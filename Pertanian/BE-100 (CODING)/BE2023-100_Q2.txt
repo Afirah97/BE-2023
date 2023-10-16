@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+        
+        function initForm(){
+        
+            var arr_F020001_enb = ['#r-F020001_1','#r-F020001_2','#r-F020001_9','#r-F020001_3'];
+            var arr_F020001_dsb = ['#r-F020001_4','#r-F020001_5','#r-F020001_6','#r-F020001_7'];
+            var arr_F020002 = ['#r-F020002_1','#r-F020002_2'];
+            
+            arrEnable(arr_F020001_enb,arr_F020002);
+            arrDisable(arr_F020001_dsb,arr_F020002);
+            
+            $( "#r-F020001_1" ).click( function() { 
+                arrEnable(arr_F020001_enb,arr_F020002);
+            });
+            $( "#r-F020001_2" ).click( function() { 
+                arrEnable(arr_F020001_enb,arr_F020002);
+            });
+            $( "#r-F020001_9" ).click( function() { 
+                arrEnable(arr_F020001_enb,arr_F020002);
+            });
+            $( "#r-F020001_3" ).click( function() { 
+                arrEnable(arr_F020001_enb,arr_F020002);
+            });
+            $( "#r-F020001_4" ).click( function() { 
+            arrDisable(arr_F020001_dsb,arr_F020002);
+            });
+            $( "#r-F020001_5" ).click( function() { 
+            arrDisable(arr_F020001_dsb,arr_F020002);
+            });
+            $( "#r-F020001_6" ).click( function() { 
+            arrDisable(arr_F020001_dsb,arr_F020002);
+            });
+            $( "#r-F020001_7" ).click( function() { 
+            arrDisable(arr_F020001_dsb,arr_F020002);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">2</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> TARAF SAH ORGANISASI
+                        <br/><span class="text-teal-400 font-size-sm">LEGAL ORGANISATION</span></h6>
+                    </td>
+                    <td style="width:100px">
+                        </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" rowspan="8">
+                            <h6 class="mb-0">2.1</h6>
+                        </td>
+                        <td rowspan="8">
+                            <div class="font-weight-semibold">Sila tandakan (X) bagi jenis taraf sah organisasi dalam satu kotak sahaja</div>
+                            <span class="text-muted">Please mark (X) for type of legal organisation in one box only</span>
+                        </td>
+                        <td rowspan="8">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-020001">020001</a> <span class="text-danger"></span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="020001" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold">(a) Hak Milik Perseorangan</div>
+                                    <span class="text-muted">&emsp;&ensp;Individual Proprietorship</span>
+									<input type="radio" class="form-check-input-styled 020001" id="r-F020001_1" name="F020001" value="1" {{#eq answers.F020001 '1'}}checked{{/eq}}>
+								</label>
+								<div class="font-weight-semibold text-info-800 float-right">1</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(b) Perkongsian</div>
+                                    <span class="text-muted">&emsp;&ensp;Partnership</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_2" name="F020001" value="2" {{#eq answers.F020001 '2'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">2</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(c) Perkongsian Liabiliti Terhad</div>
+                                    <span class="text-muted">&emsp;&ensp;Limited Liabilities Partnership</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_9" name="F020001" value="9" {{#eq answers.F020001 '9'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">9</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(d) Syarikat Sendirian Berhad</div>
+                                    <span class="text-muted">&emsp;&ensp;Private Limited Company</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_3" name="F020001" value="3" {{#eq answers.F020001 '3'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">3</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(e) Syarikat Awam Berhad</div>
+                                    <span class="text-muted">&emsp;&ensp;Public Limited Company</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_4" name="F020001" value="4" {{#eq answers.F020001 '4'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">4</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(f) Syarikat Koperasi</div>
+                                    <span class="text-muted">&emsp;&ensp;Co-operative</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_5" name="F020001" value="5" {{#eq answers.F020001 '5'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">5</div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(g) Perbadanan Awam</div>
+                                    <span class="text-muted">&emsp;&ensp;Public Corporation</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_6" name="F020001" value="6" {{#eq answers.F020001 '6'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">6</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">(h) Pertubuhan Persendirian Yang Tidak Mencari <br/>&emsp;&ensp;Keuntungan</div>
+                                    <span class="text-muted">&emsp;&ensp;Private Non-Profit Making Organisation</span>
+                                    <input type="radio" class="form-check-input-styled 020001" id="r-F020001_7" name="F020001" value="7" {{#eq answers.F020001 '7'}}checked{{/eq}}>
+                                </label>
+                                <div class="font-weight-semibold text-info-800 float-right">7</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">2.2</h6>
+                        </td>
+                         <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini milikan wanita? Sila tanda (X) dalam satu kotak sahaja. [Bagi yang menjawab 2.1 (a), (b), (c), atau (d) sahaja]</div>
+                            <span class="text-muted">Is this a woman-owned establishment? Please mark (X) in one box only. [For those who answered 2.1 (a), (b), (c), or (d) only]</span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nota : Definisi pertubuhan milikan wanita</span> 
+							    <br/>Notes: Definition of woman-owned establishment
+							    <br/><br/>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold"> (a) 51 peratus dan ke atas pemilikan ekuiti dipegang oleh wanita ATAU</span>
+								    <br/> 51 per cent and above of the equity held by a women OR
+								</div>
+								<br/>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold"> (b) Ketua Pegawai Eksekutif atau Pengarah Urusan adalah wanita yang memiliki sekurang-kurangnya 10 peratus ekuiti</span>
+								    <br/> Chief Executive Officer or Managing Director is a woman that owns at least 10 per cent of the equity
+								</div>
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-020002">020002</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="020002" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 020002" id="r-F020002_1" name="F020002" value="1" {{#eq answers.F020002 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 020002" id="r-F020002_2" name="F020002" value="2" {{#eq answers.F020002 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">2.3</h6>
+                        </td>
+                         <td rowspan="2">
+                            <div class="font-weight-semibold">Adakah pertubuhan ini milikan belia? Sila tanda (X) dalam satu kotak sahaja</div>
+                            <span class="text-muted">Is this a youth-owned establishment? Please mark (X) in one box only</span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nota : Definisi pertubuhan milikan belia</span> 
+							    <br/>Notes: Definition of youth-owned establishment
+							    <br/><br/>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold">(a) Had umur pemilik tidak kurang 18 tahun dan tidak lebih 30 tahun pada tahun rujukan banci</span>
+								    <br/> The owner’s age limit is not less than 18 yeras old and not more than 30 years old during the census reference year
+								</div>
+								<br>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold">(b) 51 peratus dan ke atas pemilikan ekuiti dipegang oleh belia ATAU</span>
+								    <br/> 51 per cent and above of the equity held by a youth OR
+								</div>
+								<br>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold">(c) Ketua Pegawai Eksekutif atau Pengarah Urusan adalah belia yang memiliki sekurang-kurangnya 10 peratus ekuiti</span>
+								    <br/> Chief Executive Officer or Managing Director is a youth that owns at least 10 per cent of the equity
+								</div>
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-020003">020003</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="020003" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 020003" id="r-F020003_1" name="F020003" value="1" {{#eq answers.F020003 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 020003" id="r-F020003_2" name="F020003" value="2" {{#eq answers.F020003 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

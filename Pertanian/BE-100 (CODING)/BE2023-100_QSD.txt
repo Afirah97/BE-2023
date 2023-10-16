@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                columnDefs: [
+                    {
+                        orderable: false,
+                        targets: [5]
+                    },
+                    {
+                        width: "200px",
+                        targets: [0]
+                    },
+                    {
+                        width: "300px",
+                        targets: [1]
+                    },
+                    {
+                        width: "200px",
+                        targets: [5, 6]
+                    },
+                    {
+                        width: "100px",
+                        targets: [4]
+                    }
+                ],
+                scrollX: true,
+                scrollY: '350px',
+                scrollCollapse: true,
+                fixedColumns: true
+            });
+            
+            
+        });
+        
+        function initForm(){
+           //$(".office_use").hide();
+           
+           var arr_F320301_2 = ['#t-F320301a'];  
+                chkDisableT("#r-F320301_2", "#r-F320301_1", arr_F320301_2);
+                $( "#r-F320301_1" ).click( function() { 
+                    chkDisableT("#r-F320301_2", "#r-F320301_1", arr_F320301_2);
+                });
+                $( "#r-F320301_2" ).click( function() { 
+                    chkDisableT("#r-F320301_2", "#r-F320301_1", arr_F320301_2);
+                    $('#t-F320301a').val('');
+                });
+                
+            var arr_F320302_2 = ['#t-F320302a'];  
+                chkDisableT("#r-F320302_2", "#r-F320302_1", arr_F320302_2);
+                $( "#r-F320302_1" ).click( function() { 
+                    chkDisableT("#r-F320302_2", "#r-F320302_1", arr_F320302_2);
+                });
+                $( "#r-F320302_2" ).click( function() { 
+                    chkDisableT("#r-F320302_2", "#r-F320302_1", arr_F320302_2);
+                    $('#t-F320302a').val('');
+                });
+                
+             var arr_F320303_2 = ['#t-F320303a'];  
+                chkDisableT("#r-F320303_2", "#r-F320303_1", arr_F320303_2);
+                $( "#r-F320303_1" ).click( function() { 
+                    chkDisableT("#r-F320303_2", "#r-F320303_1", arr_F320303_2);
+                });
+                $( "#r-F320303_2" ).click( function() { 
+                    chkDisableT("#r-F320303_2", "#r-F320303_1", arr_F320303_2);
+                    $('#t-F320303a').val('');
+                });
+        }
+
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button"
+                            class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+                            <div class="font-size-lg font-weight-bold">D</div>
+                        </button></td>
+                    <td>
+                        <h6 class="text-teal-800">IMPORT DAN EKSPORT
+                            <br><span class="text-teal-400 font-size-sm">IMPORTS AND EKSPORTS</span></h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br/><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br/><span class="text-muted">Description</span></th>
+                        <th style="width:20%;">
+                            <p align="center">
+                            Import / <span class="text-muted">Imports</span><br>
+                            Nilai / <span class="text-muted">Value</span>
+                            </p>
+                        </th>
+                        <th style="width: 20%;">
+                            <p align="center">
+                            Eksport / <span class="text-muted">Exports</span><br>
+                            Nilai / <span class="text-muted">Value</span>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">D.1</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        
+                        <td class="text-left" colspan="3"><div class="font-weight-semibold">Sila laporkan jumlah import dan eksport dalam tahun rujukan bagi:</div>
+                            <span class="text-muted">Please report the total imports and exports for reference year of:</span>
+                        </td>
+                        
+                        
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(a) Barangan</div>
+                            <span class="text-muted">&emsp;&ensp;Goods</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-320101">320101</a>
+                            </div>
+
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input class="form-control only-number-pos" type="text" id="t-F320101" name="F320101"
+                                    value="{{answers.F320101}}" maxlength="12">
+                                <div class="form-control-feedback form-control-feedback-lg">RM</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-320201">320201</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input class="form-control only-number-pos" type="text" id="t-F320201" name="F320201"
+                                    value="{{answers.F320201}}" maxlength="12">
+                                <div class="form-control-feedback form-control-feedback-lg">RM</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(b) Perkhidmatan</div>
+                            <span class="text-muted">&emsp;&ensp;Services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-320102">320102</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input class="form-control only-number-pos" type="text" id="t-F320102" name="F320102"
+                                    value="{{answers.F320102}}" maxlength="12">
+                                <div class="form-control-feedback form-control-feedback-lg">RM</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-320202">320202</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input class="form-control only-number-pos" type="text" id="t-F320202" name="F320202"
+                                    value="{{answers.F320202}}" maxlength="12">
+                                <div class="form-control-feedback form-control-feedback-lg">RM</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+            <td class="text-center" rowspan="4">
+              <h6 class="mb-0">D.2</h6>
+            </td>
+            <td rowspan="4">
+              <div class="font-weight-semibold">Jika pertubuhan mempunyai nilai import / eksport, sila tandakan (X) tujuan barangan tersebut diimport atau dieksport (Boleh pilih lebih daripada satu)</div>
+              <span class="text-muted">If the establishment has an import / export value, please mark (X) the purpose for which the goods are imported / exported (May choose more than one)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-320401">320401</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Bahan mentah untuk pengeluaran sendiri <br />
+                    <span class="text-muted">Raw material for own production</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F320401" name="F320401" value="1" {{#eq answers.F320401 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-320402">320402</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Kegunaan pertubuhan lain <br />
+                    <span class="text-muted">Use by other establishments</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F320402" name="F320402" value="1" {{#eq answers.F320402 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-320403">320403</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Barangan untuk prosesan (GFP) <br />
+                    <span class="text-muted">Goods for processing (GFP)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F320403" name="F320403" value="1" {{#eq answers.F320403 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-320404">320404</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Barangan untuk simpanan (GFS) <br />
+                    <span class="text-muted">Goods for storage (GFS)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F320404" name="F320404" value="1" {{#eq answers.F320404 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">D.3</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        
+                        <td class="text-left" colspan="3"><div class="font-weight-semibold">Sila nyatakan tiga nama negara utama eksport produk halal pertubuhan ini dan tandakan sama ada eksport ke setiap negara tersebut menggunakan Free Trade Agreement (FTA)</div>
+                            <span class="text-muted">Please indicate the top three halal products export countries of this establishment is and state the use of the Free Trade Agreement (FTA)</span>
+                            <br>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold p-custom-1">
+                						        Nama Negara 
+                						        <br/> <span class="text-muted">Name Of Country</span>
+                						    </div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">FTA</div>
+                                        </th>
+                                        <th class="office_use">
+                                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                                            </button>
+                                            <br>
+                                            <div class="font-weight-semibold p-custom-1">
+                						        Nama Negara 
+                						        <br/> <span class="text-muted">Name Of Country</span>
+                						    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320301a">320301a</a>
+                                            </div>
+                                             <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320301a" name="F320301a"
+                                                    value="{{answers.F320301a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                			            <td class="first-child-col">
+                                            <br/><div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320301">320301</a>
+                                            </div>
+                                            
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320301" id="r-F320301_1" name="F320301" value="1" required {{#eq answers.F320301 '1'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                                
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320301" id="r-F320301_2" name="F320301" value="2" required {{#eq answers.F320301 '2'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="office_use">
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320304"><span class="font-weight-semibold">320304</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320304" name="F320304" selected=answers.F320304 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>    
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320302a">320302a</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320302a" name="F320302a"
+                                                    value="{{answers.F320302a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                                        <td class="first-child-col">
+                                            <br/><div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320302">320302</a>
+                                            </div>
+                                            
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320302" id="r-F320302_1" name="F320302" value="1" required {{#eq answers.F320302 '1'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                                
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320302" id="r-F320302_2" name="F320302" value="2" required {{#eq answers.F320302 '2'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="office_use" >
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320305"><span class="font-weight-semibold">320305</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320305" name="F320305" selected=answers.F320305 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320303a">320303a</a>
+                                            </div>
+                                             <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320303a" name="F320303a"
+                                                    value="{{answers.F320303a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                                        <td class="first-child-col">
+                                            <br/><div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320303">320303</a>
+                                            </div>
+                                            
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320303" id="r-F320303_1" name="F320303" value="1" required {{#eq answers.F320303 '1'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                                
+                                            <div class="form-check form-check-right">
+                                                <label class="form-check-label">
+                                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                                    <input type="radio" class="form-check-input-styled 320303" id="r-F320303_2" name="F320303" value="2" required {{#eq answers.F320303 '2'}}checked{{/eq}} required>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="office_use">
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320306"><span class="font-weight-semibold">320306</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320306" name="F320306" selected=answers.F320306 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">D.4</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        
+                        <td class="text-left" colspan="3"><div class="font-weight-semibold">Sila nyatakan nama negara pertubuhan ini berhasrat untuk mempelbagaikan pasaran eksport produk halal</div>
+                            <span class="text-muted">Please indicate the name of country this establishment intend to diversity its halal export markets</span>
+                            <br>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold p-custom-1">
+                						        Nama negara 
+                						        <br/> <span class="text-muted">Name of country</span>
+                						    </div>
+                                        </th>
+                                        <th class="office_use">
+                                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                                            </button>
+                                            <br>
+                                            <div class="font-weight-semibold p-custom-1">
+                						        Nama negara 
+                						        <br/> <span class="text-muted">Name of country</span>
+                						    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320307a">320307a</a>
+                                            </div>
+                                             <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320307a" name="F320307a"
+                                                    value="{{answers.F320307a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                                        <td class="office_use">
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320307"><span class="font-weight-semibold">320307</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320307" name="F320307" selected=answers.F320307 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    <tr> 
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320308a">320308a</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320308a" name="F320308a"
+                                                    value="{{answers.F320308a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                                        <td class="office_use">
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320308"><span class="font-weight-semibold">320308</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320308" name="F320308" selected=answers.F320305 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320309a">320309a</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback">
+                                                <input class="form-control" type="text" id="t-F320309a" name="F320309a"
+                                                    value="{{answers.F320309a}}" maxlength="50">
+                                            </div>
+                                        </td>
+                                        <td class="office_use">
+                                            <br>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-320309"><span class="font-weight-semibold">320309</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="view_appendix_3" class="fv" id="s-F320309" name="F320309" selected=answers.F320309 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

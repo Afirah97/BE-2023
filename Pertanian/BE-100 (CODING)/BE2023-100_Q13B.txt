@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+    function initForm(){
+            
+            var trig_F134510 = "#c-F134510";
+            var arr_F134510 = ['#tx-F134512'];
+            chkDisableFRequiredT(trig_F134510, arr_F134510, arr_F134510);
+            $( trig_F134510 ).click( function() {
+                chkDisableFRequiredT(trig_F134510, arr_F134510, arr_F134510);
+            });
+            
+            $("#c-F134510").click(function() { 
+                if ($(this).is(":checked")) {
+                    $("#tx-F134512").prop("readonly", false);
+                } else {
+                    $("#tx-F134512").prop("readonly", true);
+                    $("#tx-F134512").val("");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">13B</div></button></td>
+                    <td><h6 class="text-teal-800">STATUS HUTAN, SISTEM PEMBALAKAN DAN KELUASAN PEMBALAKAN<br/><span class="text-teal-400 font-size-sm">STATUS OF FOREST, LOGGING SYSTEM AND TOTAL AREA OF LOGGING</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--13B.1-->
+                    <tr>
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0">13B.1</h6>
+                        </td>
+                        <td rowspan="4">
+                            <div class="font-weight-semibold">Status hutan:</div>
+                            <span class="text-muted">Status of forest:</span>
+                            </br></br>
+                            <div class="font-weight-semibold">Sila tanda (X) di kotak yang berkaitan (boleh tanda lebih dari satu kotak):</div>
+                            <span class="text-muted">Please mark (X) in the boxes concerned (can mark more than one box):</span>
+                        </td>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134501">134501</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (a) Hutan Tanah Berimilik
+                                        <br/><span class="text-muted">Alienated land</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134501" name="F134501" value="1" {{#eq answers.F134501 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134502">134502</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (b) Hutan Tanah Kerajaan
+                                        <br/><span class="text-muted">Stateland Forest</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134502" name="F134502" value="1" {{#eq answers.F134502 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134503">134503</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (c) Hutan Simpanan Kekal
+                                        <br/><span class="text-muted">Permanent Reserved Forest</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134503" name="F134503" value="1" {{#eq answers.F134503 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134504">134504</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (d) Ladang Hutan Kekal
+                                        <br/><span class="text-muted">Permanent Forest Estate</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134504" name="F134504" value="1" {{#eq answers.F134504 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <!--13B.2-->
+                    <tr>
+                        <td class="text-center" rowspan="7">
+                            <h6 class="mb-0">13B.2</h6>
+                        </td>
+                        <td rowspan="7">
+                            <div class="font-weight-semibold">Sistem pembalakan:</div>
+                            <span class="text-muted">Logging system:</span>
+                             </br></br>
+                            <div class="font-weight-semibold">Sila tanda (X) di kotak yang berkaitan (boleh tanda lebih dari satu kotak):</div>
+                            <span class="text-muted">Please mark (X) in the boxes concerned (can mark more than one box):</span>
+                        </td>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134505">134505</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (a) Jentolak
+                                        <br/><span class="text-muted">Bulldozer</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134505" name="F134505" value="1" {{#eq answers.F134505 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134506">134506</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (b) Helikopter
+                                        <br/><span class="text-muted">Helicopter</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134506" name="F134506" value="1" {{#eq answers.F134506 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134507">134507</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (c) Kabel
+                                        <br/><span class="text-muted">Cable</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134507" name="F134507" value="1" {{#eq answers.F134507 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134508">134508</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (d) Kuda-kuda
+                                        <br/><span class="text-muted">Sleigh logging</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134508" name="F134508" value="1" {{#eq answers.F134508 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134509">134509</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (e) Jentera penggali berasaskan pembalakan
+                                        <br/><span class="text-muted">Excavator-based logging (e.g. logfisher)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134509" name="F134509" value="1" {{#eq answers.F134509 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134510">134510</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (f) Lain-lain (nyatakan):
+                                        <br/><span class="text-muted">Others (specify):</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F134510" name="F134510" value="1" {{#eq answers.F134510 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134512">134512</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                            <div>
+                                <textarea rows="3" class="form-control" id="tx-F134512" name="F134512" maxlength="250">{{answers.F134512}}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!--13B.3-->
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">13B.3</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Jumlah keluasan pembalakan pada tahun 2022 (Hektar):</div>
+                            <span class="text-muted">Total area of logging during 2022 (Hectares):</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-134511">134511</a>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control only-number-pos" type="text" id="t-F134511" name="F134511" value="{{answers.F134511}}" maxlength="5">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

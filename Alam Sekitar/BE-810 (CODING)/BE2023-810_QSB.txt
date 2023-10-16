@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <script type="text/javascript">
+            $(function() {
+                // Left fixed column example
+                $('.datatable-fixed-left').DataTable({
+                    columnDefs: [
+                        { 
+                            orderable: false,
+                            targets: [5]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [0]
+                        },
+                        { 
+                            width: "300px",
+                            targets: [1]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [5, 6]
+                        },
+                        { 
+                            width: "100px",
+                            targets: [4]
+                        }
+                    ],
+                    scrollX: true,
+                    scrollY: '350px',
+                    scrollCollapse: true,
+                    fixedColumns: true
+                });
+            });
+            
+            function initForm(){
+                
+                 //  disable check box 1 350045
+             var arr_F350045 = ['#c-F350039','#c-F350040','#c-F350041','#c-F350042','#c-F350043','#c-F350044'];
+            chkBoxDisable("#c-F350045", arr_F350045);
+            $( "#c-F350045" ).click( function() {
+                chkBoxDisable("#c-F350045", arr_F350045);
+            });
+            
+             var arr_F350039 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350039", arr_F350039, arr_F350045);
+            $( "#c-F350039" ).click( function() {
+                chkBoxDisable2("#c-F350039", arr_F350039, arr_F350045);
+            });
+
+            var arr_F350040 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350040", arr_F350040, arr_F350045);
+            $( "#c-F350040" ).click( function() {
+                chkBoxDisable2("#c-F350040", arr_F350040, arr_F350045);
+            });
+            
+            var arr_F350041 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350041", arr_F350041, arr_F350045);
+            $( "#c-F350041" ).click( function() {
+                chkBoxDisable2("#c-F350041", arr_F350041, arr_F350045);
+            });
+            
+            var arr_F350042 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350042", arr_F350042, arr_F350045);
+            $( "#c-F350042" ).click( function() {
+                chkBoxDisable2("#c-F350042", arr_F350042, arr_F350045);
+            });
+
+            var arr_F350043 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350043", arr_F350043, arr_F350045);
+            $( "#c-F350043" ).click( function() {
+                chkBoxDisable2("#c-F350043", arr_F350043, arr_F350045);
+            });
+            
+            var arr_F350044 = ['#c-F350045'];
+            chkBoxDisable2("#c-F350044", arr_F350044, arr_F350045);
+            $( "#c-F350044" ).click( function() {
+                chkBoxDisable2("#c-F350044", arr_F350044, arr_F350045);
+            });
+                
+                // B.1 (Tidak)
+                var arr_F350001_1 = ['#r-F350002_1','#r-F350002_2','#r-F350002_3','#c-F350013','#c-F350014','#c-F350015','#c-F350016','#c-F350017'
+                                    ,'#c-F350018','#c-F350019','#c-F350020','#c-F350021','#c-F350022','#c-F350023','#c-F350024','#c-F350025'
+                                    ,'#c-F350026','#c-F350027','#c-F350028'];
+                var arr_F350001_2 = ['#c-F350003','#c-F350004','#c-F350005','#c-F350006','#c-F350007','#c-F350008','#c-F350009','#c-F350010','#c-F350011','#c-F350012'];
+                chkDisableT("#r-F350001_2", "#r-F350001_1", arr_F350001_1);
+                
+                chkDisableT("#r-F350001_1", "#r-F350001_2", arr_F350001_2);
+                
+                $( "#r-F350001_1" ).click( function() { 
+                    chkDisableT("#r-F350001_2", "#r-F350001_1", arr_F350001_1);
+                    
+                    chkDisableT("#r-F350001_1", "#r-F350001_2", arr_F350001_2);
+                });
+                $( "#r-F350001_2" ).click( function() { 
+                    chkDisableT("#r-F350001_2", "#r-F350001_1", arr_F350001_1);
+                    
+                    chkDisableT("#r-F350001_1", "#r-F350001_2", arr_F350001_2);
+                    
+                   $("#c-F350013" ).removeAttr('checked');
+                });
+                
+                $("#c-F350014").click(function(){
+                    $("#c-F350013" ).removeAttr("checked");
+                });
+                
+                //B.2 
+                var arr_F350002_1 = ['#c-F350021','#c-F350022','#c-F350023','#c-F350024','#c-F350025','#c-F350026','#c-F350027','#c-F350028'];
+                var arr_F350002_2 = ['#c-F350013','#c-F350014','#c-F350015','#c-F350016','#c-F350017','#c-F350018','#c-F350019','#c-F350020'];
+                
+                chkDisableT("#r-F350002_2", "#r-F350002_1", arr_F350002_2);
+                chkDisableT("#r-F350002_2", "#r-F350002_3", arr_F350002_2);
+                
+                chkDisableT("#r-F350002_1", "#r-F350002_2", arr_F350002_1);
+                chkDisableT("#r-F350002_3", "#r-F350002_2", arr_F350002_1);
+                
+                //(YA)
+                $( "#r-F350002_1" ).click( function() { 
+                    chkDisableT("#r-F350002_2", "#r-F350002_1", arr_F350002_2);
+                    
+                    chkDisableT("#r-F350002_1", "#r-F350002_2", arr_F350002_1);
+                });
+                //(Tidak)
+                $( "#r-F350002_2" ).click( function() { 
+                    chkDisableT("#r-F350002_2", "#r-F350002_1", arr_F350002_2);
+                    chkDisableT("#r-F350002_2", "#r-F350002_3", arr_F350002_2);
+                    
+                    chkDisableT("#r-F350002_1", "#r-F350002_2", arr_F350002_1);
+                    chkDisableT("#r-F350002_1", "#r-F350002_2", arr_F350002_1);
+                });
+                
+                //(Sedang Diproses)
+                $( "#r-F350002_3" ).click( function() { 
+                    chkDisableT("#r-F350002_2", "#r-F350002_3", arr_F350002_2);
+                    
+                    chkDisableT("#r-F350002_3", "#r-F350002_2", arr_F350002_1);
+                });
+                
+                // B.7 (f) lain-lain (sila nyatakan)
+                var trig_F350044 = "#c-F350044";
+                var arr_F350044 = ['#tx-F350044'];
+                chkDisableFRequiredT(trig_F350044, arr_F350044, arr_F350044);
+                $( trig_F350044 ).click( function() {
+                    chkDisableFRequiredT(trig_F350044, arr_F350044, arr_F350044);
+                });
+                
+                $("#c-F350044").click(function() {
+                    if ($(this).is(":checked")) {
+                        $("#tx-F350044").prop("readonly", false);
+                    } else {
+                        $("#tx-F350044").prop("readonly", true);
+                        $("#tx-F350044").val("");
+                    }
+                });
+                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                //B3, B4, B5
+                //var arr_F350012 = ['#c-F350013','#c-F350014','#c-F350015','#c-F350016','#c-F350017','#c-F350018','#c-F350019','#c-F350020','#c-F350021','#c-F350022','#c-F350023','#c-F350024','#c-F350025','#c-F350026','#c-F350027','#c-F350028'];
+                
+                
+                /*// for field no. 360002_1 and 360002_3
+                var arr_F360002_1 = ['#c-F360003','#c-F360004','#c-F360005','#c-F360006','#c-F360007','#c-F360008','#c-F360009','#c-F360010','#c-F360011','#c-F360012'];
+                var arr_F360002_XXX = ['#c-F360013','#c-F360014','#c-F360015','#c-F360016','#c-F360017','#c-F360018','#c-F360019','#c-F360020'];
+                chkDisableT("#r-F360002_1",false, arr_F360002_1, arr_F360002_XXX);
+                $( "#r-F360002_1" ).click( function() { 
+                    chkDisableT("#r-F360002_1",false, arr_F360002_1, arr_F360002_XXX);
+                });
+                chkDisableT("#r-F360002_3",false, arr_F360002_1, arr_F360002_XXX);
+                $( "#r-F360002_3" ).click( function() { 
+                    chkDisableT("#r-F360002_3",false, arr_F360002_1, arr_F360002_XXX);
+                });*/
+                
+                /*// for field no. 360002_2
+                var arr_F360002_2 = ['#c-F360003','#c-F360004','#c-F360005','#c-F360006','#c-F360007','#c-F360008','#c-F360009','#c-F360010','#c-F360011','#c-F360012','#c-F360013','#c-F360014','#c-F360015','#c-F360016','#c-F360017','#c-F360018','#c-F360019','#c-F360020'];
+                $( "#r-F360002_2" ).click( function() { 
+                    chkDisableT("#r-F360002_2",false, arr_F360002_2);
+                });*/
+            }
+            
+        </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">B</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800">KEMUDAHAN PEMBIAYAAN
+                        <br/><span class="text-teal-400 font-size-sm">ACCESS TO FINANCING</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<table class="table table-bordered">-->
+<!--SOALAN F1-->
+                    <tr>
+                        <td class="text-center" rowspan = "2">
+                            <h6 class="mb-0">B.1</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan = "2">
+                            <div class="font-weight-semibold">
+                                Adakah pertubuhan ini memohon sebarang pembiayaan baharu atau tambahan daripada luar untuk tujuan perniagaan? (Pembiayaan daripada luar antaranya termasuk sebarang permohonan untuk pembiayaan, pinjaman, kemudahan kredit, kad kredit, kredit daripada pembekal, geran / pinjaman kerajaan, modal usaha niaga dan pembiayaan ekuiti) 
+                            </div>
+                            <span class="text-muted">
+                                Did this establishment apply for any new or additional external financing for business purposes? (External financing include among others, any application for financing, loans, lines of credit, credit cards, credit from suppliers, government grants / loans, venture capital and equity financing)
+                            </span>
+                        </td>
+                        <td rowspan = "2">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350001">350001</a> <span class="text-danger">*</span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="350001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </td>
+                        <td>
+                             <div class="form-check form-check-right" >
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 350001" id="r-F350001_1" name="F350001" value="1" {{#eq answers.F350001 '1'}}checked{{/eq}}>
+                                </label>
+                            </div> 
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.2</span> 
+								<br/>Please go to Question B.2
+						    </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 350001" id="r-F350001_2" name="F350001" value="2" {{#eq answers.F350001 '2'}}checked{{/eq}}>
+                                </label>
+                            </div> 
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.3</span> 
+								<br/>Please go to Question B.3
+						    </div>
+                        </td>
+                    </tr>
+                    
+<!--SOALAN F2 -->
+                    <tr>
+                        <td class="text-center" rowspan = "3">
+                            <h6 class="mb-0">B.2</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan = "3">
+                            <div class="font-weight-semibold">
+                                Adakah permohonan tersebut diluluskan?
+                            </div>
+                            <span class="text-muted">
+                                Was the application approved?
+                            </span>
+                        </td>
+                        <td rowspan = "3">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350002">350002</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset5" data-val="350002" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                             <div class="form-check form-check-right" >
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 350002" id="r-F350002_1" name="F350002" value="1" {{#eq answers.F350002 '1'}}checked{{/eq}}>
+                                </label>
+                            </div> 
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.4</span> 
+								<br/>Please go to Question B.4
+						    </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 350002" id="r-F350002_2" name="F350002" value="2" {{#eq answers.F350002 '2'}}checked{{/eq}}>
+                                </label>
+                            </div> 
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.5</span> 
+								<br/>Please go to Question B.5
+						    </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">3 Sedang diproses / <span class="text-muted">Being processed</span></div>
+                                    <input type="radio" class="form-check-input-styled 350002" id="r-F350002_3" name="F350002" value="3" {{#eq answers.F350002 '3'}}checked{{/eq}}>
+                                </label>
+                            </div> 
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.4</span> 
+								<br/>Please go to Question B.4
+						    </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="10">
+                            <h6 class="mb-0">B.3</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="10">
+                            <div class="font-weight-semibold">
+                                Mengapakah pertubuhan ini tidak memohon sebarang pembiayaan daripada luar? (Boleh pilih lebih daripada satu)
+                            </div>
+                            <span class="text-muted">
+                               Why did this establishment not apply for any external financing? (May choose more than one)
+                            </span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Sila ke Soalan B.6</span> 
+								<br/>Please go to Question B.6
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold" >
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350003">350003</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Pembiayaan tidak diperlukan
+                                        <br/><span class="text-muted">Financing not required</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350003" name="F350003" value="1" {{#eq answers.F350003 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350004">350004</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Enggan berhutang
+                                        <br/><span class="text-muted">Reluctant to be in debt</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350004" name="F350004" value="1" {{#eq answers.F350004 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350005">350005</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Tempoh pemprosesan yang panjang
+                                        <br/><span class="text-muted">Long processing period</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350005" name="F350005" value="1" {{#eq answers.F350005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350006">350006</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                         (d) Kos pembiayaan terlalu tinggi
+                                        <br/><span class="text-muted">Cost of financing is too high</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350006" name="F350006" value="1" {{#eq answers.F350006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350007">350007</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Menjangkakan permohonan akan ditolak
+                                        <br/><span class="text-muted">Expect the application would be rejected</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350007" name="F350007" value="1" {{#eq answers.F350007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350008">350008</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Memohon pembiayaan adalah terlalu sukar
+                                        <br/><span class="text-muted">Applying for financing is too difficult</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350008" name="F350008" value="1" {{#eq answers.F350008 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350009">350009</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Tidak tahu tentang prosedur permohonan
+                                        <br/><span class="text-muted">Unaware of application procedures</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350009" name="F350009" value="1" {{#eq answers.F350009 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350010">350010</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Kurang kesedaran terhadap skim pembiayaan kerajaan
+                                        <br/><span class="text-muted">Lack of awareness of government financing scheme</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350010" name="F350010" value="1" {{#eq answers.F350010 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350011">350011</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (i) Tidak tahu mengenai agensi / institusi yang perlu dirujuk bagi mendapatkan pinjaman yang sesuai
+                                        <br/><span class="text-muted">Unaware about the agencies / institutions that can be referred to obtain the appropriate loan</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350011" name="F350011" value="1" {{#eq answers.F350011 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350011">350012</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (j) Tidak tahu mengenai agensi yang menyediakan skim jaminan pembiayaan (CGC, PROKHAS dsb.)
+                                        <br/><span class="text-muted">Unaware about the agencies that provides guarantee financing scheme (CGC, PROKHAS etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350012" name="F350012" value="1" {{#eq answers.F350012 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+<!--SOALAN F4-->
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="8">
+                            <h6 class="mb-0">B.4</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="8">
+                            <div class="font-weight-semibold">
+                                Apakah tujuan pembiayaan yang dipohon? (Boleh pilih lebih daripada satu)
+                            </div>
+                            <span class="text-muted">
+                                What were the purpose of the financing? (May choose more than one)
+                            </span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+    							<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+    							<span class="font-weight-semibold">Sila ke Soalan B.6</span> 
+    							<br/>Please go to Question B.6
+    					    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350013">350013</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+    						<div class="form-check form-check-right">
+    							<label class="form-check-label">
+    								<div class="font-weight-semibold p-custom-1">
+                                            (a) Modal kerja (stok, bahan mentah, kos pekerja dsb.)
+                                        <br/><span class="text-muted">Working capital (stocks, raw materials, labour costs etc.)</span>
+                                    </div>
+    								<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350013" name="F350013" value="1" {{#eq answers.F350013 '1'}}checked{{/eq}}></span>
+    							</label>
+    						</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350014">350014</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Penambahbaikan / naik taraf proses pengeluaran
+                                        <br/><span class="text-muted">Improvement / upgrade of production processes</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350014" name="F350014" value="1" {{#eq answers.F350014 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350015">350015</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Pembelian / penyewaan tanah / bangunan (termasuk pembesaran dan pengubahsuaian)
+                                        <br/><span class="text-muted">Purchase / lease of land / building (include extension and renovation)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350015" name="F350015" value="1" {{#eq answers.F350015 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350016">350016</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Pembelian / penyewaan peralatan / mesin / kenderaan / perkakasan dan perisian komputer
+                                        <br/><span class="text-muted">Purchase / lease of equipment / machinery / vehicles / computer hardware and software</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350016" name="F350016" value="1" {{#eq answers.F350016 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350017">350017</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Penyatuan hutang / pembiayaan semula
+                                        <br/><span class="text-muted">Debt consolidation / refinancing</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350017" name="F350017" value="1" {{#eq answers.F350017 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350018">350018</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Penyelidikan dan pembangunan produk
+                                        <br/><span class="text-muted">Research and product development</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350018" name="F350018" value="1" {{#eq answers.F350018 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350019">350019</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Membeli perniagaan
+                                        <br/><span class="text-muted">Purchase a business</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350019" name="F350019" value="1" {{#eq answers.F350019 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350020">350020</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Lain-lain
+                                        <br/><span class="text-muted">Others</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350020" name="F350020" value="1" {{#eq answers.F350020 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+<!--SOALAN F5-->
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="8">
+                            <h6 class="mb-0">B.5</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="8">
+                            <div class="font-weight-semibold">
+                                Apakah alasan yang diberikan berhubung dengan penolakan permohonan pertubuhan ini? (Boleh pilih lebih daripada satu)
+                            </div>
+                            <span class="text-muted">
+                                What were the reasons for rejecting the application of this establishment? (May choose more than one)
+                            </span>
+                            <br/><br/>
+                            <!--<div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+    							<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+    							<span class="font-weight-semibold">Sila ke Soalan B.6</span> 
+    							<br/>Please go to Question B.6
+    					    </div>-->
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350021">350021</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Pelan perniagaan dianggap tidak berdaya maju
+                                        <br/><span class="text-muted">Business plan deem not viable</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350021" name="F350021" value="1" {{#eq answers.F350021 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                        
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350022">350022</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Dokumentasi yang tidak mencukupi untuk menyokong permohonan pembiayaan
+                                        <br/><span class="text-muted">Insufficient documentation to support financing application</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350022" name="F350022" value="1" {{#eq answers.F350022 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350023">350023</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Sejarah kredit yang kurang baik / jumlah pembiayaan pinjaman yang besar / banyak pembiayaan yang masih belum dibayar
+                                        <br/><span class="text-muted">Poor credit history / high leverage / many outstanding financing</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350023" name="F350023" value="1" {{#eq answers.F350023 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350024">350024</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Tiada sejarah kredit / perniagaan baru beroperasi / jualan, pendapatan atau aliran tunai yang tidak mencukupi / pengurusan tidak berpengalaman
+                                        <br/><span class="text-muted">No credit history / new business / insufficient sales, income or cash flow / management was too inexperienced</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350024" name="F350024" value="1" {{#eq answers.F350024 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350025">350025</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Perniagaan beroperasi dalam industri yang tidak stabil
+                                        <br/><span class="text-muted">Business operates in an unstable industry</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350025" name="F350025" value="1" {{#eq answers.F350025 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350026">350026</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Tiada alasan diberikan bagi penolakan permohonan
+                                        <br/><span class="text-muted">No reasons given for rejection</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350026" name="F350026" value="1" {{#eq answers.F350026 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350027">350027</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Cagaran yang tidak mencukupi
+                                        <br/><span class="text-muted">Insufficient collateral</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350027" name="F350027" value="1" {{#eq answers.F350027 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350028">350028</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Lain-lain
+                                        <br/><span class="text-muted">Others</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled 350002" id="c-F350028" name="F350028" value="1" {{#eq answers.F350028 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+         
+<!--SOALAN F6-->
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="10">
+                            <h6 class="mb-0">B.6</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="10">
+                            <div class="font-weight-semibold">
+                                Daripada manakah pertubuhan ini mendapat sumber pembiayaan untuk menjalankan perniagaan? (Boleh pilih lebih daripada satu) (NOTA: Termasuk sebarang sumber yang digunakan, tanpa mengira bila ia diluluskan atau diperoleh)
+                            </div>
+                            <span class="text-muted">
+                                Where does this establishment get the sources of finance to operate the business? (May choose more than one) (NOTE: Include any sources used, regardless of when it was authorised or obtained)
+                            </span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350029">350029</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Pembiayaan daripada bank 
+                                        <br/><span class="text-muted">Financing from banks</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled " id="c-F350029" name="F350029" value="1" {{#eq answers.F350029 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350030">350030</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Pembiayaan daripada institusi kewangan pembangunan (SME Bank, Agrobank dsb.) 
+                                        <br/><span class="text-muted">Financing from development financial institutions (SME Bank, Agrobank etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350030" name="F350030" value="1" {{#eq answers.F350030 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350031">350031</a>
+                            </div>  
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Geran atau pembiayaan daripada agensi kerajaan
+                                        <br/><span class="text-muted">Grants or financing from government agencies</span>
+                                    </div>
+                                    <span><input type="checkbox" class="form-check-input-styled" id="c-F350031" name="F350031" value="1" {{#eq answers.F350031 '1'}}checked{{/eq}}></span>
+
+                                    </label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350032">350032</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Pembiayaan daripada syarikat pajakan / syarikat pemfaktoran / syarikat kredit / syarikat modal usaha niaga / pemberi pinjam wang berlesen / kedai dan pemegang pajak gadai termasuk Ar-Rahnu
+                                        <br/><span class="text-muted">Financing from leasing companies / factoring companies / credit companies / venture capital companies  / licenced money lenders / pawnshops and pawnbrokers include Ar-Rahnu</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350032" name="F350032" value="1" {{#eq answers.F350032 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350033">350033</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Pembiayaan daripada koperasi 
+                                        <br/><span class="text-muted">Financing from co-operatives</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350033" name="F350033" value="1" {{#eq answers.F350033 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350034">350034</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Pembiayaan daripada pembekal / kredit perdagangan daripada pembekal / individu yang tiada hubungan dengan pertubuhan atau pemilik punya perniagaan ’angels’ / organisasi bukan kerajaan / pengaturan tidak formal
+                                        <br/><span class="text-muted">Financing from suppliers / trade credit owing to suppliers / individuals unrelated to the establishment or its owner ’angels’ / non-governmental organisations / informal arrangements</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350034" name="F350034" value="1" {{#eq answers.F350034 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350035">350035</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (g) Pendapatan terkumpul / dana dalaman / sumbangan daripada pemegang saham / simpanan peribadi pemilik perniagaan
+                                        <br/><span class="text-muted">Retained earnings / internally generated funds / shareholders’ own contribution / personal savings of business owner</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350035" name="F350035" value="1" {{#eq answers.F350035 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350036">350036</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (h) Pinjaman daripada rakan-rakan atau saudara-mara
+                                        <br/><span class="text-muted">Borrowings from friends or relatives</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350036" name="F350036" value="1" {{#eq answers.F350036 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350037">350037</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (i) Pembiayaan daripada institusi kredit mikro (Amanah Ikhtiar Malaysia, TEKUN dsb.)
+                                        <br/><span class="text-muted">Financing from micro credit institutions (Amanah Ikhtiar Malaysia, TEKUN etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350037" name="F350037" value="1" {{#eq answers.F350037 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350038">350038</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (j) Pembiayaan yang menggunakan platform dalam talian (platform pendanaan masyarakat)
+                                        <br/><span class="text-muted">Financing using the online platform (crowdfunding platform)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350038" name="F350038" value="1" {{#eq answers.F350038 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                        
+<!--SOALAN F7-->
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="8">
+                            <h6 class="mb-0">B.7</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="8">
+                            <div class="font-weight-semibold">
+                               Adakah pertubuhan ini memiliki / menggunakan fasiliti dan produk kewangan berikut bagi tujuan perniagaan? (Boleh pilih lebih daripada satu)
+                            </div>
+                            <span class="text-muted">
+                                Did this establishment own / use financial facilities and products for bussiness purpose(s) as follows? (May choose more than one)
+                            </span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350039">350039</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Akaun deposit
+                                        <br/><span class="text-muted">Deposit account</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350039" name="F350039" value="1" {{#eq answers.F350039 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350040">350040</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Kad kredit
+                                        <br/><span class="text-muted">Credit Card</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350040" name="F350040" value="1" {{#eq answers.F350040 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350041">350041</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Perbankan dalam talian
+                                        <br/><span class="text-muted">Online banking</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350041" name="F350041" value="1" {{#eq answers.F350041 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350042">350042</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Insurans
+                                        <br/><span class="text-muted">Insurance</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350042" name="F350042" value="1" {{#eq answers.F350042 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350043">350043</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Fasiliti eksport
+                                        <br/><span class="text-muted">Export's facilities</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350043" name="F350043" value="1" {{#eq answers.F350043 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350044">350044</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Lain-lain (sila nyatakan)
+                                        <br/><span class="text-muted">Others (please specify)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350044" name="F350044" value="1" {{#eq answers.F350044 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350044"></a>
+                            </div>-->
+                        </td> 
+                        <td>
+                            <textarea rows="3" class="form-control" id="tx-F350044" name="F350044" maxlength="250">{{answers.F350044}}</textarea>
+                        </td>
+                    </tr>
+                    
+       
+                     <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-350045">350045</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Tidak berkenaan
+                                        <br/><span class="text-muted">Not applicable</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F350045" name="F350045" value="1" {{#eq answers.F350045 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <!--</table>    -->
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

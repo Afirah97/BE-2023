@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+ 
+        $(function () {
+            
+        });
+        function initForm(){
+            
+            //Kegunaan Pejabat
+            //$(".office_use").hide();
+            
+            //COUNT JUMLAH PERCENTAGE
+            var arr_T030001 = ['F090013','F090014'];
+            calPercentage( arr_T030001, 'T030001' );
+            $( "#t-F090013" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F090014" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            
+            
+            //readonly
+            $( "input#t-F090089" ).prop( "readonly" , true);
+            $( "input#t-F090099" ).prop( "readonly" , true);
+            
+            //090089
+            var arr_F090089 = ['F095001','F095002','F095003','F095004',
+                               'F090001','F090003','F090004','F090005','F090006','F090007','F090008','F090009','F090010','F090011','F090012',
+                               'F091001','F091002','F091003','F091004','F091005','F091006','F091007','F091008','F091009',
+                               'F090109',
+                               'F090063','F090080',
+                               'F090016','F090017','F090018','F090019',
+                               'F090090','F090024','F090025','F090026','F090027','F090028','F090029','F090030','F090031','F090032',
+                               'F091010','F091011','F091012','F091013','F091014','F091015','F091017',
+                               'F090035','F090036','F090037','F090038','F090039','F090040','F090041','F090042','F090043','F090044','F090045','F090046','F090047','F090048','F090049','F090050','F090051','F090052',
+                               'F090067'];
+                               
+            autoCalculate( arr_F090089, 'F090089', 1, 999999999999 );
+            $( "#t-F095001" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F095002" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F095003" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F095004" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090001" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090003" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090004" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090005" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090006" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090007" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090008" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090009" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090010" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090011" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090012" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091001" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091002" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091003" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091004" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091005" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091006" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091007" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091008" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091009" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090109" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090063" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090080" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090016" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090017" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090018" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090019" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090090" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090024" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090025" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090026" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090027" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090028" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090029" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090030" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090031" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090032" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091010" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091011" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091012" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091013" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091014" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091015" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F091017" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090035" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090036" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090037" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090038" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090039" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090040" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090041" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090042" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090043" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090044" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090045" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090046" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090047" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090048" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090049" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090050" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090051" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090052" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+            $( "#t-F090067" ).blur( function() { autoCalculate( arr_F090089, 'F090089', 1, 999999999999 ); });
+           
+            //090099 
+            var arr_F090099 = ['F090089','F090053','F090054','F090055','F090056'];
+            autoCalculate( arr_F090099, 'F090099', 1, 999999999999 );
+            $( "#t-F090089" ).blur( function() { autoCalculate( arr_F090099, 'F090099', 1, 999999999999 ); });
+            $( "#t-F090053" ).blur( function() { autoCalculate( arr_F090099, 'F090099', 1, 999999999999 ); });
+            $( "#t-F090054" ).blur( function() { autoCalculate( arr_F090099, 'F090099', 1, 999999999999 ); });
+            $( "#t-F090055" ).blur( function() { autoCalculate( arr_F090099, 'F090099', 1, 999999999999 ); });
+            $( "#t-F090056" ).blur( function() { autoCalculate( arr_F090099, 'F090099', 1, 999999999999 ); });
+          
+        }
+        //$(".office_use").hide(); 
+    </script>
+    
+    <style>
+        
+        table.table-bordered thead {
+            /*border-bottom: 2px solid black;*/
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            /*border-bottom: 2px solid black;*/
+            background-color: #f5f5f5;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td{
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+            <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr> 
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">9</div></button></td>
+                    <td><h6 class="text-teal-800">PERBELANJAAN<br/><span class="text-teal-400 font-size-sm">EXPENDITURE</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 13%;">No Medan</th>
+                        <th style="width: 30%;" class="text-center">Nilai <span class="text-muted"> / Value</span>
+                        <br/><span class="text-center">RM</span></th>
+                        
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    
+                   <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.0</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Pembelian air (khusus untuk pertubuhan industri bekalan air)</div>
+                            <span class="text-muted">Purchase of water (specific to establishment in water supply industry)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">9.0.1  Pembelian air mentah</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purchase of raw water</span>
+                            <br/><br/>
+                      
+                            <div class="font-weight-semibold">9.0.2  Pembelian air terawat</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purchase of treated water</span>
+                            </td>
+                            
+                        <td>
+                            <br/><br/><br/>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-095001">095001</a>
+                            </div>
+                            <br/><br/>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-095002">095002</a>
+                            </div>
+                            </td> 
+                     <td>
+                            <br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F095001" name="F095001" value="{{answers.F095001}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+		                	<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F095002" name="F095002" value="{{answers.F095002}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+        
+                    	<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.1</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Subkontraktor (khusus kepada kerja utama)</div>
+                            <span class="text-muted">Subcontractor (specific to main work)</span><br/>
+                           </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-095003">095003</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F095003" name="F095003" value="{{answers.F095003}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							 
+							</tr>	
+							
+								<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.2</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Caj pelupusan (sisa yang dihantar ke tapak pelupusan)</div>
+                            <span class="text-muted">Disposal charges (waste send to landfill)</span><br/>
+                           </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-095004">095004</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F095004" name="F095004" value="{{answers.F095004}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+							</tr>
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.3</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Kos bahan mentah / komponen / bahagian yang digunakan</div>
+                            <span class="text-muted">Cost of raw materials / components / parts used</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090001">090001</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090001" name="F090001" value="{{answers.F090001}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                    
+                     <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.4</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bahan yang digunakan bagi pembaikan dan penyelenggaraan</div>
+                            <span class="text-muted">Materials used for repairs and maintenance</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090003">090003</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090003" name="F090003" value="{{answers.F090003}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.5</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Keperluan kilang (cth. alat-alat dan barang keperluan semasa)</div>
+                            <span class="text-muted">Factory requisites (e.g. tools and consumables)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090004">090004</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090004" name="F090004" value="{{answers.F090004}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.6</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Alat tulis dan bekalan pejabat</div>
+                            <span class="text-muted">Stationery and office supplies</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090005">090005</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090005" name="F090005" value="{{answers.F090005}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.7</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Air yang dibeli</div>
+                            <span class="text-muted">Water purchased</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090006">090006</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090006" name="F090006" value="{{answers.F090006}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.8</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Tenaga elektrik yang dibeli</div>
+                            <span class="text-muted">Electricity purchased</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090007">090007</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090007" name="F090007" value="{{answers.F090007}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.9</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bahan pembakar, pelincir dan gas</div>
+                            <span class="text-muted">Fuels, lubricants and gas</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090008">090008</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090008" name="F090008" value="{{answers.F090008}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.10</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Kos barang yang dijual (barang / bahan yang dibeli untuk dijual semula tanpa melalui proses selanjutnya)</div>
+                            <span class="text-muted">Cost of goods sold (goods / material purchased for resale without undergoing further processing)</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090009">090009</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090009" name="F090009" value="{{answers.F090009}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.11</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran bagi kerja memproses yang dibuat oleh pihak lain yang menggunakan bahan yang dibekal oleh pertubuhan ini (sila nyatakan)</div>
+                            <span class="text-muted">Payments for processing work done by others on materials supplied by this establishment (please specify)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090010">090010</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090010" name="F090010" value="{{answers.F090010}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                     <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.12</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran pembaikan dan penyelenggaraan semasa yang dibuat oleh pihak lain bagi harta tetap pertubuhan ini</div>
+                            <span class="text-muted">Payments for current repairs and maintenance work done by others on this establishment fixed assets</span>
+                        <br/><br/>
+                        
+                           
+                        <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                            <span class="font-weight-semibold">Termasuk </span> / <i>Includes:</i>
+                        
+						<br><b>Bangunan (pejabat, kilang, gudang dsb.), alat pengangkutan, jentera & kelengkapan, perabot & pemasangan dan komputer</b></br>
+								<!--<div class="p-custom-1">-->
+						<i>Buildings (office, factory, warehouse etc.), transport equipment,machinery & equipment,furniture & fittings and computer</i>
+						</div>
+						</div>
+                        </td> 
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090011">090011</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090011" name="F090011" value="{{answers.F090011}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+      	            <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.13</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Perbelanjaan penyelidikan dan pembangunan</div>
+                            <span class="text-muted">Research and development expenditure</span>
+                            <br/><br/><br/>
+                            <span class="font-weight-semibold">(a)  Dalaman </span> / <i>In-house</i>
+                            <br/><br/><br/>
+                      
+                            <span class="font-weight-semibold">(b)  Sumber luaran </span> / <i>Outsource</i>
+                            
+                            <br/><br/><br/>
+                            <span class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jumlah </span> / <i>Total</i>
+                         </td>
+                        <td>
+                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090012">090012</a>
+                            </div>
+                            
+                            <br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090013">090013</a>
+                            </div>
+                            
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090014">090014</a>
+                            </div></td>
+                            
+                            <td>
+                            
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090012" name="F090012" value="{{answers.F090012}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							
+							<br/><br/>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F090013" name="F090013" value="{{answers.F090013}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                            
+                            <br/>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F090014" name="F090014" value="{{answers.F090014}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T030001" name="T030001" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+							</tr>                     
+             
+                    	<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.14</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Pengangkutan barang (pengangkutan keluar)</div>
+                            <span class="text-muted">Transportation of goods (carriage outwards)</span><br/>
+                           </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091001 ">091001</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091001" name="F091001" value="{{answers.F091001}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							 
+							</tr>	
+							
+								<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.15</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Perbelanjaan perjalanan (termasuk perjalanan dalam dan luar negara, bil petrol / diesel dan bayaran parkir kenderaan sendiri)</div>
+                            <span class="text-muted">Travelling expenses (include both local and overseas travelling, petrol / diesel bills and parking fees for own vehicles)</span><br/>
+                           </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091002">091002</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091002" name="F091002" value="{{answers.F091002}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+							</tr>
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.16</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran perakaunan, kesetiausahaan dan audit</div>
+                            <span class="text-muted">Accounting, secretarial and audit fees</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091003">091003</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091003" name="F091003" value="{{answers.F091003}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                    
+                     <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.17</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran guaman</div>
+                            <span class="text-muted">Legal fees</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091004">091004</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091004" name="F091004" value="{{answers.F091004}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.18</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran pengurusan</div>
+                            <span class="text-muted">Management fees</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091005">091005</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091005" name="F091005" value="{{answers.F091005}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.19</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Perbelanjaan keraian</div>
+                            <span class="text-muted">Entertainment expenses</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091006">091006</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091006" name="F091006" value="{{answers.F091006}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.20</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran pos (termasuk perkhidmatan kurier)</div>
+                            <span class="text-muted">Postage (includes courier services)</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091007">091007</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091007" name="F091007" value="{{answers.F091007}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.21</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran bank</div>
+                            <span class="text-muted">Bank charges</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091008">091008</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091008" name="F091008" value="{{answers.F091008}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.22</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Premium insurans dibayar ke atas bangunan, jentera, alat pengangkutan dan barang</div>
+                            <span class="text-muted">Insurance premium on building, machinery, transport equipment and goods</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091009">091009</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091009" name="F091009" value="{{answers.F091009}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.23</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Komisen dan bayaran agensi</div>
+                            <span class="text-muted">Commissions and agency fees</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090109">090109</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090109" name="F090109" value="{{answers.F090109}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.24</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Pengiklanan dan promosi</div>
+                            <span class="text-muted">Advertising and promotion</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090063">090063</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090063" name="F090063" value="{{answers.F090063}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.25</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran perkhidmatan profesional lain (cth. bayaran perundingan arkitek, kejuruteraan, juruukur dsb.)</div>
+                            <span class="text-muted">Payment for other professional services (e.g. architectural, engineering, surveying consultancy fees etc.)</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090080">090080</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090080" name="F090080" value="{{answers.F090080}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.26</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran pemprosesan data dan lain-lain perkhidmatan yang berkaitan dengan teknologi maklumat</div>
+                            <span class="text-muted">Payment for data processing and other services related to information technology</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090016">090016</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090016" name="F090016" value="{{answers.F090016}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.27</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran telekomunikasi (cth. telefon, internet dsb.)</div>
+                            <span class="text-muted">Telecommunication fees (e.g. telephone, internet etc.)</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090017">090017</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090017" name="F090017" value="{{answers.F090017}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.28</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Lain-lain bayaran perkhidmatan bukan perindustrian (sila nyatakan)</div>
+                            <span class="text-muted">Others payments for non-industrial services (please specify)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090018">090018</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090018" name="F090018" value="{{answers.F090018}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+								
+							</div>
+                        </td></tr>
+                        
+						<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.29</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran sewa:</div>
+                            <span class="text-muted">Rental payments:</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(a)  Tanah </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Land</span>
+                            <br/><br/>
+                      
+                            <div class="font-weight-semibold">(b)  Sewaan operasi (tidak termasuk bayaran bagi sewa tanah) dan lain lain </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operational lease (exclude payment for rent of land) and others</span>
+                            </td>
+                            
+                        <td>
+                            <br/><br/>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090019">090019</a>
+                            </div>
+                            <br/><br/>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090090">090090</a>
+                            </div>
+                            </td>
+                           
+                            <td>
+                            <br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090019" name="F090019" value="{{answers.F090019}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+		                	<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090090" name="F090090" value="{{answers.F090090}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+							</tr>	
+							<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.30</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Susut nilai / perlunasan semasa ke atas harta tetap</div>
+                            <span class="text-muted">Current depreciation / amortisation on fixed assets</span>
+                        <br/><br/>
+                            <!--<td>
+                           <td class="office_use">-->
+                            <button type="button"
+                                class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT</span> OFFICE USE</button>
+                                    <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								
+						<b>Nilai di medan 090024 mesti sama dengan medan 041699 (Soalan 4)</b>
+								<div class="p-custom-1">
+								    <span ><i>Value in field 090024 must be equal to field 041699 (Question 4)</i></span>
+								    <br/>
+								</div>
+								</div>
+                        </td> 
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090024">090024</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090024" name="F090024" value="{{answers.F090024}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+
+			<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.31</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran faedah</div>
+                            <span class="text-muted">Interest paid</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090025">090025</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090025" name="F090025" value="{{answers.F090025}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+							</tr>	
+							<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.32</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran royalti kepada:</div>
+                            <span class="text-muted">Royalties paid to:</span>
+                            <br><br>
+                            <div class="font-weight-semibold">(a)  Kerajaan / Badan Berkanun (sila nyatakan jenis royalti) </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government / Statutory Bodies (please specify types of royalties)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                           
+                            <br><br>
+                            <div class="font-weight-semibold">(b)  Organisasi bukan kerajaan / tajaan korporat (sila nyatakan jenis royalti) </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-government organisations / corporate sponsorship (please specify types of royalties)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+                        <td>
+                            <br/><br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090026">090026</a>
+                            </div>
+                            <br/><br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090027">090027</a>
+                            </div></td>
+                            
+                            <td>
+                            <br/><br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090026" name="F090026" value="{{answers.F090026}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+								    RM
+								</div>
+							</div>
+							<br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090027" name="F090027" value="{{answers.F090027}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							</td>
+							
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.33</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Cukai tidak langsung dan lesen kerajaan:</div>
+                            <span class="text-muted">Indirect taxes and government license:</span>
+						    <br/>
+						    
+                            <div class="font-weight-semibold">(a)  Cukai ke atas produk:</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taxes on products:</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)  Cukai eksais dibayar ke atas produk pembuatan sendiri </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excise taxes paid on own manufactured products</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)  Cukai eksport</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Export tax</span>
+                            <br/><br/>
+                            
+                            <div class="font-weight-semibold">(b)  Cukai lain ke atas pengeluaran:</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other taxes on production:</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)  Taksiran (ke atas tanah dan bangunan) dan cukai tanah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assesment (on land and buildings) and quit rent</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)  Cukai jalan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Road tax</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(iii)  Bayaran pendaftaran perniagaan, lesen memandu dsb.</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business registration fees, driving licence etc.</span>
+                            <br/><br/>
+                            
+                            <div class="font-weight-semibold">(c)  Cukai perkhidmatan atau cukai jualan</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Service tax or sales tax</span>
+                            
+                        </td>
+                        <td>
+                            <br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090028">090028</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090029">090029</a>
+                            </div>
+                            <br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090030">090030</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090031">090031</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090032">090032</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091010">091010</a>
+                            </div>
+                            </td>
+                            
+                            <td>
+                            <br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090028" name="F090028" value="{{answers.F090028}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090029" name="F090029" value="{{answers.F090029}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090030" name="F090030" value="{{answers.F090030}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090031" name="F090031" value="{{answers.F090031}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090032" name="F090032" value="{{answers.F090032}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091010" name="F091010" value="{{answers.F091010}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+						</td>
+						</tr>
+               
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.34</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Perbelanjaan bukan operasi</div>
+                            <span class="text-muted">Non-operating expenditures</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(a)  Kerugian daripada pertukaran wang asing / aset kewangan </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Losses from foreign exchange / financial assets</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(b)  Kerugian daripada jualan / penilaian semula harta </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Losses from sales / revaluation of assets</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(c)  Hutang lapuk dihapuskan </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bad debts written-off</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(d)  Pindahan semasa seperti pindahan wang, hadiah, derma, denda, dsb. </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Current transfers such as remittances, gifts, donations, fine, etc.</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(e)  Lain-lain perbelanjaan bukan operasi (sila nyatakan) </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others non-operating expenditure (please specify)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+                        
+                        <td>
+                        <br/><br/><br/>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-091011">091011</a>
+                        </div>
+                        <br/><br/>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-091012">091012</a>
+                        </div>
+                        <br/><br/>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-091013">091013</a>
+                        </div>
+                        <br/><br/>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-091014">091014</a>
+                        </div>
+                        <br/><br/>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-091015">091015</a>
+                        </div>
+                        </td>
+                        <td>
+                            <br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091011" name="F091011" value="{{answers.F091011}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091012" name="F091012" value="{{answers.F091012}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091013" name="F091013" value="{{answers.F091013}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091014" name="F091014" value="{{answers.F091014}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091015" name="F091015" value="{{answers.F091015}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        </tr>
+                   
+                    <tr>
+                    <td class="text-center">
+                        <h6 clqss="mb-0">9.35</h6>
+                    </td>    
+                        <td class="first-child-col">
+                        <div class="font-weight-semibold">Adakah pertubuhan ini mempunyai perbelanjaan dalam aktiviti e-sukan?</div>
+                        <span class="text-muted">Did this establishment have expenditure in e-sports activities?</span>
+                        
+                        <br/><br/><br/><br/><br/>
+                        
+                        <div class="font-weight-semibold">&nbsp;&nbsp;9.35.1    Jika Ya, sila nyatakan jumlah perbelanjaan dalam aktiviti e-sukan ini</div>
+                        <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If Yes, please state the total expenditure in this e-sports activity</span>
+                        </td>
+                    <td>
+                        <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-091016">091016</a>
+                        <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="091016" style="float:right;" title="Reset">
+                        <i class="icon-undo"></i>
+                        </button>
+                        </div>
+                            
+                        <br/><br/><br/><br/><br/>
+                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-091017">091017</a></div>
+                        </td>
+
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 091016" id="r-F091016_1" name="F091016" value="1" {{#eq answers.F091016 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 091016" id="r-F091016_2" name="F091016" value="2" {{#eq answers.F091016 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                            
+                        <br/>
+                        
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F091017" name="F091017" value="{{answers.F091017}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.36</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold"> Lain-lain perbelanjaan operasi (sila nyatakan)</div>
+                            <span class="text-muted">Others operating expenditure (please specify)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                            <br/><br/>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600 mb-2 office_use">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nilai yang dilaporkan di medan 091015 + 090035 TIDAK boleh melebihi 5% daripada nilai di medan 090089</span>
+							    <br/>Value reported in field 091015 + 090035 must NOT be greater than 5% of field 090089
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090035">090035</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090035" name="F090035" value="{{answers.F090035}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+							</tr>
+                    
+					 <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.37</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Kos pekerjaan:</div>
+                            <span class="text-muted">Employment costs:</span>
+                            
+                            <br/><br/>
+                            <div class="font-weight-semibold">(a)  Gaji & upah dibayar </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salaries & wages paid</span>
+                            <br/><br/>
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Termasuk perkara-perkara seperti: </span><br/> Include items such as:
+							    <br/><br/>
+							    <span class="font-weight-semibold">*    Gaji & upah (termasuk bayaran lebih masa)</span>
+							    <br/><span class="text-muted">&nbsp;&nbsp;Salaries & wages (include overtime pay)</span>
+							    <br/><span class="font-weight-semibold">*   Elaun, bonus, komisen</span>
+							    <br/><span class="text-muted">&nbsp;&nbsp;Allowances, bonuses, commissions</span>
+							    <br/><span class="font-weight-semibold">*    Gaji, elaun, yuran, bonus dan komisen untuk pengarah yang bekerja</span>
+							    <br/><span class="text-muted">&nbsp;&nbsp;Salaries, allowances, fees, bonuses and commission for working directors</span>
+						    </div>
+						    <!--<td>
+						    <td class="office_use">-->
+                            <button type="button"
+                                class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT</span> / OFFICE USE</button>
+                                    <br/><br/>
+                                <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                        
+                                <b>Nilai di medan 090036 mesti sama dengan jumlah medan 050899 (Soalan 5A) dan medan 051799 (Soalan 5B)</b><br>
+                                <!--<div class="p-custom-1">-->
+                                <span><i>Value in field 090036 must be equal to the sum of field 050899 (Question 5A) and field 051799 (Question 5B)</i></span>
+                                <br/>
+                                </div>
+                                </div>
+                            
+                            <div class="font-weight-semibold">(b)  Bayaran pampasan, persaraan / pemberhentian kepada pekerja </div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment of gratuity, retirement / retrenchment benefits to employees</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(c)  Bayaran berbentuk manfaat kepada pekerja bergaji </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payments in kind to paid employees</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)  Rawatan perubatan percuma </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free medical attention</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)  Lain-lain seperti makanan percuma, tempat tinggal percuma dsb. </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others such as free food, free accomodation etc.</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(d)  Caruman majikan kepada: </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employer's contribution to:</span>
+                            <br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i)  Kumpulan Wang Simpanan Pekerja (KWSP) </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employees' Provident Fund (EPF)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ii)  Kumpulan wang simpanan lain </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other provident funds</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(iii)  Pertubuhan Keselamatan Sosial (PERKESO) </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social Security Organisation (SOCSO)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(iv)  Skim keselamatan sosial persendirian (cth: insurans pampasan
+                            pekerja dsb.) </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private social security schemes (e.g.: worker's compensation
+                            insurance etc.)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(v)  Skim bayaran pampasan, persaraan / pemberhentian </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gratuity, retirement / retrenchment benefit schemes</span>
+                            
+                            <br/><br/>
+                            <div class="font-weight-semibold">(e)  Bayaran kepada pengarah tidak bekerja kerana kehadiran mereka dalam mesyuarat Lembaga Pengarah</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fees paid to non-working directors for their attendance at Board of Directors' meetings</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(f)  Nilai pakaian percuma yang disediakan</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Value of free wearing apparel provided</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(g)  Kos latihan kepada pekerja</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Staff training cost</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(h)  Kos pengangkutan pekerja (pergi dan balik dari tempat kerja)</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cost of transport of workers (to and from work place)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(i)  Bayaran levi pekerja</div> 
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Levy on labour</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(j)  Perbelanjaan pembayaran berasaskan saham kepada pekerja (termasuk saham & pilihan saham)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Expenses on share-based payment to employees (including shares & stock options)</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">(k)  Kos pekerja lain (sila nyatakan)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other labour costs (please specify)</span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+                       
+                        <td>
+                            <br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090036">090036</a>
+                            </div>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090037">090037</a>
+                            </div>
+                            <br/><br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090038">090038</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090039">090039</a>
+                            </div>
+                            <br/><br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090040">090040</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090041">090041</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090042">090042</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090043">090043</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090044">090044</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090045">090045</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090046">090046</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090047">090047</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090048">090048</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090049">090049</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090050">090050</a>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090051">090051</a>
+                            </div>
+                            </td>
+                            
+                            <td>
+                            <br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090036" name="F090036" value="{{answers.F090036}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090037" name="F090037" value="{{answers.F090037}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090038" name="F090038" value="{{answers.F090038}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090039" name="F090039" value="{{answers.F090039}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090040" name="F090040" value="{{answers.F090040}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090041" name="F090041" value="{{answers.F090041}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090042" name="F090042" value="{{answers.F090042}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090043" name="F090043" value="{{answers.F090043}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090044" name="F090044" value="{{answers.F090044}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/><br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<p><input class="form-control only-number-pos" type="text" id="t-F090045" name="F090045" value="{{answers.F090045}}" maxlength="12"></p>
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090046" name="F090046" value="{{answers.F090046}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090047" name="F090047" value="{{answers.F090047}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<p><input class="form-control only-number-pos" type="text" id="t-F090048" name="F090048" value="{{answers.F090048}}" maxlength="12"></p>
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<p><input class="form-control only-number-pos" type="text" id="t-F090049" name="F090049" value="{{answers.F090049}}" maxlength="12"></p>
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<p><input class="form-control only-number-pos" type="text" id="t-F090050" name="F090050" value="{{answers.F090050}}" maxlength="10"></p>
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							<br/>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<p><input class="form-control only-number-pos" type="text" id="t-F090051" name="F090051" value="{{answers.F090051}}" maxlength="10"></p>
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+							    <!--<input class="form-control" type="text" id="t-F0900" name="F0900" value="{{answers.F0900}}" maxlength="100">-->
+                        </td></tr>	
+						
+						<tr> 
+                    <td class="text-center">
+                            <h6 class="mb-0">9.38</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran kepada pertubuhan lain yang membekalkan pekerja</div>
+                            <span class="text-muted">Payment to other establishment for providing workers</span>
+                        </td>
+                        <td>
+                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090052">090052</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090052" name="F090052" value="{{answers.F090052}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.39</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Bayaran bagi perkhidmatan keselamatan</div>
+                            <span class="text-muted">Payment for security services</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090067">090067</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090067" name="F090067" value="{{answers.F090067}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.40</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Jumlah perbelanjaan (9.0 hingga 9.39)</div>
+                            <span class="text-muted">Total expenditure (9.0 to 9.39)</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090089">090089</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090089" name="F090089" value="{{answers.F090089}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                         <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.41</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Pindahan modal yang dibuat</div>
+                            <span class="text-muted">Capital transfers made</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090053">090053</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090053" name="F090053" value="{{answers.F090053}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                         <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.42</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Perbelanjaan pajakan kewangan</div>
+                            <span class="text-muted">Financial lease charges</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090054">090054</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090054" name="F090054" value="{{answers.F090054}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                         <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.43</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Dividen dibayar</div>
+                            <span class="text-muted">Dividend payable</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090055">090055</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090055" name="F090055" value="{{answers.F090055}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                         <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.44</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">Cukai langsung dibayar (cth. cukai syarikat dan duti setem)</div>
+                            <span class="text-muted">Direct taxes paid (e.g. company tax and stamp duties)</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090056">090056</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090056" name="F090056" value="{{answers.F090056}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                        <tr> 
+                        <td class="text-center">
+                            <h6 class="mb-0">9.45</h6>
+                        </td>
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">JUMLAH BESAR (9.40 hingga 9.44)</div>
+                            <span class="text-muted">GRAND TOTAL (9.40 to 9.44)</span></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-090099">090099</a>
+                            </div></td>
+                            <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F090099" name="F090099" value="{{answers.F090099}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td></tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <script type="text/javascript">
+            $(function() {
+                // Left fixed column example
+                $('.datatable-fixed-left').DataTable({
+                    columnDefs: [
+                        { 
+                            orderable: false,
+                            targets: [5]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [0]
+                        },
+                        { 
+                            width: "300px",
+                            targets: [1]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [5, 6]
+                        },
+                        { 
+                            width: "100px",
+                            targets: [4]
+                        }
+                    ],
+                    scrollX: true,
+                    scrollY: '350px',
+                    scrollCollapse: true,
+                    fixedColumns: true
+                });
+                
+                
+            });
+
+            
+            function initForm(){
+                
+                 //   A12
+                var arr_F410001_2 = ['#s-F410002a','#s-F410002','#s-F410003a','#s-F410003','#s-F410004a','#s-F410004','#s-F410005a','#s-F410005','#s-F410006a','#s-F410006','#t-F410007','#t-F410008'];
+                chkDisableT("#r-F410001_2", "#r-F410001_1", arr_F410001_2);
+                $( "#r-F410001_1" ).click( function() { 
+                    chkDisableT("#r-F410001_2", "#r-F410001_1", arr_F410001_2);
+                    $('#s-F410002a').attr("disabled",false)
+                    $('#s-F410002').attr("disabled",false)
+                      $('#s-F410003a').attr("disabled",false)
+                    $('#s-F410003').attr("disabled",false)
+                      $('#s-F410004a').attr("disabled",false)
+                    $('#s-F410004').attr("disabled",false)
+                      $('#s-F410005a').attr("disabled",false)
+                    $('#s-F410005').attr("disabled",false)
+                      $('#s-F410006a').attr("disabled",false)
+                    $('#s-F410006').attr("disabled",false)
+                  
+                });
+                $( "#r-F410001_2" ).click( function() { 
+                    chkDisableT("#r-F410001_2", "#r-F410001_1", arr_F410001_2);
+             
+                    $('#s-F410002a').attr("disabled",true)
+                    $('#s-F410002').attr("disabled",true)
+                     $('#s-F410003a').attr("disabled",true)
+                    $('#s-F410003').attr("disabled",true)
+                      $('#s-F410004a').attr("disabled",true)
+                    $('#s-F410004').attr("disabled",true)
+                      $('#s-F410005a').attr("disabled",true)
+                    $('#s-F410005').attr("disabled",true)
+                      $('#s-F410006a').attr("disabled",true)
+                    $('#s-F410006').attr("disabled",true)
+             
+                    $('#t-F410007').val('');
+                    $('#t-F410008').val('');
+                   
+                });
+
+
+            $("#t-F410008").on("change", function() {
+                
+            var val = parseInt(this.value);
+            if(val > 100 || val < 1)
+            {
+            alert('Range Must be 1% to 100% only');
+            this.value ='';        
+            }
+            });
+
+            }
+            
+          //  $(".office_use").hide();
+          
+            copyField("#s-F410002a", "#s-F410002");
+            copyField("#s-F410003a", "#s-F410003");
+            copyField("#s-F410004a", "#s-F410004");
+            copyField("#s-F410005a", "#s-F410005");
+            copyField("#s-F410006a", "#s-F410006");
+            
+            
+          //  $(".office_use").hide();
+            
+            
+        </script>
+    <style>
+        table.table-bordered thead {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">H</div></button></td>
+                    <td><h6 class="text-teal-800">PERKHIDMATAN DAN PERALATAN MINYAK & GAS (OGSE)<br/><span class="text-teal-400 font-size-sm">OIL & GAS SERVICES AND EQUIPMENT (OGSE)</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br/><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br/><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br/><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">H.1</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan terlibat dengan aktiviti Perkhidmatan dan Peralatan Minyak & Gas (OGSE)? Sila tanda (X) dalam satu kotak sahaja </div>
+                            <span class="text-muted">Does this establishment involve in Oil & Gas and Services and Equipment (OGSE) activity? Please mark (X) in one box only </span><br><br>
+
+                                <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <!--<span class="font-weight-semibold">Nota /</span> Notes:<br>-->
+                                    <span class="font-weight-semibold">Jika Tidak, TAMAT di sini</span>
+                                    <br>If No, END here
+                                </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-410001">410001</a> <span class="text-danger">*</span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="410001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 410001" id="r-F410001_1" name="F410001" value="1" required {{#eq answers.F410001 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 410001" id="r-F410001_2" name="F410001" value="2" required {{#eq answers.F410001 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">H.2</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        
+                        <td class="text-left" colspan="3"><div class="font-weight-semibold">Sila senaraikan 5 aktiviti utama yang terlibat dengan OGSE. Rujuk senarai aktiviti teras dalam kriteria kelayakan</div>
+                            <span class="text-muted">Please list up to 5 main activities involved in OGSE. Refer to the list of core activities in eligibility criteria</span>
+                            <br>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold p-custom-1">
+                						        
+                						        <br/> <span class="text-muted"></span>
+                						    </div>
+                                        </th>
+                                        <th class="office_use">
+                                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                                            </button>
+                                            <br>
+                                            <div class="font-weight-semibold p-custom-1">
+                						         
+                						        <br/> <span class="text-muted"></span>
+                						    </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <!--<div class="text-default font-weight-semibold"><br><br>(a)
+                                                <a class="ancor" id="a-"></a>
+                                            </div>-->
+                                            <div class="text-default font-weight-semibold">(a)
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410002a">410002a</a>
+                                            </div>
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410002a" name="F410002a" selected=answers.F410002a readonly="readonly"}}
+                                            </div>
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410002a" name="F410002a" value="{{answers.F410002a}}" maxlength="50">
+                                            </div>-->
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410002" name="F410002"
+                                                    value="{{answers.F410002}}" maxlength="250">
+                                            </div>-->
+                                        </td>
+                                        <td class="office_use">
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410002"><span class="font-weight-semibold">410002</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410002" name="F410002" selected=answers.F410002 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    <tr> 
+                                        <td>
+                                             <!--<div class="text-default font-weight-semibold"><br><br>(a)
+                                                <a class="ancor" id="a-"></a>
+                                            </div>-->
+                                            
+                                            <div class="text-default font-weight-semibold">(b)
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410003a">410003a</a>
+                                            </div>
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410003a" name="F410003a" selected=answers.F410003a readonly="readonly"}}
+                                            </div>
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410003a" name="F410003a" value="{{answers.F410003a}}" maxlength="50">
+                                            </div>-->
+                                            <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410003a" name="F410003a"
+                                                    value="{{answers.F410003a}}" maxlength="250">
+                                            </div>-->
+                                        </td>
+                                        <td class="office_use">
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410003"><span class="font-weight-semibold">410003</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410003" name="F410003" selected=answers.F410003 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                             <!--<div class="text-default font-weight-semibold"><br><br>(a)
+                                                <a class="ancor" id="a-"></a>
+                                            </div>-->
+                                            
+                                            <div class="text-default font-weight-semibold">(c)
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410004a">410004a</a>
+                                            </div>
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410004a" name="F410004a" selected=answers.F410004a readonly="readonly"}}
+                                            </div>
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410004a" name="F410004a" value="{{answers.F410004a}}" maxlength="50">
+                                            </div>-->
+                                            <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410004a" name="F410004a"
+                                                    value="{{answers.F410004a}}" maxlength="250">
+                                            </div>-->
+                                        </td>
+                                        <td class="office_use">
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410004"><span class="font-weight-semibold">410004</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410004" name="F410004" selected=answers.F410004 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                            <td>
+                                             <!--<div class="text-default font-weight-semibold"><br><br>(a)
+                                                <a class="ancor" id="a-"></a>
+                                            </div>-->
+                                            
+                                            <div class="text-default font-weight-semibold">(d)
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410005a">410005a</a>
+                                            </div>
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410005a" name="F410005a" selected=answers.F410005a readonly="readonly"}}
+                                            </div>
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410005a" name="F410005a" value="{{answers.F410005a}}" maxlength="50">
+                                            </div>-->
+                                            <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410005" name="F410005"
+                                                    value="{{answers.F410005}}" maxlength="250">
+                                            </div>-->
+                                        </td>
+                                        <td class="office_use">
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410005"><span class="font-weight-semibold">410005</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410005" name="F410005" selected=answers.F410005 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                            <td>
+                                             <!--<div class="text-default font-weight-semibold"><br><br>(a)
+                                                <a class="ancor" id="a-"></a>
+                                            </div>-->
+                                            
+                                            <div class="text-default font-weight-semibold">(e)
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410006a">410006a</a>
+                                            </div>
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410006a" name="F410006a" selected=answers.F410006a readonly="readonly"}}
+                                            </div>
+                                             <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-F410006a" name="F410006a" value="{{answers.F410006a}}" maxlength="50">
+                                            </div>-->
+                                            <!--<div class="form-group form-group-feedback">
+                                                <input class="form-control" style="text-transform:uppercase" type="text" id="t-410006" name="410006"
+                                                    value="{{answers.410006}}" maxlength="250">
+                                            </div>-->
+                                        </td>
+                                        <td class="office_use">
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-410006"><span class="font-weight-semibold">410006</span></a>
+                                    
+                                            <div width="30%">
+                                                {{select table="ref_appendix_ogse" value="code" class="fv" id="s-F410006" name="F410006" selected=answers.F410006 readonly="readonly"}}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                    
+                </tbody>
+            </table>
+             <!--<tr>-->
+             <!--           <th style="width: 2%;"><br/><span class="text-muted"></span></th>-->
+             <!--           <th><br/><span class="text-muted"></span></th>-->
+             <!--           <th style="width: 10%;">No Medan<br/><span class="text-muted">Field No</span></th>-->
+             <!--           <th class="text-center" style="width: 30%;">Nilai / <span class="text-muted">Value</span>-->
+             <!--           <br/><span class="text-bold">RM</span></th>-->
+             <!--       </tr>-->
+                    
+                <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">H.3</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan nilai pendapatan yang diterima daripada aktiviti OGSE</div>
+                            <span class="text-muted">Please state the income received from the OGSE activities.</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-410007">410007</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F410007" name="F410007" value="{{answers.F410007}}" maxlength="12">
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">Jika pertubuhan ini tidak dapat membekalkan nilai, sila nyatakan peratusan (%) pendapatan yang diterima bagi aktiviti OGSE tersebut.</div>
+                            <span class="text-muted">If this establishment unable to provide the value, please state the percentage (%) of income received,from OGSE activities.</span>
+                        </td>
+                        <td>
+                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-410008">410008</a>
+                            </div>
+                        </td>
+                        <td>
+                            
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F410008" name="F410008" value="{{answers.F410008}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+                    </tr>        
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+			

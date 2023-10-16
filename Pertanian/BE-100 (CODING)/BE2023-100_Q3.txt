@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+        });
+        function initForm(){
+            var arr_T030001 = ['F030003','F030004','F030005','F030006','F030007','F030014','F030015','F030016','F030017','F030018','F030019','F030010','F030011'];
+            calPercentage( arr_T030001, 'T030001' );
+            $( "#t-F030003" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030004" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030005" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030006" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030007" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030014" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030015" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030016" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030017" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030018" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030019" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030010" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F030011" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            
+            if ($( "#t-F030001" ).val() == ""){
+                $( "#t-F030001" ).val();
+            }
+            
+            if ($( "#s-F030012" ).val() == 999){
+                if ($( "#t-F030013" ).val() == ""){
+                    get_country();
+                }
+            } else {
+                get_country();
+            }
+            $( "#s-F030012" ).change(function() {
+                get_country();
+            });
+        }
+        
+        function get_country(){
+            var country_id = $( "#s-F030012" ).val();
+            if (country_id != 999){
+                $.post("{{ctxPath}}/t/common/helper?remote", { d_action:"get_country",key:country_id}, function(data) {
+                    result = data.body.results;
+                    $( "#t-F030013" ).val(result);
+                    console.log(result);
+                }, "json");
+            } else {
+                $( "#t-F030013" ).val("");
+            }
+            
+        }
+        // $(".office_use").hide();
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+                        <div class="font-size-lg font-weight-bold">3</div></button>
+                    </td>
+                    <td>
+                        <h6 class="text-teal-800"> DANA PEMEGANG SAHAM DAN STRUKTUR HAK MILIK
+                        <br/><span class="text-teal-400 font-size-sm">SHAREHOLDERS' FUND AND OWNERSHIP STRUCTURE</span></h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">3.1</h6>
+                        </td>
+                        <td colspan="2">
+                            <div class="font-weight-semibold">Dana Pemegang Saham:</div>
+                            <span class="text-muted">Shareholders' Fund:</span>
+                        </td>
+                        <td class="text-center">
+                            Seperti pada 31.12.2022 /<span class="text-muted">As at 31.12.2022</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(a) Modal Berbayar *</div>
+                            <span class="text-muted">&emsp;&ensp;Paid-Up Capital</span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nota / </span> Notes: 
+								<br/><span class="font-weight-semibold">* Jika taraf sah ialah hak milik perseorangan atau perkongsian, ia merujuk kepada modal yang disumbangkan oleh pemilik</span>
+								<br/>If the legal status is individual proprietorship or partnership, it refers to capital contributed by the owner(s)
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030001">030001</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F030001" name="F030001" value="{{answers.F030001}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(b) Rizab</div>
+                            <span class="text-muted">&emsp;&ensp;Reserves</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030002">030002</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-neg" type="text" id="t-F030002" name="F030002" value="{{answers.F030002}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan="16">
+                            <h6 class="mb-0">3.2</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Struktur Hak Milik</div>
+                            <span class="text-muted">Ownership Structure</span>
+                            <div class="font-weight-semibold"><br/>Sila laporkan hak milik pertubuhan berdasarkan modal berbayar seperti pada 31 Disember 2022:</div>
+                            <span class="text-muted">Please report the ownership of the establishment based on the paid-up capital as at 31 December 2022:</span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<span class="font-weight-semibold">Nota : Definisi residen Malaysia dan bukan residen Malaysia</span> 
+								<br/> Notes : Definition of Malaysian resident and non-Malaysian resident
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold">(a) Residen Malaysia ialah merujuk kepada individu yang menetap dan syarikat yang beroperasi di Malaysia bagi tempoh sekurang-kurangnya satu tahun dan kepentingan ekonominya berpusat di Malaysia</span>
+								    <br/> A Malaysian resident is referring to individual who live and companies operating in Malaysia for a period of at least one year and their centre of economic interests in Malaysia
+								</div>
+								<div class="p-custom-1">
+								    <span class="font-weight-semibold">(b) Bukan residen Malaysia merujuk kepada individu yang menetap dan syarikat yang beroperasi di luar Malaysia</span>
+								    <br/> A non-Malaysian resident is referring to individual who live and companies operating outside Malaysia
+								</div>
+						    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+							    <span class="font-weight-semibold">3.2.1 Dipegang secara langsung oleh residen Malaysia</span>
+							    <br/> <span class="text-muted">Held directly by Malaysian resident</span>
+							    
+    							<div class="p-custom-3">
+    							    <span class="font-weight-semibold">3.2.1.1 Individu:</span>
+    							    <br/> <span class="text-muted">Individual:</span>
+    							    
+        							<div class="p-custom-1">
+        							    <span class="font-weight-semibold">(i) Warganegara:</span>
+        							    <br/> <span class="text-muted">Citizen:</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold"></div>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold text-center">Peratus <br/>
+                            <span class="text-muted text-center">Percentage (%)</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+            							<div class="p-custom-1">
+            							    <span class="font-weight-semibold">(a) Melayu</span>
+            							    <br/> <span class="text-muted">Malay</span>
+            							</div>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030003">030003</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030003" name="F030003" value="{{answers.F030003}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+            							<div class="p-custom-1">
+            							    <span class="font-weight-semibold">(b) Bumiputera lain</span>
+            							    <br/> <span class="text-muted">Other Bumiputera</span>
+            							</div>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030004">030004</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030004" name="F030004" value="{{answers.F030004}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+            							<div class="p-custom-1">
+            							    <span class="font-weight-semibold">(c) Cina</span>
+            							    <br/> <span class="text-muted">Chinese</span>
+            							</div>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030005">030005</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030005" name="F030005" value="{{answers.F030005}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+            							<div class="p-custom-1">
+            							    <span class="font-weight-semibold">(d) India</span>
+            							    <br/> <span class="text-muted">Indians</span>
+            							</div>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030006">030006</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030006" name="F030006" value="{{answers.F030006}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+            							<div class="p-custom-1">
+            							    <span class="font-weight-semibold">(e) Lain-lain</span>
+            							    <br/> <span class="text-muted">Others</span>
+            							</div>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030007">030007</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030007" name="F030007" value="{{answers.F030007}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+        							    <span class="font-weight-semibold">(ii) Bukan Warganegara</span>
+        							    <br/> <span class="text-muted"> Non-Citizen</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030014">030014</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030014" name="F030014" value="{{answers.F030014}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+    							    <span class="font-weight-semibold">3.2.1.2 Institusi / Syarikat:</span>
+    							    <br/> <span class="text-muted"> Institution / Company:</span>
+        							<div class="p-custom-1">
+        							    <div class="p-custom-1">
+        							    <span class="font-weight-semibold">(a) Melayu</span>
+        							    <br/> <span class="text-muted"> Malay</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030015">030015</a>
+                            </div>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030015" name="F030015" value="{{answers.F030015}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+        							    <div class="p-custom-1">
+        							    <span class="font-weight-semibold">(b) Bumiputera lain</span>
+        							    <br/> <span class="text-muted"> Other Bumiputera</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030016">030016</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030016" name="F030016" value="{{answers.F030016}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+        							    <div class="p-custom-1">
+        							    <span class="font-weight-semibold">(c) Cina</span>
+        							    <br/> <span class="text-muted">Chinese</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030017">030017</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030017" name="F030017" value="{{answers.F030017}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+        							    <div class="p-custom-1">
+        							    <span class="font-weight-semibold">(d) India</span>
+        							    <br/> <span class="text-muted">Indians</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030018">030018</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030018" name="F030018" value="{{answers.F030018}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+    							<div class="p-custom-3">
+        							<div class="p-custom-1">
+        							    <div class="p-custom-1">
+        							    <span class="font-weight-semibold">(e) Lain-lain</span>
+        							    <br/> <span class="text-muted">Others</span>
+        							</div>
+    							</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030019">030019</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030019" name="F030019" value="{{answers.F030019}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+							    <span class="font-weight-semibold">3.2.2 Dipegang secara langsung oleh Agensi Kerajaan Persekutuan, Negeri dan Tempatan</span>
+							    <br/> <span class="text-muted"> Held directly by Federal, State and Local Government Agencies</span>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030010">030010</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030010" name="F030010" value="{{answers.F030010}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+							<div class="p-custom-2">
+							    <span class="font-weight-semibold">3.2.3 Dipegang secara langsung oleh bukan residen Malaysia</span>
+							    <br/> <span class="text-muted"> Held directly by non-Malaysian resident</span>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030011">030011</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F030011" name="F030011" value="{{answers.F030011}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="font-weight-semibold">&emsp;&emsp;&ensp;JUMLAH</div>
+                                <span class="text-muted">TOTAL</span>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T030001" name="T030001" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">3.3</h6>
+                        </td>
+                        <td class="office_use">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                        <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030012">030012</a>
+                            </div>
+                        </td>
+                        <td class="office_use">
+                            {{select table="view_appendix_3" id="s-F030012" name="F030012" class="form-control select-search" selected=answers.F030012}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">Jika modal berbayar pertubuhan ini dipegang melebihi 50 peratus oleh syarikat / individu di luar negara,
+                            secara langsung atau tidak langsung, <u>sila nyatakan negara syarikat induk</u></div>
+                            <span class="text-muted">If this establishment’s paid-up capital is directly or indirectly held more than 50 per cent by a foreign company /
+                            individual, <u>please specify the country of the ultimate parent company</u></span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-030013">030013</a>
+                            </div>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" id="t-F030013" name="F030013" value="{{answers.F030013}}" maxlength="100">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

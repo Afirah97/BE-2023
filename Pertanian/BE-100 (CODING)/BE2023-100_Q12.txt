@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+        });
+        function initForm(){
+            
+            var arr_T121215 = ['F120112','F120113','F120114'];
+            calPercentage( arr_T121215, 'T121215' );
+            $( "#t-F120112" ).blur( function() { calPercentage( arr_T121215, 'T121215' ); });
+            $( "#t-F120113" ).blur( function() { calPercentage( arr_T121215, 'T121215' ); });
+            $( "#t-F120114" ).blur( function() { calPercentage( arr_T121215, 'T121215' ); });
+            
+            var arr_T121216 = ['F120122','F120123','F120124'];
+            calPercentage( arr_T121216, 'T121216' );
+            $( "#t-F120122" ).blur( function() { calPercentage( arr_T121216, 'T121216' ); });
+            $( "#t-F120123" ).blur( function() { calPercentage( arr_T121216, 'T121216' ); });
+            $( "#t-F120124" ).blur( function() { calPercentage( arr_T121216, 'T121216' ); });
+            
+            var arr_T121217 = ['F120133','F120134','F120135','F120136','F120137','F120138','F120139','F120140','F120141','F120142'];
+            calPercentage( arr_T121217, 'T121217' );
+            $( "#t-F120133" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120134" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120135" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120136" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120137" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120138" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120139" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120140" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120141" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            $( "#t-F120142" ).blur( function() { calPercentage( arr_T121217, 'T121217' ); });
+            
+            var arr_F120299 = ['F120201','F120202','F120217','F120243','F120244','F120220','F120221','F120203','F120204','F120225','F120205',
+                               'F120206','F120207','F120208','F120226','F120227','F120228','F120229','F120209','F120230','F120231','F120232',
+                               'F120210','F120211'];
+            autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true );
+            $( "#t-F120201" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120202" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            //$( "#t-F120215" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            //$( "#t-F120216" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120217" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120243" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120244" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120220" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120221" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120203" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120204" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120225" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120205" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120206" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120207" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120208" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120226" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120227" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120228" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120229" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120209" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120230" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120231" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120232" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120210" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            $( "#t-F120211" ).blur( function() { autoCalculate( arr_F120299, 'F120299', 1, 999999999, false, true ); $( "#t-F120299" ).trigger( "keyup" ); });
+            
+            calPercentage( 'F120118' );
+            $( "#t-F120118" ).keyup( function() { setPercentage( 'F120118' ); });
+            calPercentage( 'F120119' );
+            $( "#t-F120119" ).keyup( function() { setPercentage( 'F120119' ); });
+            calPercentage( 'F120212' );
+            $( "#t-F120212" ).keyup( function() { setPercentage( 'F120212' ); });
+            
+            // var arr_percentage = ['F120112','F120113','F120114','F120118','F120119','F120122','F120123','F120124','F120133','F120134','F120135','F120136','F120137','F120138','F120139','F120140','F120141','F120142'];
+            // setPercentageCombo( arr_percentage );
+            // $( "#t-F120112" ).keyup( function() { setPercentage( 'F120112' ); });
+            // $( "#t-F120113" ).keyup( function() { setPercentage( 'F120113' ); });
+            // $( "#t-F120114" ).keyup( function() { setPercentage( 'F120114' ); });
+            // $( "#t-F120118" ).keyup( function() { setPercentage( 'F120118' ); });
+            // $( "#t-F120119" ).keyup( function() { setPercentage( 'F120119' ); });
+            // $( "#t-F120122" ).keyup( function() { setPercentage( 'F120122' ); });
+            // $( "#t-F120123" ).keyup( function() { setPercentage( 'F120123' ); });
+            // $( "#t-F120124" ).keyup( function() { setPercentage( 'F120124' ); });
+            // $( "#t-F120133" ).keyup( function() { setPercentage( 'F120133' ); });
+            // $( "#t-F120134" ).keyup( function() { setPercentage( 'F120134' ); });
+            // $( "#t-F120135" ).keyup( function() { setPercentage( 'F120135' ); });
+            // $( "#t-F120136" ).keyup( function() { setPercentage( 'F120136' ); });
+            // $( "#t-F120137" ).keyup( function() { setPercentage( 'F120137' ); });
+            // $( "#t-F120138" ).keyup( function() { setPercentage( 'F120138' ); });
+            // $( "#t-F120139" ).keyup( function() { setPercentage( 'F120139' ); });
+            // $( "#t-F120140" ).keyup( function() { setPercentage( 'F120140' ); });
+            // $( "#t-F120141" ).keyup( function() { setPercentage( 'F120141' ); });
+            // $( "#t-F120142" ).keyup( function() { setPercentage( 'F120142' ); });
+        }
+        
+    </script>
+    
+</head>
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr> 
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">12</div></button></td>
+                    <td><h6 class="text-teal-800"> AIR, PELINCIR, BAHAN PEMBAKAR DAN TENAGA ELEKTRIK YANG DIGUNAKAN<br/><span class="text-teal-400 font-size-sm">WATER, LUBRICANTS, FUELS AND ELECTRICITY CONSUMED</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+            
+                <thead>
+                   <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th class="text-center" style="width: 20%">Unit Kuantiti<br/><span class="text-muted">Unit of Quantity</span></th>
+                        <th class="text-center" style="width: 20%;">Kuantiti<br/><span class="text-muted">Quantity</span></th>
+                        <th class="text-center" style="width: 20%;">
+                            <div class="font-weight-semibold">Nilai / <span class="text-muted">Value</span></div>
+                            <div class="font-weight-semibold">RM</div>
+                        </th>
+                        <!--<th class="text-center" style="width: 20%;">Nilai<br/><span class="text-muted">Value</span>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!--12.1-->
+                    <tr>
+                        <td class="text-center" rowspan="21">
+                            <h6 class="mb-0">12.1</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Air</div>
+                            <span class="text-muted">Water</span>
+                            <div class="font-weight-semibold">12.1.1 Air yang dibeli</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Water purchased</span>
+                        </td>
+                        <td class="text-center" style="vertical-align:top">
+                            <br/><br/>
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td style="vertical-align:top">
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120101">120101</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120101" name="F120101" value="{{answers.F120101}}" maxlength="9">
+							</div>
+                        </td>
+                        <td style="vertical-align:top">
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120201">120201</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120201" name="F120201" value="{{answers.F120201}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>
+                            <div class="font-weight-semibold">12.1.2 Air yang diabstrak</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Water abstracted</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120102">120102</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-120102" name="F120102" value="{{answers.F120102}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120202">120202</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120202" name="F120202" value="{{answers.F120202}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr rowspan="5">
+                        <td>
+                            <span class="font-weight-semibold">&emsp;&emsp;&ensp;&ensp;Sila nyatakan peratus air diabstrak mengikut sumber</span>
+						    <br/><span class="text-muted">&emsp;&emsp;&ensp;&ensp;Please specify the percentage of water abstracted by source</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+        							<div class="p-custom-1">
+                                        <span class="font-weight-semibold">(i) Air permukaan (cth. Sungai, Empangan, Tasik)</span>
+            						    <br><span class="text-muted">Surface water (eg. River, Dam, Lake)</span>
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120112">120112</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right number-pos" type="text" maxlength="3" id="t-F120112" name="F120112" value="{{answers.F120112}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+        							<div class="p-custom-1">
+                                        <span class="font-weight-semibold">(ii) Air bawah tanah</span>
+            						    <br><span class="text-muted">Groundwater</span>
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120113">120113</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right number-pos" type="text" maxlength="3" id="t-F120113" name="F120113" value="{{answers.F120113}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>  
+                         </td>
+                         <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-3">
+    							    <div class="p-custom-1">
+                                        <span class="font-weight-semibold">(iii) Air laut</span>
+            						    <br><span class="text-muted">Sea water</span>
+        						    </div>
+    						    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120114">120114</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right number-pos" type="text" maxlength="3" id="t-F120114" name="F120114" value="{{answers.F120114}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--<div class="p-custom-2">
+    							<div class="p-custom-3">
+    							    <div class="p-custom-1">
+                                        <div class="font-weight-semibold">&emsp;&ensp;JUMLAH</div>
+                                        <span class="text-muted">TOTAL</span>
+        						    </div>
+    						    </div>
+    						</div>-->
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T121215" name="T121215" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                        <td></td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <span class="font-weight-semibold">(a) Air yang diabstrak untuk kegunaan sendiri</span>
+        						    <br><span class="text-muted">Water abstracted for own use</span>
+    						    </div>
+    						</div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120115">120115</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120115" name="F120115" value="{{answers.F120115}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120215">120215</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120215" name="F120215" value="{{answers.F120215}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <span class="font-weight-semibold">(b) Air yang diabstrak untuk dijual / diagihkan</span>
+        						    <br><span class="text-muted">Water abstracted for sale / distribution</span>
+    						    </div>
+    						</div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120116">120116</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120116" name="F120116" value="{{answers.F120116}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120216">120216</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120216" name="F120216" value="{{answers.F120216}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>
+                            <div class="font-weight-semibold">12.1.3 Air yang digunakan semula</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Reused water</span>
+                        </td>
+                         <td></td>
+                        <td></td>
+                        <td></td>
+                        <!--<td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120117">120117</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control only-number-pos" type="text" id="t-F120117" name="F120117" value="{{answers.F120117}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120217">120217</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120217" name="F120217" value="{{answers.F120217}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>-->
+                    </tr>
+                    <tr rowspan="3">
+                        <!--<td>
+                            <span class="font-weight-semibold">&emsp;&emsp;&ensp;&ensp;Sila nyatakan peratus air yang digunakan semula mengikut 
+                            <br/>&emsp;&emsp;&ensp;&ensp;sumber</span>
+    					    <br/><span class="text-muted">&emsp;&emsp;&ensp;&ensp;Please specify the percentage of reused water by source</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>-->
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+        							<div class="p-custom-1">
+                                        <span class="font-weight-semibold">(i) Air guna semula yang dihasilkan untuk dijual</span>
+            						    <br><span class="text-muted">Reused water produced for sale</span>
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120117">120117</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120117" name="F120117" value="{{answers.F120117}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120217">120217</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120217" name="F120217" value="{{answers.F120217}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                       
+                        <!--<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120118">120118</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120118" name="F120118" value="{{answers.F120118}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>-->
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+        							<div class="p-custom-1">
+                                        <span class="font-weight-semibold">(ii) Air guna semula yang dihasilkan untuk pengagihan secara percuma</span>
+            						    <br><span class="text-muted">Reused water produced for distribution for free</span>
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                    
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120143">120143</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120143" name="F120143" value="{{answers.F120143}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120243">120243</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120243" name="F120243" value="{{answers.F120243}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                        <!--<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120118">120118</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120118" name="F120118" value="{{answers.F120118}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>-->
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+        							<div class="p-custom-1">
+                                        <span class="font-weight-semibold">(iii) Air guna semula yang diterima dari industri lain</span>
+            						    <br><span class="text-muted">Reused water received from other industries</span>
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120144">120144</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120144" name="F120144" value="{{answers.F120144}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120244">120244</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120244" name="F120244" value="{{answers.F120244}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                        <!--<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120119">120119</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120119" name="F120119" value="{{answers.F120119}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>  
+                         </td>-->
+                        
+                    </tr>
+                    <tr>
+                        <td colspan ="5">
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+					            <span class="font-weight-semibold">Nota / </span> Note:<br/>
+						        <span class="font-weight-semibold">Air guna semula merujuk kepada air kitar semula yang digunakan dengan atau tanpa rawatan terlebih dahulu. Ia juga merujuk kepada tebus guna air sisa.</span><br/>
+						        <span class="text-muted">Reused water refers to recycling of water for further use with or without prior treatment. It is also referred as reclaimed water.</span>
+						    </div>
+						</td>
+                    </tr>
+                    <tr> 
+                        <td>
+                            <div class="font-weight-semibold">12.1.4 Air yang dimasukkan ke dalam produk (cth. minuman, <br/>&emsp;&emsp;&ensp;&ensp;makanan, dll)</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Water incorporated into product (e.g. beverages, food, etc.)</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120120">120120</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120120" name="F120120" value="{{answers.F120120}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120220">120220</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120220" name="F120220" value="{{answers.F120220}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr rowspan="5"> 
+                        <td>
+                            <div class="font-weight-semibold">12.1.5 Air sisa yang dilepaskan / dibuang</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Wastewater discharged / removal</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120121">120121</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120121" name="F120121" value="{{answers.F120121}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120221">120221</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120221" name="F120221" value="{{answers.F120221}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <span class="font-weight-semibold">(a) Dilepaskan ke sistem pembentungan</span>
+        						    <br><span class="text-muted">Discharged to sewerage system</span>
+    						    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120122">120122</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120122" name="F120122" value="{{answers.F120122}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <span class="font-weight-semibold">(b) Dilepaskan ke air permukaan, air bawah tanah</span>
+        						    <br><span class="text-muted">Discharged to surface water, groundwater</span>
+    						    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120123">120123</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120123" name="F120123" value="{{answers.F120123}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <span class="font-weight-semibold">(c) Dilepaskan ke laut</span>
+        						    <br><span class="text-muted">Discharged to sea</span>
+    						    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120124">120124</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120124" name="F120124" value="{{answers.F120124}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--<div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <div class="font-weight-semibold">&emsp;&ensp;JUMLAH</div>
+                                    <span class="text-muted">TOTAL</span>
+    						    </div>
+    						</div>-->
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T121216" name="T121216" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                        <td></td>                    
+                    </tr>
+                    
+                    <!--12.2-->
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">12.2</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pelincir</div>
+                            <span class="text-muted">Lubricants</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Meter padu</div>
+                            <span class="text-muted">Cubic metre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120103">120103</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120103" name="F120103" value="{{answers.F120103}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120203">120203</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120203" name="F120203" value="{{answers.F120203}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <!--12.3-->
+                    <tr>
+                        <td class="text-center" rowspan="15">
+                            <h6 class="mb-0">12.3</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Bahan pembakar</div>
+                            <span class="text-muted">Fuels</span>
+                            <div class="font-weight-semibold">(a) Diesel</div>
+                            <span class="text-muted">&emsp;&ensp;Diesel</span>
+                        </td>
+                        <td class="text-center" style="vertical-align:bottom;">
+                            <div class="font-weight-semibold">Liter</div>
+                            <span class="text-muted">Litre</span>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120104">120104</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120104" name="F120104" value="{{answers.F120104}}" maxlength="9">
+							</div>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120204">120204</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120204" name="F120204" value="{{answers.F120204}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(b) Biodesel</div>
+                            <span class="text-muted">&emsp;&ensp;Biodesel</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Liter</div>
+                            <span class="text-muted">Litre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120125">120125</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120125" name="F120125" value="{{answers.F120125}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120225">120225</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120225" name="F120225" value="{{answers.F120225}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(c) Petrol</div>
+                            <span class="text-muted">&emsp;&ensp;Petrol</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Liter</div>
+                            <span class="text-muted">Litre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120105">120105</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120105" name="F120105" value="{{answers.F120105}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120205">120205</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120205" name="F120205" value="{{answers.F120205}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(d) Minyak relau / Minyak pembakar</div>
+                            <span class="text-muted">&emsp;&ensp;Furnace oil / Fuel oil</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Liter</div>
+                            <span class="text-muted">Litre</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120106">120106</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120106" name="F120106" value="{{answers.F120106}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120206">120206</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120206" name="F120206" value="{{answers.F120206}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(e) Gas petroleum cecair</div>
+                            <span class="text-muted">&emsp;&ensp;Liquified petroleum gas (LPG)</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120107">120107</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120107" name="F120107" value="{{answers.F120107}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120207">120207</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120207" name="F120207" value="{{answers.F120207}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(f) Gas asli / Gas asli untuk kenderaan (NGV)</div>
+                            <span class="text-muted">&emsp;&ensp;Natural gas / Natural gas for vehicle (NGV)</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120108">120108</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120108" name="F120108" value="{{answers.F120108}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120208">120208</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120208" name="F120208" value="{{answers.F120208}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(g) Cecair gas asli</div>
+                            <span class="text-muted">&emsp;&ensp;Liquified Natural gas (LNG)</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120126">120126</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120126" name="F120126" value="{{answers.F120126}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120226">120226</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120226" name="F120226" value="{{answers.F120226}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(h) Minyak mentah</div>
+                            <span class="text-muted">&emsp;&ensp;Crude oil</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120127">120127</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120127" name="F120127" value="{{answers.F120127}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120227">120227</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120227" name="F120227" value="{{answers.F120227}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(i) Kerosin</div>
+                            <span class="text-muted">&emsp;&ensp;Kerosene</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120128">120128</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120128" name="F120128" value="{{answers.F120128}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120228">120228</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120228" name="F120228" value="{{answers.F120228}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(j) ATF & AV Gas</div>
+                            <span class="text-muted">&emsp;&ensp;ATF & AV Gas</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120129">120129</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120129" name="F120129" value="{{answers.F120129}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120229">120229</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120229" name="F120229" value="{{answers.F120229}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr rowspan="5">
+                        <td>
+                            <div class="font-weight-semibold">(k) Bahan pembakar lain (sila nyatakan):</div>
+                            <span class="text-muted">&emsp;&ensp;Other fuels (please specify):</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <!--<span class="font-weight-semibold">(i)</span>-->
+        						    <div class="p-custom-1">
+            	                        <div class="text-default font-weight-semibold">
+            	                            <span class="font-weight-semibold">(i)</span>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                            <a class="ancor" id="a-120301">120301</a>
+                                        </div>
+                                    </div>
+        			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120301" name="F120301" value="{{answers.F120301}}">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120109">120109</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120109" name="F120109" value="{{answers.F120109}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120209">120209</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120209" name="F120209" value="{{answers.F120209}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <!--<span class="font-weight-semibold">(ii)</span>-->
+                                    <div class="p-custom-1">
+            	                        <div class="text-default font-weight-semibold">
+            	                            <span class="font-weight-semibold">(ii)</span>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                            <a class="ancor" id="a-120302">120302</a>
+                                        </div>
+                                    </div>
+        			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120302" name="F120302" value="{{answers.F120302}}">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120130">120130</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120130" name="F120130" value="{{answers.F120130}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120230">120230</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120230" name="F120230" value="{{answers.F120230}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <!--<span class="font-weight-semibold">(iii)</span>-->
+                                    <div class="p-custom-1">
+            	                        <div class="text-default font-weight-semibold">
+            	                            <span class="font-weight-semibold">(iii)</span>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                            <a class="ancor" id="a-120303">120303</a>
+                                        </div>
+                                    </div>
+        			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120303" name="F120303" value="{{answers.F120303}}">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120131">120131</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120131" name="F120131" value="{{answers.F120131}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120231">120231</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120231" name="F120231" value="{{answers.F120231}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <!--<span class="font-weight-semibold">(iv)</span>-->
+                                    <div class="p-custom-1">
+            	                        <div class="text-default font-weight-semibold">
+            	                            <span class="font-weight-semibold">(iv)</span>
+                                            <span class="badge badge-mark border-blue mr-1"></span>
+                                            <a class="ancor" id="a-120304">120304</a>
+                                        </div>
+                                    </div>
+        			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120304" name="F120304" value="{{answers.F120304}}">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tan Metrik</div>
+                            <span class="text-muted">Tonne</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120132">120132</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120132" name="F120132" value="{{answers.F120132}}" maxlength="12">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120232">120232</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120232" name="F120232" value="{{answers.F120232}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <!--12.4-->
+                    <tr>
+                        <td class="text-center" rowspan="16">
+                            <h6 class="mb-0">12.4</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tenaga elektrik</div>
+                            <span class="text-muted">Electricity</span>
+                            <div class="font-weight-semibold">12.4.1 Tenaga elektrik yang dibeli</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Electricity purchased</span>
+                        </td>
+                        <td class="text-center" style="vertical-align:bottom;">
+                            <div class="font-weight-semibold">Kilowatt-jam</div>
+                            <span class="text-muted">Kilowatt-hour</span>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120110">120110</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-F120110" name="F120110" value="{{answers.F120110}}" maxlength="9">
+							</div>
+                        </td>
+                        <td style="vertical-align:bottom;">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120210">120210</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120210" name="F120210" value="{{answers.F120210}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>
+                            <div class="font-weight-semibold">12.4.2 Tenaga elektrik yang dijana</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;Electricity generated</span>
+                        </td>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Kilowatt-jam</div>
+                            <span class="text-muted">Kilowatt-hour</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120111">120111</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control number-pos" type="text" id="t-120111" name="F120111" value="{{answers.F120111}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120211">120211</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120211" name="F120211" value="{{answers.F120211}}" maxlength="9">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="font-weight-semibold">&emsp;&emsp;&ensp;&ensp;Sila nyatakan peratus tenaga yang dijana mengikut sumber</span>
+						    <br/><span class="text-muted">&emsp;&emsp;&ensp;&ensp;Please specify the percentage of electricity generated by source</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(a) Kuasa hidro</span>
+        						    <br><span class="text-muted">Hydropower</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120133">120133</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120133" name="F120133" value="{{answers.F120133}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(b) Solar</span>
+        						    <br><span class="text-muted">Solar</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120134">120134</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120134" name="F120134" value="{{answers.F120134}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>  
+                         </td>
+                         <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(c) Biomass</span>
+        						    <br><span class="text-muted">Biomass</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120135">120135</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120135" name="F120135" value="{{answers.F120135}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(d) Biogas</span>
+        						    <br><span class="text-muted">Biogas</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120136">120136</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120136" name="F120136" value="{{answers.F120136}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(e) Arang batu</span>
+        						    <br><span class="text-muted">Coal</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120137">120137</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120137" name="F120137" value="{{answers.F120137}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(f) Gas asli</span>
+        						    <br><span class="text-muted">Natural gas</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120138">120138</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120138" name="F120138" value="{{answers.F120138}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-1">
+                                    <span class="font-weight-semibold">(g) Lain-lain (sila nyatakan):</span>
+        						    <br><span class="text-muted">Others (please specify):</span>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+                                    <div class="p-custom-1">
+                                        <!--<span class="font-weight-semibold">(i)</span>-->
+                                        <div class="p-custom-1">
+                	                        <div class="text-default font-weight-semibold">
+                	                            <span class="font-weight-semibold">(i)</span>
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-120339">120339</a>
+                                            </div>
+                                        </div>
+            			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120339" name="F120339" value="{{answers.F120339}}">
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120139">120139</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120139" name="F120139" value="{{answers.F120139}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+                                    <div class="p-custom-1">
+                                        <!--<span class="font-weight-semibold">(ii)</span>-->
+                                        <div class="p-custom-1">
+                	                        <div class="text-default font-weight-semibold">
+                	                            <span class="font-weight-semibold">(ii)</span>
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-120340">120340</a>
+                                            </div>
+                                        </div>
+            			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120340" name="F120340" value="{{answers.F120340}}">
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120140">120140</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120140" name="F120140" value="{{answers.F120140}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+                                    <div class="p-custom-1">
+                                        <!--<span class="font-weight-semibold">(iii)</span>-->
+                                        <div class="p-custom-1">
+                	                        <div class="text-default font-weight-semibold">
+                	                            <span class="font-weight-semibold">(iii)</span>
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-120341">120341</a>
+                                            </div>
+                                        </div>
+            			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120341" name="F120341" value="{{answers.F120341}}">
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120141">120141</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120141" name="F120141" value="{{answers.F120141}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="p-custom-2">
+                                <div class="p-custom-3">
+                                    <div class="p-custom-1">
+                                        <!--<span class="font-weight-semibold">(iv)</span>-->
+                                        <div class="p-custom-1">
+                	                        <div class="text-default font-weight-semibold">
+                	                            <span class="font-weight-semibold">(iv)</span>
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-120342">120342</a>
+                                            </div>
+                                        </div>
+            			                <input class="form-control" type="text" maxlength="50" style="width:60%" id="t-F120342" name="F120342" value="{{answers.F120342}}">
+        						    </div>
+        					    </div>
+    						</div>
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F120142">120142</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120142" name="F120142" value="{{answers.F120142}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div> 
+                        </td>
+                        <td></td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--<div class="p-custom-2">
+    							<div class="p-custom-1">
+                                    <div class="font-weight-semibold">&emsp;&ensp;JUMLAH</div>
+                                    <span class="text-muted">TOTAL</span>
+    						    </div>
+    						</div>-->
+                        </td>
+                        <td></td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T121217" name="T121217" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                        <td></td>                    
+                    </tr>
+                    <tr> 
+                        <td>
+                            <div class="font-weight-semibold">12.4.3 Jika soalan 12.4.2 diisi, sila nyatakan peratus kegunaan sendiri</div>
+                            <span class="text-muted">&emsp;&emsp;&ensp;&ensp;If the question 12.4.2 are filled, please specify the percentage </br>&emsp;&emsp;&ensp;&ensp;for own use</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120212">120212</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F120212" name="F120212" value="{{answers.F120212}}">
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>
+                    </tr>
+                  </tbody>
+			    <tfoot>  
+                    <!--12.5-->
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">12.5</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">JUMLAH (12.1 hingga 12.4)</div>
+                            <span class="text-muted">TOTAL (12.1 to 12.4)</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-120299">120299</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F120299" name="F120299" value="{{answers.F120299}}" maxlength="9" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    </tfoot>
+                
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

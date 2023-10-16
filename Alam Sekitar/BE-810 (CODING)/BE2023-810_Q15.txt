@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+        });
+        function initForm(){
+            var arr_T030001 = ['F150301','F150302','F150303','F150304','F150305','F150306','F150307','F150308','F150309','F150310','F150311','F150312','F150313','F150314','F150315','F150316'];
+            calPercentage( arr_T030001, 'T030001' );
+            $( "#t-F150301" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150302" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150303" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150304" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150305" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150306" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150307" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150308" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150309" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150310" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150311" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150312" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150313" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150314" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150315" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            $( "#t-F150316" ).blur( function() { calPercentage( arr_T030001, 'T030001' ); });
+            
+            if ($( "#t-T030001" ).val() == ""){
+                $( "#t-T030001" ).val();
+            }
+        }
+        
+        //$(".office_use").hide();
+        
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">15</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> SUMBER BAHAN YANG DIGUNAKAN
+                        <br/><span class="text-teal-400 font-size-sm">SOURCES OF MATERIALS CONSUMED</span></h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table text-nowrap">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th class="text-center" style="width: 20%;">Import<br/><span class="text-muted">Imports</span><br/>RM</th>
+                        <th class="text-center" style="width: 20%;">Buatan Tempatan<br/><span class="text-muted">Locally Manufactured</span><br/>RM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">15.1</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Bahan mentah secara langsung * (Seperti yang dilaporkan di Soalan 14)</div>
+                            <span class="text-muted">Direct raw materials (As reported in Question 14)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150101">150101</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F150101" name="F150101" value="{{answers.F150101}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150201">150201</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F150201" name="F150201" value="{{answers.F150201}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">15.2</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Bahan dan bekas pembungkus</div>
+                            <span class="text-muted">Materials and packaging materials</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150102">150102</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F150102" name="F150102" value="{{answers.F150102}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150202">150202</a>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F150202" name="F150202" value="{{answers.F150202}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr>
+                <!--</tbody>
+            </table>
+            </div>-->
+            
+            <tr class="office_use">
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                <span class="font-weight-semibold">* Nilai yang dilaporkan di medan 150101 + 150201 mesti sama dengan medan 090001 di Soalan 9 dan medan 140299 di Soalan 14.</span>
+							    <br/>Value reported in fields 150101 + 150201 must be equal to field 090001 in Question 9 and field 140299 in Question 14.
+						    </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" >
+						    <h6 class="mb-0">15.3</h6>
+                        </td>
+                        <td  colspan="3">
+                            <div class="font-weight-semibold">Sila nyatakan peratusan bahan buatan tempatan yang digunakan mengikut negeri</div>
+                            <span class="text-muted">Please indicate the percentage of local manufactured materials consumed by states</span>
+                            
+                            </td>
+                            
+                            
+                    
+						    <table class="table table-bordered" >
+						<tr>
+						        <thead class="text-center" colspan="4">
+						            <tr>
+						                <th>
+						                    <div class="font-weight-semibold">Bil.</div>
+                                            <span class="text-muted">No.</span>
+						                </th>
+						                <th>
+						                    <div class="font-weight-semibold">Negeri / Wilayah</div>
+                                            <span class="text-muted">State / Federal</span>
+						                </th>
+						                <th>
+                                            <div class="font-weight-semibold">No Medan</div>
+                			                
+                			               
+                		                </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Peratus</div>
+                			                <span class="text-muted">Percent</span>
+                			                <br/>(%)
+                		                </th>
+                		                
+						            </tr>
+        <!--<div class="table-responsive">
+			<table class="table table-bordered datatable-fixed-left">
+				<thead>
+				    <tr>
+				        <th colspan="3" style="text-align:left;">
+				            <div style="font-size:14px">14.3
+                            &nbsp; Sila nyatakan peratusan bahan buatan tempatan yang digunakan mengikut negeri
+	                        <br/><span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please indicate the percentage of local manufactured materials consumed by states</span>
+    	                    </div>
+    	                </th>        
+                    </tr>
+			        <tr style="text-align:center;">
+			            <th class="first-child-col">
+			                Bil. 
+			                <br/><span class="text-muted">No.</span>
+		                </th>
+		                
+		                <th>
+		                    Negeri
+			                <br/><span class="text-muted">State</span>
+		                </th>
+		                <th>
+		                    Bil. Medan
+		                    <br/><span class="text-muted">Fields No.</span>
+		                </th>
+		                <th>
+		                    Peratus (%)
+		                    <br/><span class="text-muted">Per cent</span>
+		                </th>
+	                </tr>-->
+			    </thead>
+			    <tbody >
+			        <tr>
+			            <td>
+			                1.
+		                </td>
+			            <td>
+							Johor
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150301">150301</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150301" name="F150301" value="{{answers.F150301}}">
+						</td>
+			        </tr> <!--01-->
+			        
+			        <tr>
+			            <td>
+			                2.
+		                </td>
+			            <td>
+							Kedah
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150302">150302</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150302" name="F150302" value="{{answers.F150302}}">
+						</td>
+			        </tr> <!--02-->
+			        
+			        <tr>
+			            <td >
+			                3.
+		                </td>
+			            <td>
+							Kelantan
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150303">150303</a>
+                            </div>
+                        </td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150303" name="F150303" value="{{answers.F150303}}">
+						</td>
+			        </tr> <!--03-->
+			        
+			        <tr>
+			            <td >
+			                4.
+		                </td>
+			            <td>
+							Melaka
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150304">150304</a>
+                            </div>
+                        </td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150304" name="F150304" value="{{answers.F150304}}">
+						</td>
+			        </tr> <!--04-->
+			        
+			        <tr>
+			            <td >
+			                5.
+		                </td>
+			            <td>
+							Negeri Sembilan
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150305">150305</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150305" name="F150305" value="{{answers.F150305}}">
+						</td>
+			        </tr> <!--05-->
+			        
+			        <tr>
+			            <td >
+			                6.
+		                </td>
+			            <td>
+							Pahang
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150306">150306</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150306" name="F150306" value="{{answers.F150306}}">
+						</td>
+			        </tr> <!--06-->
+			        
+			        <tr>
+			            <td >
+			                7.
+		                </td>
+			            <td>
+							Pulau Pinang
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150307">150307</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150307" name="F150307" value="{{answers.F150307}}">
+						</td>
+			        </tr> <!--07-->
+			        
+			        <tr>
+			            <td >
+			                8.
+		                </td>
+			            <td>
+							Perak
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150308">150308</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150308" name="F150308" value="{{answers.F150308}}">
+						</td>
+			        </tr> <!--08-->
+			        
+			        <tr>
+			            <td >
+			                9.
+		                </td>
+			            <td>
+							Perlis
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150309">150309</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150309" name="F150309" value="{{answers.F150309}}">
+						</td>
+			        </tr> <!--09-->
+			        
+			        <tr>
+			            <td >
+			                10.
+		                </td>
+			            <td>
+							Selangor
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150310">150310</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150310" name="F150310" value="{{answers.F150310}}">
+						</td>
+			        </tr> <!--10-->
+			        
+			        <tr>
+			            <td >
+			                11.
+		                </td>
+			            <td>
+							Terengganu
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150311">150311</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150311" name="F150311" value="{{answers.F150311}}">
+						</td>
+			        </tr> <!--11-->
+			        
+			        <tr>
+			            <td>
+			                12.
+		                </td>
+			            <td>
+							Sabah
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150312">150312</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150312" name="F150312" value="{{answers.F150312}}">
+						</td>
+			        </tr> <!--12-->
+			        
+			        <tr>
+			            <td >
+			                13.
+		                </td>
+			            <td>
+							Sarawak
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150313">150313</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150313" name="F150313" value="{{answers.F150313}}">
+						</td>
+			        </tr> <!--13-->
+			        
+			        <tr>
+			            <td >
+			                14.
+		                </td>
+			            <td>
+							W.P. Kuala Lumpur
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150314">150314</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150314" name="F150314" value="{{answers.F150314}}">
+						</td>
+			        </tr> <!--14-->
+			        
+			        <tr>
+			            <td >
+			                15.
+		                </td>
+			            <td>
+							W.P. Labuan
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150315">150315</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150315" name="F150315" value="{{answers.F150315}}">
+							
+						</td>
+			        </tr> <!--15-->
+			        
+			        <tr>
+			            <td >
+			                16.
+		                </td>
+			            <td>
+							W.P. Putrajaya
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F150316">150316</a>
+                            </div>
+						</td>
+			            <td>
+							<input class="form-control only-number-pos" type="text" maxlength="3" id="t-F150316" name="F150316" value="{{answers.F150316}}">
+						</td>
+			        </tr> <!--16-->
+			        
+			        <tr>
+			            <td  colspan="2" align="center">
+			                Jumlah
+			                <br/><span class="text-muted">Total</span>
+		                </td>
+			            <td>
+                            
+						</td>
+			            <td>
+							<div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T030001" name="T030001" readonly>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+						</td>
+			        </tr> <!--17-->
+			    </tbody>
+			</table>
+		</div>
+		<footer>
+           
+        </footer>
+        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

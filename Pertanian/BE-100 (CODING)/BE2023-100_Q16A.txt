@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script src="{{ctxPath}}/usr_css/limit22/global_assets/js/plugins/forms/inputs/inputmask.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                scrollX: true
+                ,scrollY: '50vh'
+                ,scrollCollapse: true
+                ,fixedColumns: true
+                ,paging: false
+                ,ordering: false
+                ,searching: false
+                ,bInfo: false
+            });
+            
+            // hit enter focus on next input
+            $('.form-control').keydown(function (e) {
+                if (e.which === 13) {
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).focus();
+                }
+            });
+        });
+        
+        $(document).ready(function() {
+            $(".t_mcpa").typeahead({
+                source: function(q, process) {
+                    console.log(q);
+                    $.post("{{ctxPath}}/t/web/ajax?remote", {q:q, d_action:"find_mcpa"}, function(data) {
+                        process(data.body.result);
+                    }, "json");
+                },
+                fitToElement: true,
+                afterSelect: function(item) {
+                }
+            });
+        });
+        
+        function initForm(){
+            
+            //readonly
+            $( "input#t-F164016" ).prop( "readonly" , true);
+            $( "input#t-F164316" ).prop( "readonly" , true);
+            $( "input#t-F164416" ).prop( "readonly" , true);
+            $( "input#t-F164516" ).prop( "readonly" , true);
+            $( "input#t-F164616" ).prop( "readonly" , true);
+            
+            $( "input#t-F164701" ).prop( "readonly" , true);
+            $( "input#t-F164702" ).prop( "readonly" , true);
+            $( "input#t-F164703" ).prop( "readonly" , true);
+            
+            $( "input#t-F164801" ).prop( "readonly" , true);
+            $( "input#t-F164802" ).prop( "readonly" , true);
+            $( "input#t-F164803" ).prop( "readonly" , true);
+            
+            //F164016
+            var arr_F164016 = ['F164001','F164002','F164003','F164004','F164005','F164006','F164007','F164008',
+                               'F164009','F164010','F164011','F164012','F164013','F164014','F164015'];
+            autoCalculate ( arr_F164016, 'F164016', 1, 99999 );
+            $( "#t-F164001" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164002" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164003" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164004" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164005" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164006" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164007" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164008" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164009" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164010" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164011" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164012" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164013" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164014" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            $( "#t-F164015" ).blur( function() { autoCalculate( arr_F164016, 'F164016', 1, 99999 ); });
+            
+            //F164316
+            var arr_F164316 = ['F164301','F164302','F164303','F164304','F164305','F164306','F164307','F164308',
+                               'F164309','F164310','F164311','F164312','F164313','F164314','F164315'];
+            autoCalculate( arr_F164316, 'F164316', 1, 999999999 );
+            $( "#t-F164301" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164302" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164303" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164304" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164305" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164306" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164307" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164308" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164309" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164310" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164311" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164312" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164313" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164314" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            $( "#t-F164315" ).blur( function() { autoCalculate( arr_F164316, 'F164316', 1, 999999999 ); });
+            
+            //F164416
+            var arr_F164416 = ['F164401','F164402','F164403','F164404','F164405','F164406','F164407','F164408',
+                               'F164409','F164410','F164411','F164412','F164413','F164414','F164415'];
+            autoCalculate( arr_F164416, 'F164416', 1, 99999999 );
+            $( "#t-F164401" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164402" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164403" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164404" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164405" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164406" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164407" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164408" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164409" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164410" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164411" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164412" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164413" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164414" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            $( "#t-F164415" ).blur( function() { autoCalculate( arr_F164416, 'F164416', 1, 99999999 ); });
+            
+            //F164516
+            var arr_F164516 = ['F164501','F164502','F164503','F164504','F164505','F164506','F164507','F164508',
+                               'F164509','F164510','F164511','F164512','F164513','F164514','F164515'];
+            autoCalculate( arr_F164516, 'F164516', 1, 999999 );
+            $( "#t-F164501" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999999999 ); });
+            $( "#t-F164502" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164503" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164504" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164505" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164506" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164507" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164508" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164509" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164510" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164511" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164512" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164513" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164514" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            $( "#t-F164515" ).blur( function() { autoCalculate( arr_F164516, 'F164516', 1, 999999 ); });
+            
+            //F164616
+            var arr_F164616 = ['F164601','F164602','F164603','F164604','F164605','F164606','F164607','F164608',
+                               'F164609','F164610','F164611','F164612','F164613','F164614','F164615'];
+            autoCalculate( arr_F164616, 'F164616', 1, 999999 );
+            $( "#t-F164601" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999999999 ); });
+            $( "#t-F164602" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164603" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164604" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164605" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164606" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164607" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164608" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164609" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164610" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164611" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164612" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164613" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164614" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            $( "#t-F164615" ).blur( function() { autoCalculate( arr_F164616, 'F164616', 1, 999999 ); });
+            
+            $( ".DTFC_Cloned #t-F164804D" ).keyup (function() { $( "#t-F164804D" ).val($( ".DTFC_Cloned #t-F164804D" ).val()); });
+            $( ".DTFC_Cloned #t-F164805E" ).keyup (function() { $( "#t-F164805E" ).val($( ".DTFC_Cloned #t-F164805E" ).val()); });
+            $( ".DTFC_Cloned #t-F164806F" ).keyup (function() { $( "#t-F164806F" ).val($( ".DTFC_Cloned #t-F164806F" ).val()); });
+            $( ".DTFC_Cloned #t-F164807G" ).keyup (function() { $( "#t-F164807G" ).val($( ".DTFC_Cloned #t-F164807G" ).val()); });
+            $( ".DTFC_Cloned #t-F164808H" ).keyup (function() { $( "#t-F164808H" ).val($( ".DTFC_Cloned #t-F164808H" ).val()); });
+            $( ".DTFC_Cloned #t-F164809I" ).keyup (function() { $( "#t-F164809I" ).val($( ".DTFC_Cloned #t-F164809I" ).val()); });
+            $( ".DTFC_Cloned #t-F164810J" ).keyup (function() { $( "#t-F164810J" ).val($( ".DTFC_Cloned #t-F164810J" ).val()); });
+            $( ".DTFC_Cloned #t-F164811K" ).keyup (function() { $( "#t-F164811K" ).val($( ".DTFC_Cloned #t-F164811K" ).val()); });
+            $( ".DTFC_Cloned #t-F164812L" ).keyup (function() { $( "#t-F164812L" ).val($( ".DTFC_Cloned #t-F164812L" ).val()); });
+            $( ".DTFC_Cloned #t-F164813M" ).keyup (function() { $( "#t-F164813M" ).val($( ".DTFC_Cloned #t-F164813M" ).val()); });
+            $( ".DTFC_Cloned #t-F164814N" ).keyup (function() { $( "#t-F164814N" ).val($( ".DTFC_Cloned #t-F164814N" ).val()); });
+            $( ".DTFC_Cloned #t-F164815O" ).keyup (function() { $( "#t-F164815O" ).val($( ".DTFC_Cloned #t-F164815O" ).val()); });
+        }
+        
+        // $(".office_use").hide();
+    </script>
+    <style>
+        table.table-bordered thead tr th {
+            text-align: center;
+            white-space: normal !important;
+        }
+        table.table-bordered thead {
+            border-bottom: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            border-top: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {  
+            vertical-align: bottom;
+        }
+        
+        table.table-bordered thead tr th,
+        table.table-bordered tbody tr td,
+        table.table-bordered tfoot tr td {
+            padding: 5px;
+            line-height: 1.3;
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col,
+        table.table-bordered tbody tr th.first-child-col,
+        table.table-bordered tfoot tr td.first-child-col {
+            width: 180px;
+            min-width: 180px;
+            max-width: 180px;
+            background-color: #f5f5f5;
+            vertical-align: top;
+        }
+        
+        table.table-bordered thead tr th.special-long-col {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        table.datatable-fixed-left div.col-lg-10{
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">16A</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> PENGELUARAN DAN JUALAN DARIPADA AKTIVITI TANAMAN
+                        <br/><span class="text-teal-400 font-size-sm">PRODUCTION AND SALES FROM CROPS ACTIVITIES</span></h6>
+                    </td>
+                </tr>
+                
+             </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive p-1">
+			<table class="table table-bordered datatable-fixed-left" style="width: 100%">
+				<thead>
+			        <tr>
+			            <th rowspan="3" class="first-child-col" style="vertical-align: middle;">
+			                Jenis Tanaman
+			                <br/><span class="text-muted">Type of Crops</span>
+		                </th>
+		                <th colspan="10">
+		                    TAHUN RUJUKAN 2022 /
+                            <span class="text-muted">REFERENCE YEAR 2022</span>
+			            </th>
+			            <th colspan="2" rowspan="2" class="office_use">
+                            UNTUK KEGUNAAN PEJABAT SAHAJA
+                            <br/><span class="text-muted">FOR OFFICE USE ONLY</span>
+			            </th>
+			        </tr>
+		            <tr>
+		                <th rowspan="2">
+		                    # Jenis sistem
+			                <br/><span class="text-muted">Type of system</span>
+		                </th>
+		                <th rowspan="2">
+		                    Keluasan dituai (Hektar) / Polibeg (Unit) / Bongkah (Unit)
+			                <br/><span class="text-muted">Area harvested (Hectares) / Polybags (Unit) / Block (Unit)</span>
+		                </th>
+		                <th rowspan="2">
+		                    Unit Kuantiti (Kg / Tan Metrik / Bil. / dsb.)
+			                <br/><span class="text-muted">Unit of Quantity (Kg / Tonne / No. / etc)</span>
+			            </th>
+    		            <th rowspan="2">
+		                    Jumlah kutipan
+			                <br/><span class="text-muted">Total harvested</span><br><br>
+			                Kuantiti
+			                <br/><span class="text-muted">Quantity</span>
+		                </th>
+		                <th colspan="2">
+		                    Jumlah jualan
+                            <br/><span class="text-muted">Total sales</span>
+			            </th>
+			            <th colspan="2">
+                            Kerugian / kerosakan / lain-lain *
+			                <br/><span class="text-muted">Loss / damaged / others</span>
+			            </th>
+			            <th colspan="2">
+                            Nilai Stok dimiliki
+			                <br/><span class="text-muted">Value of stocks owned</span>
+			            </th>
+			        </tr>
+	                <tr>
+                        <th>
+                            Kuantiti
+			                <br/><span class="text-muted">Quantity</span>
+		                </th>
+		                <th>
+                            Nilai
+			                <br/><span class="text-muted">Value </span>
+			                <br/>RM
+		                </th>
+		                <th>
+                            Kuantiti
+			                <br/><span class="text-muted">Quantity</span>
+		                </th>
+		                <th>
+                            Nilai
+			                <br/><span class="text-muted">Value </span>
+			                <br/>RM
+		                </th>
+		                <th>
+                            Pada awal tahun
+			                <br/><span class="text-muted">As at beginning of year</span>
+			                <br/>RM
+		                </th>
+		                <th>
+                            Pada akhir tahun
+			                <br/><span class="text-muted">As at end of year</span>
+			                <br/>RM
+		                </th>
+                        <th class="office_use">
+                            Kod Unit
+			                <br/><span class="text-muted">Unit Code</span>
+		                </th>
+		                <th class="office_use">
+                           Kod Produk
+			                <br/><span class="text-muted">Product Code</span>
+		                </th>
+		            </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    		                    <div class="col-lg-10">
+    		                        Kelapa Sawit
+    		                        <br/><span class="text-muted">Oil Palm - FFB</span>
+    	                        </div>
+	                        </div>
+		                </td>		
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163901">163901</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163901" name="F163901" class="form-control select-search" selected=answers.F163901}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164001">164001</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164001" name="F164001" value="{{answers.F164001}}">
+						</td>
+						<td>
+		                    <div style="text-align: center;vertical-align: middle;">
+		                        Tan Metrik
+		                        <br/><span class="text-muted">Tonne</span>
+	                        </div>
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164101">164101</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164101" name="F164101" value="{{answers.F164101}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164201">164201</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164201" name="F164201" value="{{answers.F164201}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164301">164301</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="9" id="t-F164301" name="F164301" value="{{answers.F164301}}">
+						</td>
+			            
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164901">164901</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164901" name="F164901" value="{{answers.F164901}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164401">164401</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164401" name="F164401" value="{{answers.F164401}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164501">164501</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164501" name="F164501" value="{{answers.F164501}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164601">164601</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164601" name="F164601" value="{{answers.F164601}}">
+						</td>
+						
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164701">164701</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="10" id="t-F164701" name="F164701" value="08">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164801">164801</a>
+                            </div>
+                            <input class="form-control only-number-pos t_mcpa" type="text" maxlength="10" id="t-F164801" name="F164801" value="0126101001">
+						</td>
+					</tr>	
+					<tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    		                    <div class="col-lg-10">
+    		                        Getah
+    		                        <br/><span class="text-muted">Rubber</span>
+    		                        <div class="row">
+            		                    <div class="col-lg-10">
+            		                        - Susu getah
+    		                                <br/><span class="text-muted">&emsp;Latex</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			              <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163902">163902</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163902" name="F163902" class="form-control select-search" selected=answers.F163902}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164002">164002</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164002" name="F164002" value="{{answers.F164002}}">
+						</td>
+						<td >
+		                    <div style="text-align: center;vertical-align: middle;">
+		                        Tan Metrik
+		                        <br/><span class="text-muted">Tonne</span>
+	                        </div>
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164102">164102</a>
+                            </div>
+    					    <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164102" name="F164102" value="{{answers.F164102}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164202">164202</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164202" name="F164202" value="{{answers.F164202}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164302">164302</a>
+                            </div>
+				            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164302" name="F164302" value="{{answers.F164302}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164902">164902</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164902" name="F164902" value="{{answers.F164902}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164402">164402</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164402" name="F164402" value="{{answers.F164402}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164502">164502</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164502" name="F164502" value="{{answers.F164502}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164602">164602</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164602" name="F164602" value="{{answers.F164602}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164702">164702</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164702" name="F164702" value="08">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164802">164802</a>
+                            </div>
+                            <input class="form-control only-number-pos t_mcpa" type="text" maxlength="10" id="t-F164802" name="F164802" value="0129101001">
+						</td>
+			        </tr>
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+			                    <div class="col-lg-10">
+			                    - Sekerap
+			                    <br/><span class="text-muted">&emsp;Scrap</span>
+			                    </div>
+			                </div>
+		                </td>
+		                <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163903">163903</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163903" name="F163903" class="form-control select-search" selected=answers.F163903}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164003">164003</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164003" name="F164003" value="{{answers.F164003}}">
+						</td>
+						<td >
+		                    <div style="text-align: center;vertical-align: middle;">
+		                        Tan Metrik
+		                        <br/><span class="text-muted">Tonne</span>
+	                        </div>
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164103">164103</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164103" name="F164103" value="{{answers.F164103}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164203">164203</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164203" name="F164203" value="{{answers.F164203}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164303">164303</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164303" name="F164303" value="{{answers.F164303}}">
+						</td>
+						<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164903">164903</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164903" name="F164903" value="{{answers.F164903}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164403">164403</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164403" name="F164403" value="{{answers.F164403}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164503">164503</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164503" name="F164503" value="{{answers.F164503}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164603">164603</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164603" name="F164603" value="{{answers.F164603}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164703">164703</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164703" name="F164703" value="08">
+						</td>
+			            
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164803">164803</a>
+                            </div>
+                            <input class="form-control only-number-pos t_mcpa" type="text" maxlength="10" id="t-F164803" name="F164803" value="0129101002">
+						</td>
+					</tr>	
+					<tr>
+			            <td class="first-child-col">
+		                    Lain-lain (nyatakan):
+		                    <br/><span class="text-muted">Others (specify):</span>
+	                        <br/><br/>
+	                        <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164804D">164804D</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164804D" name="F164804D" value="{{answers.F164804D}}">
+		                </td>
+			           	<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163904">163904</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163904" name="F163904" class="form-control select-search" selected=answers.F163904}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164004">164004</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164004" name="F164004" value="{{answers.F164004}}">
+						</td>
+						<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164704D">164704D</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164704D" name="F164704D" class="form-control select-search" selected=answers.F164704D}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164104">164104</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164104" name="F164104" value="{{answers.F164104}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164204">164204</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164204" name="F164204" value="{{answers.F164204}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164304">164304</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164304" name="F164304" value="{{answers.F164304}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164904">164904</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164904" name="F164904" value="{{answers.F164904}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164404">164404</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164404" name="F164404" value="{{answers.F164404}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164504">164504</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164504" name="F164504" value="{{answers.F164504}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164604">164604</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164604" name="F164604" value="{{answers.F164604}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164704">164704</a>
+                            </div>
+                            <!--<input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164704" name="F164704" value="{{answers.F164704}}">-->
+                            {{select table="view_kod_unit" id="s-F164704" name="F164704" class="form-control select-search" selected=answers.F164704}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164804">164804</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164804" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164804}}
+						</td>
+					</tr>	
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164805E">164805E</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164805E" name="F164805E" value="{{answers.F164805E}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163905">163905</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163905" name="F163905" class="form-control select-search" selected=answers.F163905}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164005">164005</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164005" name="F164005" value="{{answers.F164005}}">
+						</td>
+						<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164705E">164705E</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164705E" name="F164705E" class="form-control select-search" selected=answers.F164705E}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164105">164105</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164105" name="F164105" value="{{answers.F164105}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164205">164205</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164205" name="F164205" value="{{answers.F164205}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164305">164305</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164305" name="F164305" value="{{answers.F164305}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164905">164905</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164905" name="F164905" value="{{answers.F164905}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164405">164405</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164405" name="F164405" value="{{answers.F164405}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164505">164505</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164505" name="F164505" value="{{answers.F164505}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164605">164605</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164605" name="F164605" value="{{answers.F164605}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164705">164705</a>
+                            </div>
+                            <!--<input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164705" name="F164705" value="{{answers.F164705}}">-->
+                            {{select table="view_kod_unit" id="s-F164705" name="F164705" class="form-control select-search" selected=answers.F164705}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164805">164805</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164805" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164805}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164806F">164806F</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164806F" name="F164806F" value="{{answers.F164806F}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163906">163906</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163906" name="F163906" class="form-control select-search" selected=answers.F163906}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164006">164006</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164006" name="F164006" value="{{answers.F164006}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164706F">164706F</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164706F" name="F164706F" class="form-control select-search" selected=answers.F164706F}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164106">164106</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164106" name="F164106" value="{{answers.F164106}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164206">164206</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164206" name="F164206" value="{{answers.F164206}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164306">164306</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164306" name="F164306" value="{{answers.F164306}}">
+						</td>
+			            
+			             <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164906">164906</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164906" name="F164906" value="{{answers.F164906}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164406">164406</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164406" name="F164406" value="{{answers.F164406}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164506">164506</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164506" name="F164506" value="{{answers.F164506}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164606">164606</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164606" name="F164606" value="{{answers.F164606}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164706">164706</a>
+                            </div>
+                            <!--<input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164706" name="F164706" value="{{answers.F164706}}">-->
+                            {{select table="view_kod_unit" id="s-F164706" name="F164706" class="form-control select-search" selected=answers.F164706}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164806">164806</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164806" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164806}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164807G">164807G</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164807G" name="F164807G" value="{{answers.F164807G}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163907">163907</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163907" name="F163907" class="form-control select-search" selected=answers.F163907}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164007">164007</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164007" name="F164007" value="{{answers.F164007}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164707G">164707G</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164707G" name="F164707G" class="form-control select-search" selected=answers.F164707G}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164107">164107</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164107" name="F164107" value="{{answers.F164107}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164207">164207</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164207" name="F164207" value="{{answers.F164207}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164307">164307</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164307" name="F164307" value="{{answers.F164307}}">
+						</td>
+			           <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164907">164907</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164907" name="F164907" value="{{answers.F164907}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164407">164407</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164407" name="F164407" value="{{answers.F164407}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164507">164507</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164507" name="F164507" value="{{answers.F164507}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164607">164607</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164607" name="F164607" value="{{answers.F164607}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164707">164707</a>
+                            </div>
+                            <!--<input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164707" name="F164707" value="{{answers.164707}}">-->
+                            {{select table="view_kod_unit" id="s-F164707" name="F164707" class="form-control select-search" selected=answers.F164707}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164807">164807</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164807" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164807}}
+						</td>
+					</tr>
+                    <tr>
+			            <td class="first-child-col">
+			                 <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164808H">164808H</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164808H" name="F164808H" value="{{answers.F164808H}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163908">163908</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163908" name="F163908" class="form-control select-search" selected=answers.F163908}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164008">164008</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164008" name="F164008" value="{{answers.F164008}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164708H">164708H</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164708H" name="F164708H" class="form-control select-search" selected=answers.F164708H}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164108">164108</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164108" name="F164108" value="{{answers.F164108}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164208">164208</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164208" name="F164208" value="{{answers.F164208}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164308">164308</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164308" name="F164308" value="{{answers.F164308}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164908">164908</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164908" name="F164908" value="{{answers.F164908}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164408">164408</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164408" name="F164408" value="{{answers.F164408}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164508">164508</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164508" name="F164508" value="{{answers.F164508}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164608">164608</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164608" name="F164608" value="{{answers.F164608}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164708">164708</a>
+                            </div>
+                            <!--<input class= "form-control" type="text" maxlength="10" id="t-F164708" name="F164708" value="{{answers.F164708}}">-->
+                            {{select table="view_kod_unit" id="s-F164708" name="F164708" class="form-control select-search" selected=answers.F164708}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164808">164808</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164808" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164808}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			               <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164809I">164809I</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164809I" name="F164809I" value="{{answers.F164809I}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163909">163909</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163909" name="F163909" class="form-control select-search" selected=answers.F163909}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164009">164009</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164009" name="F164009" value="{{answers.F164009}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164709I">164709I</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164709I" name="F164709I" class="form-control select-search" selected=answers.F164709I}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164109">164109</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164109" name="F164109" value="{{answers.F164109}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164209">164209</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164209" name="F164209" value="{{answers.F164209}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164309">164309</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164309" name="F164309" value="{{answers.F164309}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164909">164909</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164909" name="F164909" value="{{answers.F164909}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164409">164409</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164409" name="F164409" value="{{answers.F164409}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164509">164509</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164509" name="F164509" value="{{answers.F164509}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164609">164609</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164609" name="F164609" value="{{answers.F164609}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164709">164709</a>
+                            </div>
+                            <!--<input class="form-control only-number-pos" type="text" maxlength="10" id="t-F164709" name="F164709" value="{{answers.F164709}}">-->
+                            {{select table="view_kod_unit" id="s-F164709" name="F164709" class="form-control select-search" selected=answers.F164709}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164809">164809</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164809" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164809}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164810J">164810J</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164810J" name="F164810J" value="{{answers.F164810J}}">
+		                </td>			
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163910">163910</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163910" name="F163910" class="form-control select-search" selected=answers.F163910}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164010">164010</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164010" name="F164010" value="{{answers.F164010}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164710J">164710J</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164710J" name="F164710J" class="form-control select-search" selected=answers.F164710J}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164110">164110</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164110" name="F164110" value="{{answers.F164110}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164210">164210</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164210" name="F164210" value="{{answers.F164210}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164310">164310</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="9" id="t-F164310" name="F164310" value="{{answers.F164310}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164910">164910</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164910" name="F164910" value="{{answers.F164910}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164410">164410</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164410" name="F164410" value="{{answers.F164410}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164510">164510</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164510" name="F164510" value="{{answers.F164510}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164610">164610</a>
+                            </div>
+                            <input class="form-control" type="text" maxlength="6" id="t-F164610" name="F164610" value="{{answers.F164610}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164710">164710</a>
+                            </div>
+                            <!--<input class= "form-control" type="text" maxlength="10" id="t-F164710" name="F164710" value="{{answers.F164710}}">-->
+                            {{select table="view_kod_unit" id="s-F164710" name="F164710" class="form-control select-search" selected=answers.F164710}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164810">164810</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164810" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164810}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164811K">164811K</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164811K" name="F164811K" value="{{answers.F164811K}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163911">163911</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163911" name="F163911" class="form-control select-search" selected=answers.F163911}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164011">164011</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164011" name="F164011" value="{{answers.F164011}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164711K">164711K</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164711K" name="F164711K" class="form-control select-search" selected=answers.F164711K}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164111">164111</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-164111" name="F164111" value="{{answers.F164111}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164211">164211</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164211" name="F164211" value="{{answers.F164211}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164311">164311</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="9" id="t-F164311" name="F164311" value="{{answers.F164311}}">
+						</td>
+			           <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164911">164911</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164911" name="F164911" value="{{answers.F164911}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164411">164411</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164411" name="F164411" value="{{answers.F164411}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164511">164511</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164511" name="F164511" value="{{answers.F164511}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164611">164611</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164611" name="F164611" value="{{answers.F164611}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164711">164711</a>
+                            </div>
+                            <!--<input class= "form-control only-number-pos" type="text" maxlength="10" id="t-F164711" name="F164711" value="{{answers.F164711}}">-->
+                            {{select table="view_kod_unit" id="s-F164711" name="F164711" class="form-control select-search" selected=answers.F164711}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164811">164811</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164811" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164811}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164812L">164812L</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164812L" name="F164812L" value="{{answers.F164812L}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163912">163912</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163912" name="F163912" class="form-control select-search" selected=answers.F163912}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164012">164012</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164012" name="F164012" value="{{answers.F164012}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164712L">164712L</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164712L" name="F164712L" class="form-control select-search" selected=answers.F164712L}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164112">164112</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164112" name="F164112" value="{{answers.F164112}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164212">164212</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164212" name="F164212" value="{{answers.F164212}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164312">164312</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164312" name="F164312" value="{{answers.F164312}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164912">164912</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164912" name="F1649121" value="{{answers.F164912}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164412">164412</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164412" name="F164412" value="{{answers.F164412}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164512">164512</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164512" name="F164512" value="{{answers.F164512}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164612">164612</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164612" name="F164612" value="{{answers.F164612}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164712">164712</a>
+                            </div>
+                            <!--<input class= "form-control" type="text" maxlength="10" id="t-F164712" name="F164712" value="{{answers.F164712}}">-->
+                            {{select table="view_kod_unit" id="s-F164712" name="F164712" class="form-control select-search" selected=answers.F164712}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164812">164812</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164812" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164812}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164813M">164813M</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164813M" name="F164813M" value="{{answers.F164813M}}">
+		                </td>				
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163913">163913</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163913" name="F163913" class="form-control select-search" selected=answers.F163913}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164013">164013</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164013" name="F164013" value="{{answers.F164013}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164713M">164713M</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164713M" name="F164713M" class="form-control select-search" selected=answers.F164713M}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164113">164113</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164113" name="F164113" value="{{answers.F164113}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164213">164213</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164213" name="F164213" value="{{answers.F164213}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164313">164313</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="9" id="t-F164313" name="F164313" value="{{answers.F164313}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164913">164913</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164913" name="F164913" value="{{answers.F164913}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164413">164413</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164413" name="F164413" value="{{answers.F164413}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164513">164513</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164513" name="F164513" value="{{answers.F164513}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164613">164613</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164613" name="F164613" value="{{answers.F164613}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164713">164713</a>
+                            </div>
+                            <!--<input class= "form-control" type="text" maxlength="10" id="t-F164713" name="F164713" value="{{answers.F164713}}">-->
+                            {{select table="view_kod_unit" id="s-F164713" name="F164713" class="form-control select-search" selected=answers.F164713}}
+						</td> 
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164813">164813</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164813" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164813}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164814N">164814N</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164814N" name="F164814N" value="{{answers.F164814N}}">
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163914">163914</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163914" name="F163914" class="form-control select-search" selected=answers.F163914}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164014">164014</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164014" name="F164014" value="{{answers.F164014}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164714N">164714N</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164714N" name="F164714N" class="form-control select-search" selected=answers.F164714N}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164114">164114</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164114" name="F164114" value="{{answers.F164114}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164214">164214</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164214" name="F164214" value="{{answers.F164214}}"> 
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164314">164314</a>
+                            </div>
+                            <input class= "form-control only-number-pos" type="text" maxlength="9" id="t-F164314" name="F164314" value="{{answers.F164314}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164914">164914</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164914" name="F164914" value="{{answers.F164914}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164414">164414</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164414" name="F164414" value="{{answers.F164414}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164514">164514</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164514" name="F164514" value="{{answers.F164514}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164614">164614</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164614" name="F164614" value="{{answers.F164614}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164714">164714</a>
+                            </div>
+                            <!--<input class= "form-control" type="text" maxlength="10" id="t-F164714" name="F164714" value="{{answers.F164714}}">-->
+                            {{select table="view_kod_unit" id="s-F164714" name="F164714" class="form-control select-search" selected=answers.F164714}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164814">164814</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164814" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164814}}
+						</td>
+					</tr>
+					<tr>
+			            <td class="first-child-col">
+			                <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164815O">164815O</a>
+                            </div>
+			                <input class="form-control" type="text" maxlength="50" id="t-F164815O" name="F164815O" value="{{answers.F164815O}}">
+		                </td>				
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-163915">163915</a>
+                            </div>
+                            {{select table="view_kod_sistem_tanaman" id="s-F163915" name="F163915" class="form-control select-search" selected=answers.F163915}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164015">164015</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164015" name="F164015" value="{{answers.F164015}}">
+						</td>
+						<td>
+						    <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164715O">164715O</a>
+                            </div>
+							{{select table="view_kod_unit" id="s-F164715O" name="F164715O" class="form-control select-search" selected=answers.F164715O}}
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164115">164115</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164115" name="F164115" value="{{answers.F164115}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164215">164215</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="7" id="t-F164215" name="F164215" value="{{answers.F164215}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164315">164315</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164315" name="F164315" value="{{answers.F164315}}">
+						</td>
+			           <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164915">164915</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164915" name="F164915" value="{{answers.F164915}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164415">164415</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164415" name="F164415" value="{{answers.F164415}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164515">164515</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164515" name="F164515" value="{{answers.F164515}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164615">164615</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164615" name="F164615" value="{{answers.F164615}}">
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164715">164715</a>
+                            </div>
+                            {{select table="view_kod_unit" id="s-F164715" name="F164715" class="form-control select-search" selected=answers.F164715}}
+						</td>
+			            <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164815">164815</a>
+                            </div>
+                            {{select table="view_msic_mcpa" filter="kp in ('101')" name="F164815" value="mcpa_code" label="mcpa" class="form-control" selected=answers.F164815}}
+						</td>
+					</tr>
+				</tbody>
+			    <tfoot>
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    		                    <div class="col-lg-10">
+    		                        JUMLAH
+    		                        <br/><span class="text-muted">TOTAL</span>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td></td>
+			            <td>
+			             <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164016">164016</a>
+                            </div>
+							<input class="form-control only-number-pos-dec" type="text" maxlength="7" id="t-F164016" name="F164016" value="{{answers.F164016}}">
+						</td>
+						<td></td>
+			            <td></td>
+			            <td></td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164316">164316</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" maxlength="9" id="t-F164316" name="F164316" value="{{answers.F164316}}">
+						</td>
+			            <td></td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164416">164416</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="8" id="t-F164416" name="F164416" value="{{answers.F164416}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164516">164516</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164516" name="F164516" value="{{answers.F164516}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-164616">164616</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="6" id="t-F164616" name="F164616" value="{{answers.F164616}}">
+						</td>
+			            <td class="office_use"></td>
+			            <td class="office_use"></td>
+		            </tr>
+				</tfoot>
+		    </table>
+        </div>
+        <footer class="p-1">
+            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg mb-1">
+                <table style="width: 100%">
+                    <tr>
+            	        <td rowspan="3" style="vertical-align: top;">
+            	            <!--<div class="font-weight-semibold"># Jenis sistem tanaman :</div>
+                            <span class="text-muted">&emsp;Type of crops system</span>-->
+            	            <span class="font-weight-semibold"># Jenis sistem tanaman :</span>
+                            <br/>&emsp;Type of crops system
+            	        </td>
+            	        <td>
+            	            <span class="font-weight-semibold">01 - Fertigasi dengan Struktur Perlindungan Hujan /</span>
+                            <br/>&emsp;&ensp;&ensp;Fertigation with Greenhouse Structure
+            	        </td>
+            	        <td>
+            	            <span class="font-weight-semibold">02 - Fertigasi tanpa Struktur Perlindungan Hujan /</span>
+                            <br/>&emsp;&ensp;&ensp;Fertigation without Greenhouse Structure
+            	        </td>
+            	    </tr>
+            	    <tr>
+            	       <td>
+            	           <span class="font-weight-semibold">03 - Akuaponik /</span> Aquaponic
+            	        </td>
+            	        <td>
+            	            <span class="font-weight-semibold">04 - Hidroponik /</span> Hydroponic
+            	        </td>
+            	    </tr>
+            	    <tr>
+            	       <td>
+            	           <span class="font-weight-semibold">05 - Tradisional / Konvensional</span> Traditional / Conventional
+            	        </td>
+            	        <td>
+            	            <span class="font-weight-semibold">09 - Lain-lain (nyatakan) /</span> Others (specify)
+            	        </td>
+            	    </tr>
+    		    </table>
+    	    </div>
+    	    <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg mb-1">
+    		    <!--<span class="font-weight-semibold">Nota /</span> Notes:-->
+    		    <span class="font-weight-semibold">** Jumlah nilai di medan 164316 mesti sama dengan medan 084001 yang dilaporkan dalam Soalan 8 perkara 8.1 (a) di muka surat 14.</span>
+    		    <br/>&emsp;Total of field 164316 must be equal to field 084001 as reported in Question 8 item 8.1 (a) on page 14.
+    		    <br/> <span class="font-weight-semibold">* Termasuk untuk kegunaan sendiri atau pindah ke pihak lain</span>
+		        <br/>&emsp;Includes own consumption or transfered to another party
+    		    <!--<br/> <span class="font-weight-semibold">* Termasuk untuk kegunaan sendiri atau dipindahkan ke pihak lain</span>
+    		    <br/>&emsp;Includes own consumption or transfered to another party-->
+    	    </div>
+        </footer>
+    </div>
+</body>
+</html>

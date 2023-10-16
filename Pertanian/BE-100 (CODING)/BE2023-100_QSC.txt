@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <script type="text/javascript">
+            $(function() {
+                // Left fixed column example
+                $('.datatable-fixed-left').DataTable({
+                    columnDefs: [
+                        { 
+                            orderable: false,
+                            targets: [5]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [0]
+                        },
+                        { 
+                            width: "300px",
+                            targets: [1]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [5, 6]
+                        },
+                        { 
+                            width: "100px",
+                            targets: [4]
+                        }
+                    ],
+                    scrollX: true,
+                    scrollY: '350px',
+                    scrollCollapse: true,
+                    fixedColumns: true
+                });
+            });
+            
+            function initForm(){
+                
+                // C1
+                //readonly
+                $( "input#c-F330001" ).prop( "readonly" , true);
+                $( "input#c-F330002" ).prop( "readonly" , true);
+                $( "input#c-F330003" ).prop( "readonly" , true);   
+                $( "input#c-F330004" ).prop( "readonly" , true);   
+                
+                // C2
+                //readonly
+                $( "input#c-F330005" ).prop( "readonly" , true);
+                $( "input#c-F330006" ).prop( "readonly" , true);
+                $( "input#c-F330007" ).prop( "readonly" , true);
+                $( "input#c-F330008" ).prop( "readonly" , true);
+                $( "input#c-F330009" ).prop( "readonly" , true);
+                
+                // C3
+                //radonly
+                $( "input#c-F3300010" ).prop( "readonly" , true);
+                $( "input#c-F3300011" ).prop( "readonly" , true);
+                $( "input#c-F3300012" ).prop( "readonly" , true);
+                $( "input#c-F3300013" ).prop( "readonly" , true);
+                
+                // C4
+                //readonly
+                $( "input#c-F330014" ).prop( "readonly" , true);
+                $( "input#c-F330015" ).prop( "readonly" , true);
+                $( "input#c-F3300016" ).prop( "readonly" , true);
+                $( "input#c-F3300017" ).prop( "readonly" , true);
+                $( "input#c-F3300018" ).prop( "readonly" , true);
+                
+                // C5
+                //readonly
+                $( "input#c-F330019" ).prop( "readonly" , true);
+                $( "input#c-F330020" ).prop( "readonly" , true);
+                $( "input#c-F3300021" ).prop( "readonly" , true);
+                $( "input#c-F3300022" ).prop( "readonly" , true);
+                $( "input#c-F3300023" ).prop( "readonly" , true);
+                $( "input#c-F3300024" ).prop( "readonly" , true);
+                $( "input#c-F3300025" ).prop( "readonly" , true);
+                
+                // C7
+                //If user pick yes
+                var arr_F330035_2 = ['#t-F330036','#t-F330037','#t-F330038','#t-F330039','#t-F330040','#t-F330041','#t-F330042','#t-F330043','#t-F330044','#t-F330045','#t-F330046','#t-F330047','#t-F330048','#t-F330049','#t-F330050','#t-F330051','#t-F330052','#t-F330053','#t-F330054','#t-F330055','#t-F330056'];
+                chkDisableT("#r-F330035_2", "#r-F330035_1", arr_F330035_2);
+                $( "#r-F330035_1" ).click( function() { 
+                    chkDisableT("#r-F330035_2", "#r-F330035_1", arr_F330035_2);
+                });
+                // If user pick no
+                $( "#r-F330035_2" ).click( function() { 
+                    chkDisableT("#r-F330035_2", "#r-F330035_1", arr_F330035_2);
+                    $('#t-F330036').val('');
+                    $('#t-F330037').val('');
+                    $('#t-F330038').val('');
+                    $('#t-F330039').val('');
+                    $('#t-F330040').val('');
+                    $('#t-F330041').val('');
+                    $('#t-F330042').val('');
+                    $('#t-F330043').val('');
+                    $('#t-F330044').val('');
+                    $('#t-F330045').val('');
+                    $('#t-F330046').val('');
+                    $('#t-F330047').val('');
+                    $('#t-F330048').val('');
+                    $('#t-F330049').val('');
+                    $('#t-F330050').val('');
+                    $('#t-T330001').val('0');
+                    $('#t-F330051').val('');
+                    $('#t-F330052').val('');
+                    $('#t-F330053').val('');
+                    $('#t-F330054').val('');
+                    $('#t-F330055').val('');
+                    $('#t-F330056').val('');
+                });
+                
+                // C11
+                var arr_T330001 = ['F330048','F330049','F330050'];
+                calPercentage( arr_T330001, 'T330001' );
+                $( "#t-F330048" ).blur( function() { calPercentage( arr_T330001, 'T330001' ); });
+                $( "#t-F330049" ).blur( function() { calPercentage( arr_T330001, 'T330001' ); });
+                $( "#t-F330050" ).blur( function() { calPercentage( arr_T330001, 'T330001' ); });
+                
+                
+                // $("#uniform-r-F330035_1").addClass("border-danger text-danger");
+                // $("#uniform-r-F330035_2").addClass("border-danger text-danger");
+            
+                var arr_F330004 = ['#c-F330001','#c-F330002','#c-F330003'];
+                chkBoxDisable("#c-F330004", arr_F330004);
+                $( "#c-F330004" ).click( function() {
+                    chkBoxDisable("#c-F330004", arr_F330004);
+                });
+                var arr_F330001 = ['#c-F330004'];
+                chkBoxDisable2("#c-F330001", arr_F330001, arr_F330004);
+                $( "#c-F330001" ).click( function() {
+                    chkBoxDisable2("#c-F330001", arr_F330001, arr_F330004);
+                });
+                var arr_F330002 = ['#c-F330004'];
+                chkBoxDisable2("#c-F330002", arr_F330002, arr_F330004);
+                $( "#c-F330002" ).click( function() {
+                    chkBoxDisable2("#c-F330002", arr_F330002, arr_F330004);
+                });
+                var arr_F330003 = ['#c-F330004'];
+                chkBoxDisable2("#c-F330003", arr_F330003, arr_F330004);
+                $( "#c-F330003" ).click( function() {
+                    chkBoxDisable2("#c-F330003", arr_F330003, arr_F330004);
+                });
+            
+                var arr_F330009 = ['#c-F330005','#c-F330006','#c-F330007','#c-F330008'];
+                chkBoxDisable("#c-F330009", arr_F330009);
+                $( "#c-F330009" ).click( function() {
+                    chkBoxDisable("#c-F330009", arr_F330009);
+                });
+                var arr_F330005 = ['#c-F330009'];
+                chkBoxDisable2("#c-F330005", arr_F330005, arr_F330009);
+                $( "#c-F330005" ).click( function() {
+                    chkBoxDisable2("#c-F330005", arr_F330005, arr_F330009);
+                });
+                var arr_F330006 = ['#c-F330009'];
+                chkBoxDisable2("#c-F330006", arr_F330006, arr_F330009);
+                $( "#c-F330006" ).click( function() {
+                    chkBoxDisable2("#c-F330006", arr_F330006, arr_F330009);
+                });
+                var arr_F330007 = ['#c-F330009'];
+                chkBoxDisable2("#c-F330007", arr_F330007, arr_F330009);
+                $( "#c-F330007" ).click( function() {
+                    chkBoxDisable2("#c-F330007", arr_F330007, arr_F330009);
+                });
+                var arr_F330008 = ['#c-F330009'];
+                chkBoxDisable2("#c-F330008", arr_F330008, arr_F330009);
+                $( "#c-F330008" ).click( function() {
+                    chkBoxDisable2("#c-F330008", arr_F330008, arr_F330009);
+                });
+                
+                var arr_F330013 = ['#c-F330010','#c-F330011','#c-F330012','#c-F330057'];
+                chkBoxDisable("#c-F330013", arr_F330013);
+                $( "#c-F330013" ).click( function() {
+                    chkBoxDisable("#c-F330013", arr_F330013);
+                });
+                var arr_F330010 = ['#c-F330013'];
+                chkBoxDisable2("#c-F330010", arr_F330010, arr_F330013);
+                $( "#c-F330010" ).click( function() {
+                    chkBoxDisable2("#c-F330010", arr_F330010, arr_F330013);
+                });
+                var arr_F330011 = ['#c-F330013'];
+                chkBoxDisable2("#c-F330011", arr_F330011, arr_F330013);
+                $( "#c-F330011" ).click( function() {
+                    chkBoxDisable2("#c-F330011", arr_F330011, arr_F330013);
+                });
+                var arr_F330012 = ['#c-F330013'];
+                chkBoxDisable2("#c-F330012", arr_F330012, arr_F330013);
+                $( "#c-F330012" ).click( function() {
+                    chkBoxDisable2("#c-F330012", arr_F330012, arr_F330013);
+                });
+                 var arr_F330057 = ['#c-F330013'];
+                chkBoxDisable2("#c-F330057", arr_F330012, arr_F330013);
+                $( "#c-F330057" ).click( function() {
+                    chkBoxDisable2("#c-F330057", arr_F330057, arr_F330013);
+                });
+            
+                var arr_F330018 = ['#c-F330014','#c-F330015','#c-F330016','#c-F330017'];
+                chkBoxDisable("#c-F330018", arr_F330018);
+                $( "#c-F330018" ).click( function() {
+                    chkBoxDisable("#c-F330018", arr_F330018);
+                });
+                var arr_F330014 = ['#c-F330018'];
+                chkBoxDisable2("#c-F330014", arr_F330014, arr_F330018);
+                $( "#c-F330014" ).click( function() {
+                    chkBoxDisable2("#c-F330014", arr_F330014, arr_F330018);
+                });
+                var arr_F330015 = ['#c-F330018'];
+                chkBoxDisable2("#c-F330015", arr_F330015, arr_F330018);
+                $( "#c-F330015" ).click( function() {
+                    chkBoxDisable2("#c-F330015", arr_F330015, arr_F330018);
+                });
+                var arr_F330016 = ['#c-F330018'];
+                chkBoxDisable2("#c-F330016", arr_F330016, arr_F330018);
+                $( "#c-F330016" ).click( function() {
+                    chkBoxDisable2("#c-F330016", arr_F330016, arr_F330018);
+                });
+                var arr_F330017 = ['#c-F330018'];
+                chkBoxDisable2("#c-F330017", arr_F330017, arr_F330018);
+                $( "#c-F330017" ).click( function() {
+                    chkBoxDisable2("#c-F330017", arr_F330017, arr_F330018);
+                });
+            
+                var arr_F330025 = ['#c-F330019','#c-F330020','#c-F330021','#c-F330022','#c-F330023','#c-F330024'];
+                chkBoxDisable("#c-F330025", arr_F330025);
+                $( "#c-F330025" ).click( function() {
+                    chkBoxDisable("#c-F330025", arr_F330025);
+                });
+                var arr_F330019 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330019", arr_F330019, arr_F330025);
+                $( "#c-F330019" ).click( function() {
+                    chkBoxDisable2("#c-F330019", arr_F330019, arr_F330025);
+                });
+                var arr_F330020 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330020", arr_F330020, arr_F330025);
+                $( "#c-F330020" ).click( function() {
+                    chkBoxDisable2("#c-F330020", arr_F330020, arr_F330025);
+                });
+                var arr_F330021 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330021", arr_F330021, arr_F330025);
+                $( "#c-F330021" ).click( function() {
+                    chkBoxDisable2("#c-F330021", arr_F330021, arr_F330025);
+                });
+                var arr_F330022 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330022", arr_F330022, arr_F330025);
+                $( "#c-F330022" ).click( function() {
+                    chkBoxDisable2("#c-F330022", arr_F330022, arr_F330025);
+                });
+                var arr_F330023 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330023", arr_F330023, arr_F330025);
+                $( "#c-F330023" ).click( function() {
+                    chkBoxDisable2("#c-F330023", arr_F330023, arr_F330025);
+                });
+                var arr_F330024 = ['#c-F330025'];
+                chkBoxDisable2("#c-F330024", arr_F330024, arr_F330025);
+                $( "#c-F330024" ).click( function() {
+                    chkBoxDisable2("#c-F330024", arr_F330024, arr_F330025);
+                });
+            }
+
+        </script>
+        <style>
+            table.table-bordered thead {
+                background-color: #f5f5f5;
+            }
+            table.table-bordered tbody tr td {
+                vertical-align: middle;
+            }
+            table.table-bordered tbody tr td {
+                vertical-align: middle;
+            }
+            table.table-bordered thead tr th.first-child-col,
+            table.table-bordered tbody tr td.first-child-col,
+            table.table-bordered tfoot tr td.first-child-col {
+            background-color: #f5f5f5;
+            }
+        </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="card-header alpha-teal header-elements-inline">
+      <table class="table">
+        <tr>
+          <td style="width:1%">
+            <button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+              <div class="font-size-lg font-weight-bold">C</div>
+            </button>
+          </td>
+          <td>
+            <h6 class="text-teal-800">INOVASI DAN PENYELIDIKAN & PEMBANGUNAN <br />
+              <span class="text-teal-400 font-size-sm">INNOVATION AND RESEARCH & DEVELOPMENT</span>
+            </h6>
+          </td>
+        </tr>
+      </table>
+      <div class="header-elements header-custom"></div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th style="width: 2%;">Seksyen <br />
+              <span class="text-muted">Section</span>
+            </th>
+            <th>Keterangan <br />
+              <span class="text-muted">Description</span>
+            </th>
+            <th style="width: 10%;">No Medan <br />
+              <span class="text-muted">Field No</span>
+            </th>
+            <th class="text-center" style="width: 30%;">
+              <i class="icon-arrow-down12"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center" rowspan="4">
+              <h6 class="mb-0">C.1</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td rowspan="4">
+              <div class="font-weight-semibold">Adakah pertubuhan ini mematuhi sebarang pengiktirafan tempatan dan / atau antarabangsa? (Boleh pilih lebih daripada satu)</div>
+              <span class="text-muted">Did this establishment comply with any local and / or international accreditation? (May choose more than one)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330001">330001</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Tempatan (cth. Amalan Peningkatan Kualiti (APK), Pensijilan Jenama Malaysia, Skim Organik Malaysia (SOM), MeSTI (Makanan Selamat Tanggungjawab Industri) dsb.) <br />
+                    <span class="text-muted">Local (e.g.: Quality Improvement Practice, National Mark of Malaysian Brand, Malaysia Organic Scheme (SOM), MeSTI (Makanan Selamat Tanggungjawab Industri) etc.)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330001" name="F330001" value="1" {{#eq answers.F330001 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330002">330002</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Antarabangsa <br />
+                    <span class="text-muted">International (e.g. ISO. HACCP, GMP, GVHP, 5S etc.)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330002" name="F330002" value="1" {{#eq answers.F330002 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330003">330003</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Halal <br />
+                    <span class="text-muted">Halal</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330003" name="F330003" value="1" {{#eq answers.F330003 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330004">330004</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Tiada <br />
+                    <span class="text-muted">None</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330004" name="F330004" value="1" {{#eq answers.F330004 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="5">
+              <h6 class="mb-0">C.2</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td rowspan="5">
+              <div class="font-weight-semibold">Adakah pertubuhan ini mempunyai Sistem Perlindungan Harta Intelek (HI)? (Boleh pilih lebih daripada satu)</div>
+              <span class="text-muted">Did this establishment have any Intellectual Property (IP) Protection System? (May choose more than one)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330005">330005</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Paten <br />
+                    <span class="text-muted">Patent</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330005" name="F330005" value="1" {{#eq answers.F330005 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330006">330006</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Cap dagangan (termasuk: Jenama yang didaftarkan / dilindungi) <br />
+                    <span class="text-muted">Trademark (include: Registered / protected brand name)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330006" name="F330006" value="1" {{#eq answers.F330006 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330007">330007</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Hakcipta <br />
+                    <span class="text-muted">Copyright</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330007" name="F330007" value="1" {{#eq answers.F330007 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330008">330008</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Lain-lain (cth. Reka bentuk perindustrian, Petunjuk geografi, Reka bentuk susun atur litar bersepadu) <br />
+                    <span class="text-muted">Others (e.g. Industrial design, Geographical indication, Layout - Design of integrated circuit layout)</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330008" name="F330008" value="1" {{#eq answers.F330008 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330009">330009</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (e) Tiada <br />
+                    <span class="text-muted">None</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330009" name="F330009" value="1" {{#eq answers.F330009 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="5">
+              <h6 class="mb-0">C.3</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td rowspan="5">
+              <div class="font-weight-semibold">Adakah pertubuhan ini menerima bantuan nasihat / teknikal dari pihak berikut? (Boleh pilih lebih daripada satu)</div>
+              <span class="text-muted">Did this establishment received advice / technical assistance from the following parties? (May choose more than one)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330010">330010</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Agensi kerajaan <br />
+                    <span class="text-muted">Government agencies</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330010" name="F330010" value="1" {{#eq answers.F330010 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330011">330011</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Institusi Pengajian Tinggi <br />
+                    <span class="text-muted">Institution of Higher Education</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330011" name="F330011" value="1" {{#eq answers.F330011 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330012">330012</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Swasta <br />
+                    <span class="text-muted">Private</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330012" name="F330012" value="1" {{#eq answers.F330012 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+           <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330057">330057</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Agensi Antarabangsa <br />
+                    <span class="text-muted">International Agencies</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330057" name="F330057" value="1" {{#eq answers.F330057 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330013">330013</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (e) Tiada <br />
+                    <span class="text-muted">None</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330013" name="F330013" value="1" {{#eq answers.F330013 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="5">
+              <h6 class="mb-0">C.4</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td rowspan="5">
+              <div class="font-weight-semibold">Adakah pertubuhan ini memperkenalkan sebarang inovasi baharu atau penambahbaikan nyata dalam tahun kewangan / rujukan 2022? (Boleh pilih lebih daripada satu)</div>
+              <span class="text-muted">Did this establishment introduced any new or significantly improved innovations in the financial / reference year 2022? (May choose more than one)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330014">330014</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Inovasi produk <br />
+                    <span class="text-muted">Product innovations</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330014" name="F330014" value="1" {{#eq answers.F330014 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330015">330015</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Inovasi proses <br />
+                    <span class="text-muted">Process innovations</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330015" name="F330015" value="1" {{#eq answers.F330015 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330016">330016</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Inovasi organisasi <br />
+                    <span class="text-muted">Organisational innovations</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330016" name="F330016" value="1" {{#eq answers.F330016 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330017">330017</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Inovasi pemasaran <br />
+                    <span class="text-muted">Marketing innovations</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330017" name="F330017" value="1" {{#eq answers.F330017 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330018">330018</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (e) Tiada <br />
+                    <span class="text-muted">None</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330018" name="F330018" value="1" {{#eq answers.F330018 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="7">
+              <h6 class="mb-0">C.5</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td rowspan="7">
+              <div class="font-weight-semibold">Adakah pertubuhan ini menerima sumber pembiayaan untuk menyokong aktiviti inovasi daripada pihak berikut?(Boleh pilih lebih daripada satu dan nyatakan jumlahnya)</div>
+              <span class="text-muted">Did this establishment receive funding from the following to support your innovation activities? (May choose more than one and state the amount)</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330019">330019</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330026">330026</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (a) Dana sendiri <br />
+                    <span class="text-muted">Owned funds</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330019" name="F330019" value="1" {{#eq answers.F330019 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330026" name="F330026" value="{{answers.F330026}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330020">330020</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330027">330027</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (b) Syarikat Swasta <br />
+                    <span class="text-muted">Private companies</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330020" name="F330020" value="1" {{#eq answers.F330020 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330027" name="F330027" value="{{answers.F330027}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330021">330021</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330028">330028</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (c) Kerajaan <br />
+                    <span class="text-muted">Government</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330021" name="F330021" value="1" {{#eq answers.F330021 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330028" name="F330028" value="{{answers.F330028}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330022">330022</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330029">330029</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (d) Institusi Pengajian Tinggi <br />
+                    <span class="text-muted">Institution of Higher Education</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330022" name="F330022" value="1" {{#eq answers.F330022 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330029" name="F330029" value="{{answers.F330029}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330023">330023</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330030">330030</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (e) Dana luar negara <br />
+                    <span class="text-muted">Foreign funds</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330023" name="F330023" value="1" {{#eq answers.F330023 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330030" name="F330030" value="{{answers.F330030}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330024">330024</a>
+              </div>
+              <br><br>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330031">330031</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (f) Dana lain <br />
+                    <span class="text-muted">Others funds</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330024" name="F330024" value="1" {{#eq answers.F330024 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+              <div class="form-group-feedback form-group-feedback-left ml-3">
+                <input class="form-control only-number-pos" type="text" id="t-F330031" name="F330031" value="{{answers.F330031}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330025">330025</a>
+              </div>
+            </td>
+            <td class="noborder-top">
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold p-custom-1"> (g) Tiada <br />
+                    <span class="text-muted">None</span>
+                  </div>
+                  <span>
+                    <input type="checkbox" class="form-check-input-styled" id="c-F330025" name="F330025" value="1" {{#eq answers.F330025 '1'}}checked{{/eq}}>
+                  </span>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!--Open QSC6 -->
+            <td class="text-center" rowspan="3">
+              <h6 class="mb-0">C.6</h6>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Sila nyatakan jumlah perbelanjaan R&D bagi tahun rujukan berikut:</div>
+              <span class="text-muted">Please specify the total expenditure of R&D in the following reference year:</span>
+              <br />
+              <br />
+              <div class="font-weight-semibold">(a) 2019</div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330032">330032</a>
+              </div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div style="text-align:center;">
+                  <div class="font-weight-semibold">
+                      Nilai / <span class="text-muted">Value</span>
+                  </div>
+              </div>
+              <br/>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330032" name="F330032" value="{{answers.F330032}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(b) 2020</div>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330033">330033</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330033" name="F330033" value="{{answers.F330033}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(c) 2021</div>
+              <!-- <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020</span>-->
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330034">330034</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330034" name="F330034" value="{{answers.F330034}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <h6 class="mb-0">C.7</h6>
+              <div class="font-size-sm text-muted line-height-1"></div>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Adakah pertubuhan ini menjalankan aktiviti R&D secara dalaman pada tahun rujukan?</div>
+              <span class="text-muted">Did this establishment run any R&D activities internally (in house) during the reference year?</span>
+              <br />
+              <br />
+              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                <span class="font-weight-semibold">Sekiranya soalan 9.12 (a) pada muka surat 18 diisi, sila lengkapkan soalan C.7</span>
+                <br />If question 9.12 (a) on page 18 is filled, please complete question C.7<br>
+              </div>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330035">330035</a>
+                <span class="text-danger">*</span>
+                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="330035" style="float:right;" title="Reset">-->
+                <!--    <i class="icon-undo"></i>-->
+                <!--</button>-->
+              </div>
+            </td>
+            <td>
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya /
+                  <span class="text-muted"> Yes</span></div>
+                  <input type="radio" class="form-check-input-styled 330035" id="r-F330035_1" name="F330035" value="1" {{#eq answers.F330035 '1'}}checked{{/eq}} required>
+                </label>
+              </div>
+              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                <span class="font-weight-semibold">Jika YA, sila ke Soalan C.8 hingga C.12</span>
+                <br />If YES, please proceed to Question C.8 to C.12
+              </div>
+              <div class="form-check form-check-right">
+                <label class="form-check-label">
+                  <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak /
+                  <span class="text-muted"> No</span></div>
+                  <input type="radio" class="form-check-input-styled 330035" id="r-F330035_2" name="F330035" value="2" {{#eq answers.F330035 '2'}}checked{{/eq}}>
+                </label>
+              </div>
+              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                <span class="font-weight-semibold">Jika TIDAK, TAMAT bagi Seksyen ini</span>
+                <br />If NO, END for this Section here
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!--Open QSC8 -->
+            <td class="text-center" rowspan="3">
+              <h6 class="mb-0">C.8</h6>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Perbelanjaan semasa terhadap R&D</div>
+              <span class="text-muted">Current expenditure on R&D</span>
+              <br />
+              <br />
+              <div class="font-weight-semibold">(a) Kos buruh</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Labour cost</span>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330036">330036</a>
+              </div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div style="text-align:center;">
+                <div class="font-weight-semibold">
+                      Nilai / <span class="text-muted">Value</span>
+                </div>
+              </div>
+              <br/>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330036" name="F330036" value="{{answers.F330036}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(b) Kos operasi</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operating cost</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330037">330037</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330037" name="F330037" value="{{answers.F330037}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(c) Kos berulang lain</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other recurrent cost</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330038">330038</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330038" name="F330038" value="{{answers.F330038}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!--Open QSC9 -->
+            <td class="text-center" rowspan="3">
+              <h6 class="mb-0">C.9</h6>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Perbelanjaan modal terhadap R&D</div>
+              <span class="text-muted">Capital expenditure on R&D</span>
+              <br />
+              <br />
+              <div class="font-weight-semibold">(a) Tanah, bangunan & struktur lain</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Land, building & other structures</span>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330039">330039</a>
+              </div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330039" name="F330039" value="{{answers.F330039}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(b) Kenderaan, loji, perisian, jentera & peralatan</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vehicles, plant, software, machinery & equipment</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330040">330040</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330040" name="F330040" value="{{answers.F330040}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(c) Lain-lain</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330041">330041</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330041" name="F330041" value="{{answers.F330041}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!--Open QSC10 -->
+            <td class="text-center" rowspan="6">
+              <h6 class="mb-0">C.10</h6>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Sumber dana R&D</div>
+              <span class="text-muted">Source of fund for R&D</span>
+              <br />
+              <br />
+              <div class="font-weight-semibold">(a) Dana sendiri</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owned funds</span>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330042">330042</a>
+              </div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330042" name="F330042" value="{{answers.F330042}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(b) Syarikat Swasta</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private companies</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330043">330043</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330043" name="F330043" value="{{answers.F330043}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(c) Kerajaan</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330044">330044</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330044" name="F330044" value="{{answers.F330044}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(d) Institusi Pengajian Tinggi</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Institution of Higher Education</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330045">330045</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330045" name="F330045" value="{{answers.F330045}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(e) Dana luar negara</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foreign funds</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330046">330046</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330046" name="F330046" value="{{answers.F330046}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(f) Dana lain (sila nyatakan)</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others funds (please specify)</span>
+              <br>
+              <div>
+                    <textarea rows="3" class="form-control" id="tx-330047" name="F330047" maxlength="250" enabled>{{answers.F330047}}</textarea>
+            </div>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330047">330047</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-left">
+                <input class="form-control only-number-pos" type="text" id="t-F330047" name="F330047" value="{{answers.F330047}}" maxlength="12">
+                <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+              </div>
+              
+            </td>
+          </tr>
+          <tr>
+            <!--Open QSC11 -->
+            <td class="text-center" rowspan="4">
+              <h6 class="mb-0">C.11</h6>
+            </td>
+            <td>
+              <div class="font-weight-semibold">Sila nyatakan peratus perbelanjaan jenis aktiviti R&D</div>
+              <span class="text-muted">Please indicate the percentage of expenditure by type of R&D activity</span>
+              <br />
+              <br />
+              <div class="font-weight-semibold">(a) Penyelidikan asas</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basic research</span>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330048">330048</a>
+              </div>
+            </td>
+            <td style="vertical-align:bottom;">
+              <div class="form-group-feedback form-group-feedback-right">
+                <input class="form-control text-right only-number-pos" type="text" id="t-F330048" name="F330048" value="{{answers.F330048}}" maxlength="3">
+                <div class="form-control-feedback form-control-feedback-lg"> % </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(b) Penyelidikan gunaan</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Applied research</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330049">330049</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-right">
+                <input class="form-control text-right only-number-pos" type="text" id="t-F330049" name="F330049" value="{{answers.F330049}}" maxlength="3">
+                <div class="form-control-feedback form-control-feedback-lg"> % </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="font-weight-semibold">(c) Pembangunan eksperimental</div>
+              <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experimental development</span>
+            </td>
+            <td>
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-330050">330050</a>
+              </div>
+            </td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-right">
+                <input class="form-control text-right only-number-pos" type="text" id="t-F330050" name="F330050" value="{{answers.F330050}}" maxlength="3">
+                <div class="form-control-feedback form-control-feedback-lg"> % </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div class="font-weight-semibold">&emsp;&ensp;JUMLAH</div>
+                <span class="text-muted">&emsp;&ensp;TOTAL</span>
+            </td>
+            <td></td>
+            <td>
+              <div class="form-group-feedback form-group-feedback-right">
+                <input class="form-control text-right only-number-pos" type="text" id="t-T330001" name="T330001" readonly>
+                <div class="form-control-feedback form-control-feedback-lg"> % </div>
+              </div>
+            </td>
+          </tr>
+          <!--Open QSC12 -->
+          <tr>
+            <td class="text-center">
+              <h6 class="mb-0">C.12</h6>
+            </td>
+            <td colspan="3">
+              <div class="font-weight-semibold">Sila nyatakan maklumat pekerja yang terlibat dengan R&D</div>
+              <span class="text-muted">Please state the information of employee involved with R&D</span>
+              <br />
+              <br />
+              <table class="table table-bordered ">
+                <thead class="text-center">
+                  <tr>
+                    <th class="first-child-col text-left"></th>
+                    <th>
+                      <div class="font-weight-semibold">Bilangan pekerja</div>
+                      <span class="text-muted">Number of workers</span>
+                    </th>
+                    <th>
+                      <div class="font-weight-semibold">Gaji & upah tahunan</div>
+                      <span class="text-muted">Annual salaries & wages</span>
+                      <div style="text-align:center;">
+                        <div class="font-weight-semibold">
+                          Nilai / <span class="text-muted">Value</span>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="first-child-col">
+                      <div class="font-weight-semibold p-custom-1"> (a) Penyelidik <br />
+                        <span class="text-muted">Researcher</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330051">330051</a>
+                      </div>
+                      <input class="form-control only-number-pos" type="text" id="t-F330051" name="F330051" value="{{answers.F330051}}" maxlength="4">
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330054">330054</a>
+                      </div>
+                      <div class="form-group-feedback form-group-feedback-left">
+                        <input class="form-control only-number-pos" type="text" id="t-F330054" name="F330054" value="{{answers.F330054}}" maxlength="12">
+                        <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first-child-col">
+                      <div class="font-weight-semibold p-custom-1"> (b) Juruteknik dan profesional bersekutu <br />
+                        <span class="text-muted">Technicians and associate professionals</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330052">330052</a>
+                      </div>
+                      <input class="form-control only-number-pos" type="text" id="t-F330052" name="F330052" value="{{answers.F330052}}" maxlength="4">
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330055">330055</a>
+                      </div>
+                      <div class="form-group-feedback form-group-feedback-left">
+                        <input class="form-control only-number-pos" type="text" id="t-F330055" name="F330055" value="{{answers.F330055}}" maxlength="12">
+                        <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="first-child-col">
+                      <div class="font-weight-semibold p-custom-1"> (c) Pekerja sokongan perkeranian <br />
+                        <span class="text-muted">Clerical support workers</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330053">330053</a>
+                      </div>
+                      <input class="form-control only-number-pos" type="text" id="t-F330053" name="F330053" value="{{answers.F330053}}" maxlength="4">
+                    </td>
+                    <td>
+                      <div class="text-default font-weight-semibold">
+                        <span class="badge badge-mark border-blue mr-1"></span>
+                        <a class="ancor" id="a-330056">330056</a>
+                      </div>
+                      <div class="form-group-feedback form-group-feedback-left">
+                        <input class="form-control only-number-pos" type="text" id="t-F330056" name="F330056" value="{{answers.F330056}}" maxlength="12">
+                        <div class="form-control-feedback form-control-feedback-lg"> RM </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

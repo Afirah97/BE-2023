@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <script type="text/javascript">
+            $(function() {
+                // Left fixed column example
+                $('.datatable-fixed-left').DataTable({
+                    columnDefs: [
+                        { 
+                            orderable: false,
+                            targets: [5]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [0]
+                        },
+                        { 
+                            width: "300px",
+                            targets: [1]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [5, 6]
+                        },
+                        { 
+                            width: "100px",
+                            targets: [4]
+                        }
+                    ],
+                    scrollX: true,
+                    scrollY: '350px',
+                    scrollCollapse: true,
+                    fixedColumns: true
+                });
+                
+                
+            });
+
+            
+            function initForm(){
+                
+                // A.12 - Tidak
+                var arr_F310036_2 = ['#c-F310037','#c-F310038','#c-F310039','#c-F310040','#c-F310041','#c-F310113','#c-F310114',
+                '#r-F310043_1','#r-F310043_2','#t-F310045','#t-F310046','#t-F310047','#t-F310048','#t-F310049',
+                '#tx-F310050','#t-F310051','#t-F310052','#t-F310053','#t-F310054','#t-F310055','#t-F310056','#t-F310057','#t-F310058',
+                '#r-F310062_1','#r-F310062_2','#t-F310064','#t-F310065','#t-F310066',
+                '#t-F310067','#t-F310068','#t-F310069','#t-F310070','#t-F310071','#t-F310072'];
+                
+                chkDisableT("#r-F310036_2", "#r-F310036_1", arr_F310036_2);
+                $( "#r-F310036_1" ).click( function() { 
+                    chkDisableT("#r-F310036_2", "#r-F310036_1", arr_F310036_2);
+                });
+                $( "#r-F310036_2" ).click( function() { 
+                chkDisableT("#r-F310036_2", "#r-F310036_1", arr_F310036_2);
+                });
+                
+                // A.15
+                var arr_F310043_2 = ['#t-F310045','#t-F310046','#t-F310047','#t-F310048','#t-F310049','#tx-F310050','#t-F310051',
+                '#t-F310052','#t-F310053','#t-F310054','#t-F310055','#t-F310056','#t-F310057','#t-F310058'];
+                chkDisableT("#r-F310043_2", "#r-F310043_1", arr_F310043_2);
+                $( "#r-F310043_1" ).click( function() { 
+                    chkDisableT("#r-F310043_2", "#r-F310043_1", arr_F310043_2);
+                });
+                $( "#r-F310043_2" ).click( function() { 
+                    chkDisableT("#r-F310043_2", "#r-F310043_1", arr_F310043_2);
+                });
+                
+                // A.21
+                var arr_F310062_2 = ['#t-F310064','#t-F310065','#t-F310066','#t-F310067','#t-F310068','#t-F310069','#t-F310070','#t-F310071',
+                '#t-F310072'];
+                chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2);
+                $( "#r-F310062_1" ).click( function() { 
+                    chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2);
+                });
+                $( "#r-F310062_2" ).click( function() { 
+                    chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2);
+                });
+                
+                // A.17
+                var arr_T330003 = ['F310046','F310047','F310048', 'F310049'];
+                calPercentage( arr_T330003, 'T330003' );
+                $( "#t-F310046" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+                $( "#t-F310047" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+                $( "#t-F310048" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+                $( "#t-F310049" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+                
+                // A.18
+                var arr_T330002 = ['F310051','F310052','F310053'];
+                calPercentage( arr_T330002, 'T330002' );
+                $( "#t-F310051" ).blur( function() { calPercentage( arr_T330002, 'T330002' ); });
+                $( "#t-F310052" ).blur( function() { calPercentage( arr_T330002, 'T330002' ); });
+                $( "#t-F310053" ).blur( function() { calPercentage( arr_T330002, 'T330002' ); });
+                
+                // A.19
+                var arr_T310007 = ['F310054','F310055'];
+                calPercentage( arr_T310007, 'T310007' );
+                $( "#t-F310054" ).blur( function() { calPercentage( arr_T310007, 'T310007' ); });
+                $( "#t-F310055" ).blur( function() { calPercentage( arr_T310007, 'T310007' ); });
+                
+                //A.22
+                var arr_T330006 = ['F310064'];
+                calPercentage( arr_T330006, 'T330006' );
+                $( "#t-F310064" ).blur( function() { calPercentage( arr_T330006, 'T330006' ); });
+                
+                // A.23
+                var arr_T330004 = ['F310065','F310066','F310067'];
+                calPercentage( arr_T330004, 'T330004' );
+                $( "#t-F310065" ).blur( function() { calPercentage( arr_T330004, 'T330004' ); });
+                $( "#t-F310066" ).blur( function() { calPercentage( arr_T330004, 'T330004' ); });
+                $( "#t-F310067" ).blur( function() { calPercentage( arr_T330004, 'T330004' ); });
+                
+                // A.21
+                //var arr_F310062_2 = ['#t-F310063','#t-F310064','#t-F310065','#t-F310066','#t-F310067',
+                //'#t-F310068','#t-F310069','#t-F310070','#t-F310071','#t-F310072','#s-F310073','#s-F310074','#s-F310075'];
+                //chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2);
+               //$( "#r-F310062_1" ).click( function() { 
+                //chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2); });
+                //$( "#r-F310062_2" ).click( function() { 
+                //chkDisableT("#r-F310062_2", "#r-F310062_1", arr_F310062_2); });
+                
+                
+                
+                // A.24
+                var arr_T310008 = ['F310068','F310069'];
+                calPercentage( arr_T310008, 'T310008' );
+                $( "#t-F310068" ).blur( function() { calPercentage( arr_T310008, 'T310008' ); });
+                $( "#t-F310069" ).blur( function() { calPercentage( arr_T310008, 'T310008' ); });
+                
+                //A.16 - Limit 100
+                /*var arr_T330001 = ['F310045'];
+                calPercentage( arr_T330001, 'T330001' );
+                $( "#t-F310045" ).blur( function() { calPercentage( arr_T330001, 'T330001' ); });*/
+                
+                
+                $("#t-F310045").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                $("#t-F310064").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                
+            }
+        
+            //$(".office_use").hide();
+        </script>
+    <style>
+        table.table-bordered thead {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">A</div></button></td>
+                    <td><h6 class="text-teal-800">MODUL EKONOMI DIGITAL<br/><span class="text-teal-400 font-size-sm">DIGITAL ECONOMIC MODULE</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br/><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br/><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br/><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+	                        <button type="button" class="btn alpha-blue rounded-round text-blue-800 border-blue-600 text-left">
+	                            <span class="font-weight-semibold">Bahagian 2: Perkhidmatan atas talian dan transaksi e-dagang</span> 
+	                            <br/>Part 2: Online services and e-commerce transactions
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.12</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini terlibat dengan urusniaga jualan atau pembelian menggunakan internet?</div>
+                            <span class="text-muted">Did this establishment involved in sales or puchase transactions using internet?</span><br><br>
+
+                                <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <!--<span class="font-weight-semibold">Nota /</span> Notes:<br>-->
+                                    <span class="font-weight-semibold">Jika TIDAK, sila ke Seksyen B</span>
+                                    <br>If NO, please go to Section B
+                                </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310036">310036</a> <span class="text-danger"></span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310036" id="r-F310036_1" name="F310036" value="1" required {{#eq answers.F310036 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310036" id="r-F310036_2" name="F310036" value="2" required {{#eq answers.F310036 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="5">
+                            <h6 class="mb-0">A.13</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="5">
+                            <div class="font-weight-semibold">Sila tandakan (X) jenis platform yang digunakan oleh pertubuhan ini untuk urusniaga jualan atau pembelian menggunakan internet (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">Please mark (X) the type of platform that this establishment used for sales or purchases transaction using internet (May choose more than one)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310037">310037</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Media sosial (cth. Facebook, Instagram dan blog)
+                                        <br/><span class="text-muted">Social media (e.g., Facebook, Instagram and blogs)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310037" name="F310037" value="1" {{#eq answers.F310037 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310038">310038</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Laman web kepunyaan sendiri
+                                        <br/><span class="text-muted">Website owned by your establishment</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310038" name="F310038" value="1" {{#eq answers.F310038 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310039">310039</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Pasaran e-dagang dalam talian (cth. Lazada, Zalora, Shopee)
+                                        <br/><span class="text-muted">Online e-commerce marketplace (e.g. Lazada, Zalora, Shopee)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310039" name="F310039" value="1" {{#eq answers.F310039 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310040">310040</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Rangkaian persendirian yang ditetapkan (cth. extranet, EDI)
+                                        <br/><span class="text-muted">Designated private network (e.g., extranet, EDI)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310040" name="F310040" value="1" {{#eq answers.F310040 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310041">310041</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Aplikasi mudah alih (cth. Grab app, Lazada app, Pop meal app, Mudah app, Carousell app)
+                                        <br/><span class="text-muted">Mobile application (e.g. Grab app, Lazada app, Pop meal app, Mudah app, Carousell app)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310041" name="F310041" value="1" {{#eq answers.F310041 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">A.14</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">Sila tandakan (X) medium pembayaran yang digunakan oleh pertubuhan ini bagi urusniaga menggunakan internet (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">Please mark (X) the method of payment that this establishment used for transactions using internet (May choose more than one)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310113">310113</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Perkhidmatan pembayaran elektronik (cth. perbankan internet, kad kredit, kad debit, pindahan wang, e-dompet dsb.)
+                                        <br/><span class="text-muted">Payment gateway (e.g. internet banking, credit card, debit card, bank transfer, e-wallet etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310113" name="F310113" value="1" {{#eq answers.F310113 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310114">310114</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Bayaran tunai semasa penghantaran
+                                        <br/><span class="text-muted">Cash on delivery</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310114" name="F310114" value="1" {{#eq answers.F310114 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.15</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menerima pesanan (jualan) barangan atau perkhidmatan menggunakan e-dagang?</div>
+                            <span class="text-muted">Did this establishment receive orders (make sales) for goods or services via e-commerce?</span><br><br>
+
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<!--<span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                <span class="font-weight-semibold"> 
+                                    Termasuk : <br/>
+                                    (1) Melalui laman web, <i>specialised Internet marketplaces, extranet, EDI over the Internet</i>, telefon mudah alih yang membolehkan akses Internet <br/>
+                                    (2) Pesanan yang diterima bagi pihak organisasi lain <br/>
+                                    (3) Pesanan yang diterima oleh organisasi lain bagi pihak perniagaan anda
+                                </span>
+                                <br>Includes : 
+                                <br/> (1) Via websites, specialised Internet marketplaces, extranets, EDI over the Internet, Internet- enabled mobile phones
+                                <br/> (2) Orders received on behalf of other organisations
+                                <br/> (3) Orders received by other organisations on behalf of your business
+                                <br>
+                                <br><span class="font-weight-semibold">Tidak termasuk : Penghantaran pesanan melalui e-mel</span> 
+								<br/>Excludes : Orders submitted via email
+								<br>
+                                <br>
+								<span class="font-weight-semibold">Jika TIDAK, sila ke Soalan A.21</span>
+                                <br>If NO, please go to Question A.21
+						    </div>-->
+						    <span class="font-weight-semibold"> Termasuk : <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) Melalui laman web, <i>specialised internet marketplaces, extranet, EDI over the internet</i>, telefon mudah alih yang membolehkan akses internet 
+                                                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)  Pesanan yang diterima bagi pihak organisasi lain 
+                                                               <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3) Pesanan yang diterima oleh organisasi lain bagi pihak perniagaan anda 
+                <br/>Tidak termasuk : Penghantaran pesanan melalui e-mel</span>
+                <br/>
+                <br/>
+                Includes : <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1) Via websites, specialised internet marketplaces, extranets, EDI over the internet, internet enabled mobile phones 
+                           <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2) Orders received on behalf of other organisations 
+                           <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3) Orders received by other organisations on behalf of your business
+                <br/>Excludes : Orders submitted via email <br>
+                <br/>
+                <span class="font-weight-semibold">Jika TIDAK, sila ke Soalan A.21</span>
+                <br>If NO, please proceed to Question A.21
+              </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310043">310043</a> <span class="text-danger"></span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310043" id="r-F310043_1" name="F310043" value="1" required {{#eq answers.F310043 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310043" id="r-F310043_2" name="F310043" value="2" required {{#eq answers.F310043 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">A.16</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                    <!--</tr>
+                    <tr>-->
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">Sila nyatakan anggaran peratusan jumlah pendapatan yang diterima daripada jualan barangan atau perkhidmatan menggunakan e-dagang</div>
+                            <span class="text-muted">Please indicate an estimate of the percentage of total income that receive orders from sales of goods or services via e-commerce</span>
+                            <br><br>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								<span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                <span class="font-weight-semibold"> 
+                                    Bagi pesanan internet yang diterima bagi pihak organisasi lain, sila lapor hanya yuran atau komisen yang diterima
+                                </span>
+                                <br>For internet orders received on behalf of other organisations, include only fees or commissions earned
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310045">310045</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310045" name="F310045" value="{{answers.F310045}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+                        <tr>
+            <td class="office_use">
+              <div class="text-default font-weight-semibold">
+                <span class="badge badge-mark border-blue mr-1"></span>
+                <a class="ancor" id="a-F310045a">310045a</a>
+              </div>
+            </td>
+            <td class="office_use">
+                <textarea rows="3" class="form-control only-number-pos" id="tx-F310045a" name="F310045a"  maxlength="12">{{answers.F310045a}}</textarea>
+            
+            </td>
+          </tr>
+                    </tr>
+                    
+                    
+                    <!--Open A.17 -->
+                    <tr>
+                        <td class="text-center" rowspan="7">
+                            <h6 class="mb-0">A.17</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >Sila nyatakan peratusan pendapatan e-dagang mengikut platform pesanan pelanggan</div>
+                            <span class="text-muted">Please indicate the percentage of e-commerce income by platform of orders placed by customers</span>
+                            
+                            <div class="font-weight-semibold" >(a)	Melalui kemudahan pesanan dalam talian di laman web pembekal</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Via online ordering facility on the website of suppliers / vendors</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310046">310046</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="fo%-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310046" name="F310046" value="{{answers.F310046}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>                    
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(b)	Melalui laman web lain (cth. pasaran dalam talian, platform e-dagang, tapak ejen dll.)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Via another website (e.g., online marketplace, e-commerce platform, agent’s site etc.)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310047">310047</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310047" name="F310047" value="{{answers.F310047}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(c)	Rangkaian persendirian yang ditetapkan (cth. Extranet, EDI dll.)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designated private network (e.g., Extranet, EDI etc.)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310048">310048</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310048" name="F310048" value="{{answers.F310048}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                                                
+                    </tr>
+                    <tr rowspan="2">
+                        <td>
+                            <div class="font-weight-semibold">(d)	Lain-lain (sila nyatakan)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others (please specify)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310049">310049</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310049" name="F310049" value="{{answers.F310049}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                                                
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310050">310050</a>
+                            </div>
+                        </td> 
+                        <td>
+                            <textarea rows="2" class="form-control" id="tx-F310050" name="F310050" maxlength="250" >{{answers.F310050}}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T330003" name="T330003" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    
+                    <!--Open A.18 -->
+                    <tr> 
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0" >A.18</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold" >Sila nyatakan peratusan pendapatan e-dagang mengikut jenis pelanggan</div>
+                            <span class="text-muted">Please indicate the percentage of e-commerce income by type of customers</span>
+                            
+                            <div class="font-weight-semibold" >(a)	Perniagaan lain - Perniagaan kepada Perniagaan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other businesses  - Business to Business</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310051">310051</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="fo%-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310051" name="F310051" value="{{answers.F310051}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>                    
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(b)	Pengguna individu - Perniagaan kepada Pengguna</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual consumers - Business to Consumers</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310052">310052</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310052" name="F310052" value="{{answers.F310052}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(c)	Kerajaan dan organisasi bukan perniagaan lain - Perniagaan kepada Kerajaan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government and other non-business organisations - Business to Government</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310053">310053</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310053" name="F310053" value="{{answers.F310053}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                                                
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T330002" name="T330002" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    
+                    <!--Open A.19 -->
+                    <tr>
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0" >A.19</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold" >Sila nyatakan peratusan pendapatan e-dagang mengikut jenis pasaran</div>
+                            <span class="text-muted">Please indicate the percentage of e-commerce income by type of market</span> 
+                        </td>                    
+                    </tr>   
+                    
+                    <tr> 
+                        <td> 
+                            <div class="font-weight-semibold" >(a) Tempatan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Domestic</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310054">310054</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310054" name="F310054" value="{{answers.F310054}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>                   
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(b) Antarabangsa</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International</span>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                <span class="font-weight-semibold">Nota / </span> Notes:<br>
+                                <span class="font-weight-semibold">Jika peratusan pendapatan antarabangsa e&#8209;dagang diisi, sila ke soalan A.20</span>
+                                <br>If the percentage of e&#8209;commerce international income is filled, please proceed to question A.20            
+                            </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310055">310055</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310055" name="F310055" value="{{answers.F310055}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T310007" name="T310007"  readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                        
+                    <!--Open A.20 -->    
+                    <tr>
+                        <td class="text-center" rowspan="7">
+                            <h6 class="mb-0" >A.20</h6>
+                        </td>
+                        <td rowspan="7">
+                            <div class="font-weight-semibold"> Sila nyatakan nama negara yang mempunyai pendapatan e&#8209;dagang antarabangsa yang tertinggi dengan pertubuhan ini</div>
+                            <span class="text-muted">Please indicate the name of the country that has the highest international e&#8209;commerce income with this establishment</span><br><br>
+                        </td>
+                        <td>                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310056">310056</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310056" name="F310056" value="{{answers.F310056}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310057">310057</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310057" name="F310057" value="{{answers.F310057}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310058">310058</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310058" name="F310058" value="{{answers.F310058}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                    <!--<tr class="office_use">-->
+                        <td colspan="2" class="office_use">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        
+                        <td class="office_use">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310059"><span class="font-weight-semibold">310059</span></a>
+                        </td>
+                        <td class="office_use">
+                            {{select table="view_appendix_3" class="fv" id="s-F310059" name="F310059" selected=answers.F310059 readonly="readonly"}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--<tr class="office_use">-->
+                        <td class="office_use">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310060"><span class="font-weight-semibold">310060</span></a>
+                        </td>
+                        <td class="office_use">
+                            {{select table="view_appendix_3" class="fv" id="s-F310060" name="F310060" selected=answers.F310060 readonly="readonly"}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="office_use">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310061"><span class="font-weight-semibold">310061</span></a>    
+                        </td>
+                        <td class="office_use">
+                            {{select table="view_appendix_3" class="fv" id="s-F310061" name="F310061" selected=answers.F310061 readonly="readonly"}}
+                        </td>
+                    </tr>
+                    
+                    <!--Open A.21 -->  
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.21</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini membuat pesanan (pembelian) barangan atau perkhidmatan menggunakan e&#8209;dagang?</div>
+                            <span class="text-muted">Did this establishment place orders (make purchases) for goods or services via e&#8209;commerce?</span><br><br>
+                            
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                  <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                  <span class="font-weight-semibold">Jika TIDAK, sila ke Seksyen B</span>
+                  <br>If NO, please proceed to section B<br />
+                  <br>
+                  <span class="font-weight-semibold"> Termasuk : Melalui laman web, <i>specialised internet marketplaces, extranet, EDI over the internet,</i> telefon mudah alih yang membolehkan akses internet
+                  <br>Tidak termasuk : Penghantaran pesanan melalui e-mel</span>
+                  <br>
+                  <br/>Includes : Via websites, specialised internet marketplaces, extranets, EDI over the internet, internet enabled mobile phones 
+                  <br/>Excludes : Orders submitted via email <br>
+                  <br>
+                  <span class="font-weight-semibold">Nota /</span> Notes: <br>
+                  <span class="font-weight-semibold"> Termasuk pembelian semasa dan perbelanjaan modal /</span> Includes the current purchase and capital expenses
+                </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310062">310062</a> <span class="text-danger"></span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310043" id="r-F310062_1" name="F310062" value="1" required {{#eq answers.F310062 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310043" id="r-F310062_2" name="F310062" value="2" required {{#eq answers.F310062 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <!--Open A.22 -->  
+                    <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">A.22</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                    <!--</tr>
+                    <tr>-->
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">Sila nyatakan anggaran peratusan jumlah perbelanjaan melalui pembelian barangan atau perkhidmatan menggunakan e-dagang</div>
+                            <span class="text-muted">Please indicate an estimate percentage of total expenditure for purchases of goods or services via e-commerce</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310064">310064</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310064" name="F310064" value="{{answers.F310064}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+                        </tr>
+            <tr>
+                <td class="office_use">
+                  <div class="text-default font-weight-semibold">
+                    <span class="badge badge-mark border-blue mr-1"></span>
+                    <a class="ancor" id="a-F310064a">310064a</a>
+                  </div>
+                </td>
+                <td class="office_use">
+                    <textarea rows="3" class="form-control only-number-pos" id="tx-F310064a" name="F310064a"  maxlength="12">{{answers.F310064a}}</textarea>
+                   
+                </td>
+            </tr>
+                  
+                    
+                    <!--Open A.23 -->
+                    <tr> 
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0" >A.23</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold" >Sila nyatakan peratusan perbelanjaan e-dagang mengikut jenis pelanggan</div>
+                            <span class="text-muted">Please indicate the percentage of e-commerce expenditure by type of customers</span>
+                            <div class="font-weight-semibold" >(a)	Perniagaan lain - Perniagaan kepada Perniagaan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other businesses - Business to Business</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310065">310065</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="fo%-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310065" name="F310065" value="{{answers.F310065}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>                    
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(b)	Pengguna individu -  Perniagaan kepada Pengguna</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual consumers - Business to Consumers</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310066">310066</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310066" name="F310066" value="{{answers.F310066}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(c)	Kerajaan dan organisasi bukan perniagaan lain - Perniagaan kepada Kerajaan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Government and other non-business organisations - Business to Government</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310067">310067</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310067" name="F310067" value="{{answers.F310067}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                                                
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T330004" name="T330004" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    
+                   <!--Open A.24 -->
+                    <tr>
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0" >A.24</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold" >Sila nyatakan peratusan perbelanjaan e-dagang mengikut jenis pasaran</div>
+                            <span class="text-muted">Please indicate the percentage of e-commerce expenditure by type of market</span> 
+                        </td>                    
+                    </tr>   
+                    
+                    <tr> 
+                        <td> 
+                            <div class="font-weight-semibold" >(a) Tempatan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Domestic</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310068">310068</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310068" name="F310068" value="{{answers.F310068}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>                   
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >(b) Antarabangsa</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International</span>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                <span class="font-weight-semibold">Nota / </span> Notes:<br>
+                                <span class="font-weight-semibold">Jika peratusan pendapatan antarabangsa e&#8209;dagang diisi, sila ke Soalan A.25</span>
+                                <br>If the percentage of e&#8209;commerce international income is filled, please go to Question A.25           
+                            </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310069">310069</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310069" name="F310069" value="{{answers.F310069}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-T310008" name="T310008"  readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>                    
+                    </tr> 
+                    
+                    <!--Open A.25 -->    
+                    <tr>
+                        <td class="text-center" rowspan="7">
+                            <h6 class="mb-0" >A.25</h6>
+                        </td>
+                        <td rowspan="7">
+                            <div class="font-weight-semibold"> Sila nyatakan nama negara yang mempunyai perbelanjaan e&#8209;dagang antarabangsa yang tertinggi dengan pertubuhan ini</div>
+                            <span class="text-muted">Please indicate the name of the country that has the highest international e&#8209;commerce expenditure with your establishment</span><br><br>
+                        </td>
+                        <td>                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310070">310070</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310070" name="F310070" value="{{answers.F310070}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310071">310071</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310071" name="F310071" value="{{answers.F310071}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310072">310072</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control" type="text" id="t-F310072" name="F310072" value="{{answers.F310072}}" maxlength="100">
+                                <div class="form-control-feedback form-control-feedback-lg">
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                        <tr class="office_use">
+                        <td colspan="2">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                    </tr>
+                    <!--<tr>-->
+                    <tr class="office_use">
+                        <td>
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310073"><span class="font-weight-semibold">310073</span></a>
+                        </td>
+                        <td width="30%">
+                            {{select table="view_appendix_3" class="fv" id="s-F310073" name="F310073" selected=answers.F310073 readonly="readonly"}}
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                        <tr class="office_use">
+                        <td>
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310074"><span class="font-weight-semibold">310074</span></a>
+                        </td>
+                        <td width="30%">
+                            {{select table="view_appendix_3" class="fv" id="s-F310074" name="F310074" selected=answers.F310074 readonly="readonly"}}
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                        <tr class="office_use">
+                        <td>
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310075"><span class="font-weight-semibold">310075</span></a>    
+                        </td>
+                        <td width="30%">
+                            {{select table="view_appendix_3" class="fv" id="s-F310075" name="F310075" selected=answers.F310075 readonly="readonly"}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+
+        $(function () {
+            
+        });
+        function initForm(){
+            
+            //readonly
+            $( "input#t-F100199" ).prop( "readonly" , true);
+            $( "input#t-F100299" ).prop( "readonly" , true);
+            
+            //
+            var arr_F100199 = ['F100101','F100104'];
+            autoCalculate( arr_F100199, 'F100199', 1, 999999999999 );
+            $( "#t-F100101" ).blur( function() { autoCalculate( arr_F100199, 'F100199', 1, 999999999999 ); });
+            $( "#t-F100104" ).blur( function() { autoCalculate( arr_F100199, 'F100199', 1, 999999999999 ); });;
+            
+            //
+            var arr_F100299 = ['F100201','F100204'];
+            autoCalculate( arr_F100299, 'F100299', 1, 999999999999 );
+            $( "#t-F100201" ).blur( function() { autoCalculate( arr_F100299, 'F100299', 1, 999999999999 ); });
+            $( "#t-F100204" ).blur( function() { autoCalculate( arr_F100299, 'F100299', 1, 999999999999 ); });
+            
+            
+        }
+    </script>
+    <style>
+        
+        table.table-bordered thead {
+            /*border-bottom: 2px solid black;*/
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            /*border-bottom: 2px solid black;*/
+            background-color: #f5f5f5;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col {
+            background-color: #f5f5f5;
+        }
+        
+        table.table-bordered tbody tr td{
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+            <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr> 
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">10</div></button></td>
+                    <td><h6 class="text-teal-800">NILAI STOK <br/><span class="text-teal-400 font-size-sm">VALUE OF STOCKS</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div> <!--closing header question-->
+            <table class="table table-bordered datatable-fixed-left">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="font-weight-semibold"></div>
+                            <span class="text-muted"></span>
+                        </th>
+                        <th width="20%" class="text-center">Stok awal <br/><span class="text-muted">Opening stocks</span></th>
+                        <th width="20%" class="text-center">Stok akhir <br/><span class="text-muted">Closing stocks</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">(a)  Bahan mentah, bahan pembakar, bekalan dan alat ganti</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raw materials, fuels, supplies and spare part</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100101">100101</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100101" name="F100101" value="{{answers.F141701}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100201">100201</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100201" name="F100201" value="{{answers.F100201}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr> 
+                     
+                    <tr> 
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">(b) Barang yang dibeli untuk dijual semula (stok perniagaan)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goods purchased for resale (trading stocks)</span>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100104">100104</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100104" name="F100104" value="{{answers.F100104}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100204">100204</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100204" name="F100204" value="{{answers.F100204}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr> 
+                </tbody>
+                <tfoot>
+                    <tr> 
+                        <td class="first-child-col">
+                            <div class="font-weight-semibold">(c) JUMLAH (a hingga b)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOTAL (a to b)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100199">100199</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100199" name="F100199" value="{{answers.F100199}}" maxlength="10" >
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-100299">100299</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F100299" name="F100299" value="{{answers.F100299}}" maxlength="10" >
+								<div class="form-control-feedback form-control-feedback-lg">
+									RM
+								</div>
+							</div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

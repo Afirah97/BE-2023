@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+    $(function() {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                scrollX: true
+                ,scrollY: '50vh'
+                ,scrollCollapse: true
+                ,fixedColumns: false
+                ,paging: false
+                ,ordering: false
+                ,searching: false
+                ,bInfo: false
+            });
+            
+            // hit enter focus on next input
+            $('.form-control').keydown(function (e) {
+                if (e.which === 13) {
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).focus();
+                }
+            });
+        });
+        
+    
+
+        function initForm(){
+        
+            //readonly
+            $( "input#t-F070404" ).prop( "readonly" , true);
+            $( "input#t-F070499" ).prop( "readonly" , true);
+            $( "input#t-F070104" ).prop( "readonly" , true);
+            $( "input#t-F070204" ).prop( "readonly" , true);
+            $( "input#t-F070304" ).prop( "readonly" , true);
+            
+            if ($( "#t-F070101" ).val() == "" && $( "#t-F070102" ).val() == "" && $( "#t-F070103" ).val() == "") {
+                $( "#t-F070104" ).val("");
+            }
+            if ($( "#t-F070201" ).val() == "" && $( "#t-F070202" ).val() == "" && $( "#t-F070203" ).val() == "") {
+                $( "#t-F070204" ).val("");
+            }
+            if ($( "#t-F070301" ).val() == "" && $( "#t-F070302" ).val() == "" && $( "#t-F070303" ).val() == "") {
+                $( "#t-F070304" ).val("");
+            }
+            
+            var arr_F110104 = ['F070101','F070102','F070103'];
+            calMultiply( arr_F110104, 'F070104');
+            $( "#t-F070101" ).blur( function() { calMultiply( arr_F110104, 'F070104',1, 9999999 ); $( "#t-F070104" ).trigger( "keyup" ); });
+            $( "#t-F070102" ).blur( function() { calMultiply( arr_F110104, 'F070104',1, 9999999 ); $( "#t-F070104" ).trigger( "keyup" ); });
+            $( "#t-F070103" ).blur( function() { calMultiply( arr_F110104, 'F070104',1, 9999999 ); $( "#t-F070104" ).trigger( "keyup" ); });
+    
+            var arr_F070404 = ['F070101','F070102','F070103'];
+            calMultiply( arr_F070404, 'F070404');
+            $( "#t-F070101" ).blur( function() { calMultiply( arr_F070404, 'F070404',1, 999999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+            $( "#t-F070102" ).blur( function() { calMultiply( arr_F070404, 'F070404',1, 999999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+            $( "#t-F070103" ).blur( function() { calMultiply( arr_F070404, 'F070404',1, 999999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+    
+            var arr_F110204 = ['F070201','F070202','F070203'];
+            calMultiply( arr_F110204, 'F110204');
+            $( "#t-F070201" ).blur( function() { calMultiply( arr_F110204, 'F070204',1, 9999999 ); $( "#t-F070204" ).trigger( "keyup" ); });
+            $( "#t-F070202" ).blur( function() { calMultiply( arr_F110204, 'F070204',1, 9999999 ); $( "#t-F070204" ).trigger( "keyup" ); });
+            $( "#t-F070203" ).blur( function() { calMultiply( arr_F110204, 'F070204',1, 9999999 ); $( "#t-F070204" ).trigger( "keyup" ); });
+            
+            var arr_F110304 = ['F070301','F070302','F070303'];
+            calMultiply( arr_F110304, 'F110304');
+            $( "#t-F070301" ).blur( function() { calMultiply( arr_F110304, 'F070304',1, 9999999 ); $( "#t-F070304" ).trigger( "keyup" ); });
+            $( "#t-F070302" ).blur( function() { calMultiply( arr_F110304, 'F070304',1, 9999999 ); $( "#t-F070304" ).trigger( "keyup" ); });
+            $( "#t-F070303" ).blur( function() { calMultiply( arr_F110304, 'F070304',1, 9999999 ); $( "#t-F070304" ).trigger( "keyup" ); });
+            
+    
+            //WRCL011007
+            var arr_F110404 = ['F070104','F070204','F070304'];
+            autoCalculate( arr_F110404, 'F110404', 1, 999999999999 );
+            $( "#t-F070104" ).keyup( function() { autoCalculate( arr_F110404, 'F070404', 1, 9999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+            $( "#t-F070204" ).keyup( function() { autoCalculate( arr_F110404, 'F070404', 1, 999999999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+            $( "#t-F070304" ).keyup( function() { autoCalculate( arr_F110404, 'F070404', 1, 999999999999 ); $( "#t-F070404" ).trigger( "keyup" ); });
+    
+            //WRCL011008
+            var arr_F110499 = ['F070404','F070405'];
+            autoCalculate( arr_F110499, 'F070499', 1, 999999999999 );
+            $( "#t-F070404" ).keyup( function() { autoCalculate( arr_F110499, 'F070499', 1, 999999999 ); });
+            $( "#t-F070405" ).blur( function() { autoCalculate( arr_F110499, 'F070499', 1, 999999999 ); });
+    
+    
+            //WRCL012007
+            var arr_F121819 = ['F121805','F121807','F121809','F121811','F121813','F121815','F121817'];
+            autoCalculate( arr_F121819, 'F121819', 1, 999999999999 );
+            $( "#t-F121805" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121807" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121809" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121811" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121813" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121815" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            $( "#t-F121817" ).blur( function() { autoCalculate( arr_F121819, 'F121819', 1, 999999999999 ); });
+            
+            
+        }
+    </script>
+
+    <style>
+        table.table-bordered thead tr th {
+            text-align: center;
+            white-space: normal !important;
+        }
+        table.table-bordered thead {
+            border-bottom: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            border-top: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: bottom;
+        }
+        
+        table.table-bordered thead tr th,
+        table.table-bordered tbody tr td,
+        table.table-bordered tfoot tr td {
+            padding: 10px;
+            line-height: 1.3;
+            width: 150px;
+            min-width: 150px;
+            max-width: 150px;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col,
+        table.table-bordered tfoot tr td.first-child-col {
+            width: 250px;
+            min-width: 250px;
+            max-width: 250px;
+            background-color: #f5f5f5;
+            vertical-align: top;
+        }
+        
+        table.table-bordered thead tr th.special-long-col {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        table.datatable-fixed-left div.col-lg-10{
+            overflow: hidden;
+        }
+        table.table-hover tr {
+            border-top: 2px solid black;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+            <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+                        <div class="font-size-lg font-weight-bold">7</div></button>
+                    </td>
+                    <td>
+                        <h6 class="text-teal-800">JAM BEKERJA PADA TAHUN RUJUKAN<br/>
+                        <span class="text-teal-400 font-size-sm">HOURS WORKED DURING THE REFERENCE YEAR</span>
+                        </h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered datatable-fixed-left" style="width:100%">
+                <thead class="text-center">
+                    <tr>
+                        <th  rowspan="2" class="first-child-col" style="vertical-align: middle;">
+                            <div class="font-weight-semibold">Bilangan Syif Kerja</div>
+                            <span class="text-muted">Number Of Work Shifts</span>
+                        </th>
+                        <th  colspan="3">
+                            <div class="font-weight-semibold">Bilangan Syif Kerja Dalam Satu Hari</div>
+                            <span class="text-muted">Number Of Work Shifts In A Day</span>
+                        </th>
+                        <th  rowspan="2">
+                            <div class="font-weight-semibold">Jumlah</div>
+                            <span class="text-muted">Total</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="font-weight-semibold">Syif pertama / waktu bekerja biasa</div>
+                            <span class="text-muted">First shift / normal working hour</span>
+                        </th>
+                        <th>
+                            <div class="font-weight-semibold">Syif kedua</div>
+                            <span class="text-muted">Second shift</span>
+                        </th>
+                        <th>
+                            <div class="font-weight-semibold">Syif ketiga</div>
+                            <span class="text-muted">Third shift</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.1
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Bilangan pekerja dalam setiap syif
+    		                        <br/><span class="text-muted">Number of workers per shift</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070101">070101</a>
+                            </div>
+                                <input class="form-control only-number-pos" type="text" id="t-F070101" name="F070101" value="{{answers.F070101}}" maxlength="4">
+                            
+                        </td>
+                        <td></td>
+                        <td ></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.2
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Bilangan hari bekerja pada tahun rujukan
+    		                        <br/><span class="text-muted">Number of days worked during the reference year</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070102">070102</a>
+                            </div>
+                                <input class="form-control only-number-pos" type="text" id="t-F070102" name="F070102" value="{{answers.F070102}}" maxlength="3" min="1" max="365">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.3
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Jumlah jam bekerja dalam satu syif
+    		                        <br/><span class="text-muted">Total of hours worked in a shift</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070103">070103</a>
+                            </div>
+                                <input class="form-control only-number-pos number" type="text" id="t-F070103" name="F070103" value="{{answers.F070103}}" maxlength="2" min="1" max="12">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.4
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Jumlah jam pekerja bekerja = (7.1 x 7.2 x 7.3)
+    		                        <br/><span class="text-muted">Total man-hours worked = (7.1 x 7.2 x 7.3)</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070104">070104</a>
+                            </div>
+                                <input class="form-control only-number-pos" type="text" id="t-F070104" name="F070104" value="{{answers.F070104}}" maxlength="7">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070404">070404</a>
+                            </div>
+                                <input class="form-control only-number-pos" type="text" id="t-F070404" name="F070404" value="{{answers.F070404}}" maxlength="9">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.5
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Jumlah jam pekerja bekerja lebih masa pada tahun rujukan
+    		                        <br/><span class="text-muted">Total overtime man-hours worked during the reference year</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070405">070405</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" id="t-F070405" name="F070405" value="{{answers.F070405}}" maxlength="9">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    7.6
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Jumlah jam pekerja bekerja pada tahun rujukan = (7.4 + 7.5)
+    		                        <br/><span class="text-muted">Total man-hours worked during the reference year = (7.4 + 7.5)</span>
+    	                        </div>
+	                        </div>
+		                </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-070499">070499</a>
+                            </div>
+                            <input class="form-control only-number-pos" type="text" id="t-F070499" name="F070499" value="{{answers.F070499}}"  maxlength="9">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover" style="width:100%">
+                <tr>
+                    <td class="first-child-col">
+		                <div class="row">
+			                <div class="col-lg-1 text-nowrap">
+			                    7.7
+			                </div>
+		                    <div class="col-lg-10">
+		                        Upah yang dibayar untuk pekerjaan lebih masa pada tahun rujukan
+                                <br/><span class="text-muted">Overtime paid for during the reference year</span>
+	                        </div>
+                        </div>
+	                </td>
+                    <td colspan="2" class="first-child-col">
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-070507">070507</a>
+                        </div>
+                        <div class="form-group-feedback form-group-feedback-left">
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F070507" name="F070507" value="{{answers.F070507}}">
+							<div class="form-control-feedback form-control-feedback-lg">
+								RM
+							</div>
+						</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

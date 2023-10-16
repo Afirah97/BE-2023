@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+        });
+        function initForm(){
+            
+            $( "input#t-F080001" ).prop( "readonly" , true);
+            $( "input#t-F080089" ).prop( "readonly" , true);
+            $( "input#t-F080099" ).prop( "readonly" , true);
+            
+            //Subsidi
+            //var arr_F080063 = ['F080064','F080065','F080066'];
+            //autoCalculate( arr_F080063, 'F080063', 1, 999999999999 );
+            //$( "#t-F080064" ).keyup( function() { autoCalculate( arr_F080063, 'F080063', 1, 999999999999 ); });
+            //$( "#t-F080065" ).keyup ( function() { autoCalculate( arr_F080063, 'F080063', 1, 999999999999 ); });
+            //$( "#t-F080066" ).keyup ( function() { autoCalculate( arr_F080063, 'F080063', 1, 999999999999 ); });
+            
+            //readonly Q8.1
+            $( "input#t-F080001" ).prop( "readonly" , true);
+            
+            //Q8.1
+            var arr_F080001 = ['F085001','F085002','F085003','F085004','F085005','F085006','F085007','F085008','F085009','F085010','F085011',
+                              'F085012','F085013','F085014','F085015','F085016','F085017','F085018'];
+                               
+            autoCalculate( arr_F080001, 'F080001');
+            $( "#t-F085001" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085002" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085003" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085004" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085005" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085006" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085007" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085008" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085009" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085010" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085011" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085012" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085013" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085014" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085015" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085016" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085017" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+            $( "#t-F085018" ).blur( function() { autoCalculate( arr_F080001, 'F080001', 1, 9999999 ); $( "#t-F080001" ).trigger( "keyup" ); });
+    
+            //readonly Q8.12        
+            $( "input#t-F080089" ).prop( "readonly" , true);
+            
+            //Q8.12
+            var arr_F080089 = ['F080001','F080003','F080005','F080007','F080008','F080010','F080011','F080012','F080034',
+                               'F080035','F080039','F080061','F080062','F080013','F080014','F080065','F080066','F080067',
+                               'F080068','F080069','F080070','F080071','F080072','F080073','F080074','F080076','F080016'];
+                                
+            autoCalculate( arr_F080089, 'F080089');
+            $( "#t-F080001" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080003" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080005" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080007" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080008" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080010" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080011" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080012" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080034" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080035" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080039" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080061" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080062" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080013" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080014" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            //$( "#t-F080063" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            //$( "#t-F080064" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080065" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080066" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080067" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080068" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080069" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080070" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080071" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080072" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080073" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080074" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080076" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            $( "#t-F080016" ).blur( function() { autoCalculate( arr_F080089, 'F080089', 1, 9999999 ); $( "#t-F080089" ).trigger( "keyup" ); });
+            
+            //readonly Q8.14
+            $( "input#t-F080099" ).prop( "readonly" , true);
+            
+            //Q8.14
+            var arr_F080099 = ['F080089','F080017'];
+            autoCalculate( arr_F080099, 'F080099', 1, 999999999999 );
+            $( "#t-F080089" ).keyup( function() { autoCalculate( arr_F080099, 'F080099', 1, 999999999999 ); });
+            $( "#t-F080017" ).keyup( function() { autoCalculate( arr_F080099, 'F080099', 1, 999999999999 ); });
+            
+            //% limit 100
+            //var arr_T330002 = ['F080002'];
+            //calPercentage( arr_T330002, 'T330002' );
+            //$( "#t-F080002" ).blur( function() { calPercentage( arr_T330002, 'T330002' ); });
+            
+            //var arr_T330004 = ['F080004'];
+            //calPercentage( arr_T330004, 'T330004' );
+            //$( "#t-F080004" ).blur( function() { calPercentage( arr_T330004, 'T330004' ); });
+            
+            //var arr_T330006 = ['F080006'];
+            //calPercentage( arr_T330006, 'T330006' );
+            //$( "#t-F080006" ).blur( function() { calPercentage( arr_T330006, 'T330006' ); });
+            
+             $("#t-F080002").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                $("#t-F080004").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                $("#t-F080006").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+            
+        }
+        
+    </script>
+
+    <style></style>
+    
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">8</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> PEROLEHAN/ PENDAPATAN 
+                        <br/><span class="text-teal-400 font-size-sm"> TURNOVER / INCOME</span></h6>
+                    </td>
+                </tr>
+            </table>
+             <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;">
+                            <div class="font-weight-semibold">Nilai / <span class="text-muted">Value</span></div>
+                            <div class="font-weight-semibold">RM</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td  rowspan="1">
+                            <div class="font-weight-semibold">8.0 </div>
+                       </td>
+
+                        <td>
+                            <div class="font-weight-semibold">Pendapatan daripada aktiviti utama</div>
+                            <span class="text-muted"><i>Income from main activities</i></span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td rowspan="3">
+                            <!--<div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;8.0.1 </div>-->
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">8.0.1 Bekalan Air / <span class="text-muted">Water Supply :</span>
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                           
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a) Jualan air terawat bagi kegunaan domestik</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sales of treated water for domestic used</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085001">085001</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085001" name="F085001" value="{{answers.F085001}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                             
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b) Jualan air terawat bagi kegunaan industri</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sales of treated water for industrial used</span>
+
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085002">085002</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085002" name="F085002" value="{{answers.F085002}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                  <tr>
+                        <td rowspan="3">
+                            <!--<div class="font-weight-semibold">8.0.2 </div>-->
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">8.0.2 Pembetungan / <span class="text-muted"><i>Sewerage :</i></span></div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                           
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (a) Pendapatan daripada perkhidmatan pembetungan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from services rendered sewerage</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085003">085003</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085003" name="F085003" value="{{answers.F085003}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                             
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b) Pendapatan daripada penyewaan tandas mudah alih</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from rental portable toilet</span>
+
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085004">085004</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085004" name="F085004" value="{{answers.F085004}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <!--<tr>
+                        <td>
+                            <div class="font-weight-semibold"><b>8.4</b> </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pendapatan daripada pelancongan berpandu </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Income from conducted tours</i></span>
+                           
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080047">080047</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080047" name="F080047" value="{{answers.F080047}}" maxlength="13">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr> 
+
+                    
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold"><b>8.7</b> </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pendapatan daripada jualan makanan dan minuman (termasuk katering) </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Income from sales of food and beverages (including catering)</i></span>
+                        
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080040">080040</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080040" name="F080040" value="{{answers.F080040}}" maxlength="13">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>--> 
+                    
+                     
+ 
+                     <tr>
+                        <td rowspan="10">
+                            <!--<div class="font-weight-semibold">8.0.3</div>-->
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">8.0.3 Pengurusan sisa / <span class="text-muted">Waste Management :</span></div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                           
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (a) Pendapatan daripada perkhidmatan rawatan dan pelupusan sisa tidak berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from non-hazardous treatment and disposal services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085005">085005</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085005" name="F085005" value="{{answers.F085005}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                             
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b) Pendapatan daripada perkhidmatan pengumpulan sisa tidak berbahaya dan bahan kitar semula</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from non-hazardous waste and recyclable material collection services</span>
+
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085006">085006</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085006" name="F085006" value="{{answers.F085006}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (c) Pendapatan daripada jualan produk sisa termasuk elektrik, kompos dan lain-lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from sale of waste product, including recovered electricity, compost and others</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085007">085007</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085007" name="F085007" value="{{answers.F085007}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                <tr>
+                     <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (d) Pendapatan daripada perkhidmatan pengangkutan sisa tidak berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from non-hazardous waste transportation services</span>
+  
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085008">085008</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085008" name="F085008" value="{{answers.F085008}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                <tr>
+				    <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e) Pendapatan daripada perkhidmatan broker sisa tidak berbahaya dan bahan yang boleh dikitar semula</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from non-hazardous waste and recyclable material brokerage services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085009">085009</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085009" name="F085009" value="{{answers.F085009}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                <tr>
+                     <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (f) Pendapatan daripada perkhidmatan rawatan dan pelupusan sisa berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from hazardous treatment and disposal services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085010">085010</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085010" name="F085010" value="{{answers.F085010}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                         <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(g) Pendapatan daripada perkhidmatan pengumpulan sisa berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from hazardous waste collection services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085011">085011</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085011" name="F085011" value="{{answers.F085011}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+         
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (h) Pendapatan daripada perkhidmatan pengangkutan sisa berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from hazardous waste transportation services</span>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085012">085012</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085012" name="F085012" value="{{answers.F085012}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+							</td> 
+							
+							 </tr> 
+							 
+							 <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i) Pendapatan daripada perkhidmatan broker sisa berbahaya</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from hazardous waste brokerage services</span>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085013">085013</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085013" name="F085013" value="{{answers.F085013}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+							</td> 
+							</tr> 
+							 
+            			<tr>
+                        <td rowspan="6">
+                            <!--<div class="font-weight-semibold">8.0.4</div>-->
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">8.0.4 Aktiviti Pemulihan dan Lain-lain Perkhidmatan Pengurusan Sisa</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remediation Activities and Other Waste Management Services</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                           
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (a) Pendapatan daripada perkhidmatan pemulihan semula bahan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from materials recovery services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085014">085014</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085014" name="F085014" value="{{answers.F085014}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                             
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (b) Pendapatan daripada perkhidmatan pemulihan tapak</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from site remediation services</span>
+
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085015">085015</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085015" name="F085015" value="{{answers.F085015}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (c) Peredaan asbestos, cat berplumbum dan bahan kitaran toksik lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asbestos, lead paint and other toxic material abatement</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085016">085016</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085016" name="F085016" value="{{answers.F085016}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                <tr>
+                     <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (d) Pendapatan daripada perkhidmatan kecemasan alam sekitar</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from environmental emergency response services</span>
+  
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085017">085017</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085017" name="F085017" value="{{answers.F085017}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                <tr>
+				    <td>
+                            <div class="font-weight-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e) Perkhidmatan pemulihan lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other remediation services</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-085018">085018</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F085018" name="F085018" value="{{answers.F085018}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">8.1</div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Jumlah pendapatan daripada aktiviti utama (8.0.1 hingga 8.0.4):</div>
+                            <span class="text-muted">Total income from main activities (8.0.1 to 8.0.4)</span>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080001">080001</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080001" name="F080001" value="{{answers.F080001}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr> 
+                        
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.1.1 Sila nyatakan peratus (%) eksport berdasarkan jumlah nilai jualan pada tahun rujukan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Please state the percentage (%) of exports based on total value of sales during the reference year</i></span>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F080002">080002</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control only-number-pos" type="text" id="t-F080002" name="F080002" value="{{answers.F080002}}" maxlength="3" required>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <!--<td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" id="t-T330003" name="T330003" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>                    
+                    </tr>-->
+           
+                   <tr>
+                        <td rowspan="5">
+                            <div class="font-weight-semibold">8.2</div>
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold">Pendapatan daripada perkhidmatan perindustrian yang diberikan:</div>
+                            <span class="text-muted"><i>Income from industrial services rendered:</i></span>
+                        </td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>	
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.2.1  Bayaran diterima bagi kerja memproses dengan menggunakan bahan pertubuhan lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fees received for processing of goods for other establishments on their materials</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080003">080003</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080003" name="F080003" value="{{answers.F080003}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.2.2 Sila nyatakan peratus (%) pendapatan yang diterima dari luar negara bagi kerja memproses yang dibuat untuk pertubuhan lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please state the percentage (%) of income received from abroad for processing of goods for other establishment</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F080004">080004</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control only-number-pos" type="text" id="t-F080004" name="F080004" value="{{answers.F080004}}" maxlength="3" required>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+               
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.2.3 Pendapatan daripada kerja membaiki dan menyelenggara jentera dan kelengkapan pertubuhan lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from repairs and maintenance work for other establishments machinery and equipment</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080005">080005</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080005" name="F080005" value="{{answers.F080005}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.2.4 Sila nyatakan peratus (%) pendapatan yang diterima dari luar negara bagi kerja membaiki dan menyelenggara jentera dan kelengkapan untuk pertubuhan lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please state the percentage (%) of income received from abroad for machinery and equipment repairs and maintenance work for other establishment</span>
+                         
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F080006">080006</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control only-number-pos" type="text" id="t-F080006" name="F080006" value="{{answers.F080006}}" maxlength="3" required>
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>  
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.3</div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Nilai jualan (daripada barang / bahan yang dibeli untuk dijual semula tanpa melalui proses selanjutnya)</div>
+                            <span class="text-muted"><i>Values of sales (from goods / material purchases for resale without further processing)</i></span>
+                           
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080007">080007</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080007" name="F080007" value="{{answers.F080007}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                      <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.4 </div>
+                        </td>
+                        
+                        <td>
+                            <div class="font-weight-semibold">Nilai daripada kerja perindustrian lain (cth. perkhidmatan lain dsb.) Sila nyatakan</div>
+                            <span class="text-muted"><i>Value of other industrial work done (e.g. other services etc.) Please specify</i></span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080008">080008</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080008" name="F080008" value="{{answers.F080008}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.5</div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pendapatan daripada perkhidmatan profesional (cth. perakaunan,pengurusan, kejuruteraan, guaman, penyelidikan dan pembangunan dsb.)</div>
+                            <span class="text-muted"><i>Professional fees received (e.g. accounting, management, engineering, legal services, research and development etc.)</i></span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080010">080010</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080010" name="F080010" value="{{answers.F080010}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr> 
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.6</div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Komisen dan brokeraj yang diterima</div>
+                            <span class="text-muted"><i>Commissions and brokerage earned</i></span>
+                        
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080011">080011</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080011" name="F080011" value="{{answers.F080011}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td rowspan="8">
+                            <div class="font-weight-semibold">8.7</div>
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold"> Pendapatan daripada sewa:</div>
+                            <span class="text-muted"><i>Rental income received from:</i></span>
+                        </td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>	
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold"> (a) Tanah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Land</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080012">080012</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080012" name="F080012" value="{{answers.F080012}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">(b) Bangunan tempat kediaman</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Residential building</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080034">080034</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080034" name="F080034" value="{{answers.F080034}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">(c) Bangunan bukan tempat kediaman</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-residential building</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080035">080035</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080035" name="F080035" value="{{answers.F080035}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">(d) Alat pengangkutan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Transport equipment</span>
+                         
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080039">080039</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080039" name="F080039" value="{{answers.F080039}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(e) Jentera dan kelengkapan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Machinery and equipment</span>
+                         
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080061">080061</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080061" name="F080061" value="{{answers.F080061}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(f) Perabot dan pemasangan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;Furniture and fittings</span>
+                          
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080062">080062</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080062" name="F080062" value="{{answers.F080062}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                      <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(g) Lain-lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Others</span>
+                        </td> 
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080013">080013</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080013" name="F080013" value="{{answers.F080013}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.8 </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Royalti, hakcipta, pelesenan dan yuran francais</div>
+                            <span class="text-muted"><i>Royalties, copyrights, licensing and franchise fees</i></span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080014">080014</a><span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080014" name="F080014" value="{{answers.F080014}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>  
+                   
+                    <tr>
+                        <td rowspan="11">
+                            <div class="font-weight-semibold">8.9 </div>
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold"> Pendapatan bukan operasi</div>
+                            <span class="text-muted"><i>Non-operating income</i></span>
+                        </td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>	
+                    
+                     <!--<tr>
+                        <td>
+                            <div class="font-weight-semibold"> (a) Subsidi</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsidies </span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080063">080063</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080063" name="F080063" value="{{answers.F080063}}" maxlength="13">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold"> (i) Subsidi gaji dan upah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsidies on salaries and wages</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080064">080064</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080064" name="F080064" value="{{answers.F080064}}" maxlength="13">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>-->
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold"> (a) Subsidi produk</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsidies on products</span>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080065">080065</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080065" name="F080065" value="{{answers.F080065}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold"> (b) Subsidi pengeluaran</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subsidies on production</span>
+                         
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080066">080066</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080066" name="F080066" value="{{answers.F080066}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(c) Tuntutan dan pampasan yang diterima</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Claims and compensation received</span>
+                         
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080067">080067</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080067" name="F080067" value="{{answers.F080067}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(d) Pemulihan hutang lapuk</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bad debts recovered</span>
+                          
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080068">080068</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080068" name="F080068" value="{{answers.F080068}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                      <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(e) Pendapatan daripada faedah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from interest</span>
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080069">080069</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080069" name="F080069" value="{{answers.F080069}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(f) Pendapatan daripada dividen</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Income from dividend</span>
+                        
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080070">080070</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080070" name="F080070" value="{{answers.F080070}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                  
+                    
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">(g) Keuntungan daripada jualan / penilaian semula harta </div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gain from sales / revaluation of assets</span>
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080071">080071</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                             <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080071" name="F080071" value="{{answers.F080071}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+							     
+                        <td>
+                            <div class="font-weight-semibold">(h) Keuntungan daripada pertukaran mata wang asing / aset kewangan</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gain from foreign exchange / financial assets</span>
+                          
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080072">080072</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                             <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080072" name="F080072" value="{{answers.F080072}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                      <tr>
+							   
+                        <td>
+                            <div class="font-weight-semibold">(i) Kiriman wang, hadiah atau geran yang diterima</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remittances, gifts or grant received</span>
+                          
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080073">080073</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                             <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080073" name="F080073" value="{{answers.F080073}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                          <td>
+                            <div class="font-weight-semibold">(j) Lain-lain pendapatan bukan operasi (sila nyatakan)</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Others non-operating income (please specify)</i></span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080074"></a> <span>080074</span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080074" name="F080074" value="{{answers.F080074}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                        <tr>
+                            <td rowspan="2">
+                            <div class="font-weight-semibold">8.10 </div>
+                           
+                            <td>
+                             <div class="font-weight-semibold">Adakah pertubuhan ini mempunyai pendapatan daripada aktiviti e-sukan?</div>
+                            <span class="text-muted">Did this establishment have income in e-sports activities?</span><br><br>
+                            </td>
+                        </td>
+                    
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080075">080075</a><span class="text-danger"></span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310001" style="float:right;" title="Reset">-->
+                                <!--    <i class="icon-undo"></i>-->
+                                <!--</button>-->
+                            </div>
+                             <button type="button"
+                                 class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset"
+                                data-val="080075" style="float:right;" title="Reset"><i class="icon-undo"></i>
+                              </button>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold 080075">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 080075" id="r-F080075_1" name="F080075" value="1" required {{#eq answers.F080075 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right 080075">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 080075" id="r-F080075_2" name="F080075" value="2" required {{#eq answers.F080075 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>   
+                            
+                
+                        </td>
+                    
+                        <tr>
+                        <td>
+                            <div class="font-weight-semibold"> 8.10.1 Jika Ya, sila nyatakan jumlah pendapatan daripada aktiviti e-sukan ini</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i> Is Yes, please state the total income from this e-sports activity </i></span>
+                             
+                            
+                        </td>
+
+                       <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080076">080076</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        
+                         <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080076" name="F080076" value="{{answers.F080076}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="text-center" >
+                            <h6 class="mb-0">8.11</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold"> Lain-lain pendapatan operasi (sila nyatakan)</div>
+                            <span class="text-muted"><i>Others operating income (please specify)</i></span>
+                            <br/><input class="form-control" type="text" id="" name="" value="{{answers.}}" maxlength="25" required>
+                            </br>
+                            </br>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600 mb-2 office_use">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nilai yang dilaporkan di medan 080016 TIDAK boleh melebihi 5% daripada nilai di medan 080089</span>
+							    <br/>Value reported in field 080016 must NOT be greater than 5% of field 080089
+						    </div>
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080016"></a> <span>080016</span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080016" name="F080016" value="{{answers.F080016}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                        </tr>
+                        
+					 <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.12 </div>
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold"> Jumlah pendapatan (8.1 hingga 8.11)</div>
+                            <span class="text-muted"><i>Total income (8.1 to 8.11)</i></span>
+                            <br/><br/>
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080089">080089</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080089" name="F080089" value="{{answers.F080089}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>				
+                    
+                     <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.13 </div>
+                          
+                            
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold"> Pindahan modal yang diterima </div>
+                            <span class="text-muted"><i>Capital tranfers received</i></span>
+                            
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080017">080017</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080017" name="F080017" value="{{answers.F080017}}" maxlength="12" required>
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>		
+                        
+            <tr>
+                        <td>
+                            <div class="font-weight-semibold">8.14</div>
+                            
+                            
+                        </td>
+
+                        <td>
+                            <div class="font-weight-semibold"> JUMLAH BESAR (8.12 dan 8.13)</div>
+                            <span class="text-muted"><i>GRAND TOTAL (8.12 and 8.13)</i></span>
+                            
+                            
+                        </td>
+
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-080099">080099</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-pos" type="text" id="t-F080099" name="F080099" value="{{answers.F080099}}" maxlength="12">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    
+
+
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

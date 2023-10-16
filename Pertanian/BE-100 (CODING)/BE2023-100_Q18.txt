@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    
+    <script type="text/javascript">
+        $(function() {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                scrollX: true
+                ,scrollY: '50vh'
+                ,scrollCollapse: true
+                ,fixedColumns: true
+                ,paging: false
+                ,ordering: false
+                ,searching: false
+                ,bInfo: false
+            });
+            
+            // hit enter focus on next input
+            $('.form-control').keydown(function (e) {
+                if (e.which === 13) {
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).focus();
+                }
+            });
+        });
+        
+        function initForm(){
+            var arr_T184066 = ['F184201','F184202','F184203','F184204','F184205','F184206','F184207','F184208','F184209',
+                               'F184210','F184211','F184212','F184213','F184214','F184215','F184216'];
+            calPercentage( arr_T184066, 'T184066' );
+            $( "#t-F184201" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184202" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184203" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184204" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184205" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184206" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184207" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184208" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184209" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184210" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184211" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184212" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184213" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184214" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184215" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            $( "#t-F184216" ).blur( function() { calPercentage( arr_T184066, 'T184066' ); });
+            
+            if ($( "#t-T184066" ).val() == ""){
+                $( "#t-T184066" ).val();
+            }
+            
+            var arr_T184077 = ['F184301','F184302','F184303','F184304','F184305','F184306','F184307','F184308','F184309',
+                               'F184310','F184311','F184312','F184313','F184314','F184315','F184316'];
+            calPercentage( arr_T184077, 'T184077' );
+            $( "#t-F184301" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184302" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184303" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184304" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184305" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184306" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184307" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184308" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184309" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184310" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184311" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184312" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184313" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184314" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184315" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            $( "#t-F184316" ).blur( function() { calPercentage( arr_T184077, 'T184077' ); });
+            
+            if ($( "#t-T184077" ).val() == ""){
+                $( "#t-T184077" ).val();
+            }
+            
+            var arr_T184088 = ['F184401','F184402','F184403','F184404','F184405','F184406','F184407','F184408','F184409',
+                               'F184410','F184411','F184412','F184413','F184414','F184415','F184416'];
+            calPercentage( arr_T184088, 'T184088' );
+            $( "#t-F184401" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184402" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184403" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184404" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184405" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184406" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184407" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184408" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184409" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184410" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184411" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184412" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184413" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184414" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184415" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            $( "#t-F184416" ).blur( function() { calPercentage( arr_T184088, 'T184088' ); });
+            
+            if ($( "#t-T184088" ).val() == ""){
+                $( "#t-T184088" ).val();
+            }
+            
+            var arr_T184099 = ['F184501','F184502','F184503','F184504','F184505','F184506','F184507','F184508','F184509',
+                               'F184510','F184511','F184512','F184513','F184514','F184515','F184516'];
+            calPercentage( arr_T184099, 'T184099' );
+            $( "#t-F184501" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184502" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184503" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184504" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184505" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184506" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184507" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184508" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184509" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184510" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184511" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184512" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184513" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184514" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184515" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            $( "#t-F184516" ).blur( function() { calPercentage( arr_T184099, 'T184099' ); });
+            
+            if ($( "#t-T184099" ).val() == ""){
+                $( "#t-T184099" ).val();
+            }
+        }
+    </script>
+    <style>
+        table.table-bordered thead {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col,
+        table.table-bordered tfoot tr td.first-child-col {
+        background-color: #f5f5f5;
+        text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+                        <div class="font-size-lg font-weight-bold">18</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800">SUMBER BAHAN YANG DIGUNAKAN
+                        <br/><span class="text-teal-400 font-size-sm">SOURCES OF MATERIALS CONSUMED</span></h6>
+                    </td>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th class="text-center" style="width: 20%;">Import<br/><span class="text-muted">Imports</span><br/>RM</th>
+                        <th class="text-center" style="width: 20%;">Buatan Tempatan<br/><span class="text-muted">Locally Manufactured</span><br/>RM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">18.1</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Bahan dan bekas pembungkus</div>
+                            <span class="text-muted">Materials and packaging materials</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150102">150102</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control only-number-pos" type="text" id="t-150102" name="F150102" value="{{answers.F150102}}" maxlength="9">
+							</div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-150202">150202</a>
+                            </div>
+                            <div class="form-group-feedback">
+								<input class="form-control only-number-pos" type="text" id="t-150202" name="F150202" value="{{answers.F150202}}" maxlength="9">
+							</div>
+                        </td>
+                    </tr>
+                    <tr class="office_use">
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                <span class="font-weight-semibold">Nilai yang dilaporkan di medan 150102 + 150202 mesti sama dengan medan 090002 di Soalan 9</span>
+							    <br/>Value reported in fields 150102 + 150202 must be equal to field 090002 in Question 9
+						    </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan="2">
+                            <h6 class="mb-0">18.2</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Sila nyatakan peratusan bahan langsung tempatan yang digunakan mengikut negeri pembekal</div>
+                            <span class="text-muted">Please indicate the percentage of local direct materials used by supplier's state</span>
+                            <br/><br/>
+						    <table class="table table-bordered">
+						        <thead class="text-center">
+						            <tr>
+						                <th>
+						                    <div class="font-weight-semibold">Bil.</div>
+                                            <span class="text-muted">No.</span>
+						                </th>
+						                <th>
+						                    <div class="font-weight-semibold">Negeri / Wilayah</div>
+                                            <span class="text-muted">State / Federal</span>
+						                </th>
+						                <th>
+                                            <div class="font-weight-semibold">Tanaman</div>
+                			                <span class="text-muted">Crops</span>
+                			                <br/>(%)
+                		                </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Ternakan</div>
+                			                <span class="text-muted">Livestock</span>
+                			                <br/>(%)
+                		                </th>
+                		                <th>
+                                            <div class="font-weight-semibold">Perikanan</div>
+                			                <span class="text-muted">Fisheries</span>
+                			                <br/>(%)
+                		                </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perhutanan</div>
+                			                <span class="text-muted">Forestry</span>
+                			                <br/>(%)
+                		                </th>
+						            </tr>
+						        </thead>
+						        <tbody>
+						            <tr>
+                			            <td class="first-child-col">1.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Johor
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184201">184201</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184201" name="F184201" value="{{answers.F184201}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184301">184301</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184301" name="F184301" value="{{answers.F184301}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184401">184401</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184401" name="F184401" value="{{answers.F184401}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184501">184501</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184501" name="F184501" value="{{answers.F184501}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">2.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Kedah
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184202">184202</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184202" name="F184202" value="{{answers.F184202}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184302">184302</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184302" name="F184302" value="{{answers.F184302}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184402">184402</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184402" name="F184402" value="{{answers.F184402}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184502">184502</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184502" name="F184502" value="{{answers.F184502}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">3.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Kelantan
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184203">184203</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184203" name="F184203" value="{{answers.F184203}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184303">184303</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184303" name="F184303" value="{{answers.F184303}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184403">184403</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184403" name="F184403" value="{{answers.F184403}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184503">184503</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184503" name="F184503" value="{{answers.F184503}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">4.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Melaka
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184204">184204</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184204" name="F184204" value="{{answers.F184204}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184304">184304</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184304" name="F184304" value="{{answers.F184304}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184404">184404</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184404" name="F184404" value="{{answers.F184404}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184504">184504</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184504" name="F184504" value="{{answers.F184504}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">5.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Negeri Sembilan
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184205">184205</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184205" name="F184205" value="{{answers.F184205}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184305">184305</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184305" name="F184305" value="{{answers.F184305}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184405">184405</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184405" name="F184405" value="{{answers.F184405}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184505">184505</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184505" name="F184505" value="{{answers.F184505}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">6.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Pahang
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184206">184206</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184206" name="F184206" value="{{answers.F184206}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184306">184306</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184306" name="F184306" value="{{answers.F184306}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184406">184406</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184406" name="F184406" value="{{answers.F184406}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184506">184506</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184506" name="F184506" value="{{answers.F184506}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">7.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Pulau Pinang
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184207">184207</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184207" name="F184207" value="{{answers.F184207}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184307">184307</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184307" name="F184307" value="{{answers.F184307}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184407">184407</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184407" name="F184407" value="{{answers.F184407}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184507">184507</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184507" name="F184507" value="{{answers.F184507}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">8.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Perak
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184208">184208</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184208" name="F184208" value="{{answers.F184208}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184308">184308</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184308" name="F184308" value="{{answers.F184308}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184408">184408</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184408" name="F184408" value="{{answers.F184408}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184508">184508</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184508" name="F184508" value="{{answers.F184508}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">9.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Perlis
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184209">184209</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184209" name="F184209" value="{{answers.F184209}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184309">184309</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184309" name="F184309" value="{{answers.F184309}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184409">184409</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184409" name="F184409" value="{{answers.F184409}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184509">184509</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184509" name="F184509" value="{{answers.F184509}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">10.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Selangor
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184210">184210</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184210" name="F184210" value="{{answers.F184210}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184310">184310</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184310" name="F184310" value="{{answers.F184310}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184410">184410</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184410" name="F184410" value="{{answers.F184410}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184510">184510</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184510" name="F184510" value="{{answers.F184510}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">11.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Terengganu
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184211">184211</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184211" name="F184211" value="{{answers.F184211}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184311">184311</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184311" name="F184311" value="{{answers.F184311}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184411">184411</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184411" name="F184411" value="{{answers.F184411}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184511">184511</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184511" name="F184511" value="{{answers.F184511}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">12.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Sabah
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184212">184212</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184212" name="F184212" value="{{answers.F184212}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184312">184312</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184312" name="F184312" value="{{answers.F184312}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184412">184412</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184412" name="F184412" value="{{answers.F184412}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184512">184512</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184512" name="F184512" value="{{answers.F184512}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">13.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        Sarawak
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-F184213">184213</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184213" name="F184213" value="{{answers.F184213}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-F184313">184313</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184313" name="F184313" value="{{answers.F184313}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-F184413">184413</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184413" name="F184413" value="{{answers.F184413}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-F184513">184513</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184513" name="F184513" value="{{answers.F184513}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">14.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        W.P. Kuala Lumpur
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184214">184214</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184214" name="F184214" value="{{answers.F184214}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184314">184314</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184314" name="F184314" value="{{answers.F184314}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184414">184414</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184414" name="F184414" value="{{answers.F184414}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184514">184514</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184514" name="F184514" value="{{answers.F184514}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">15.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        W.P. Labuan
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184215">184215</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184215" name="F184215" value="{{answers.F184215}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184315">184315</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184315" name="F184315" value="{{answers.F184315}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184415">184415</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184415" name="F184415" value="{{answers.F184415}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184515">184515</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184515" name="F184515" value="{{answers.F184515}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col">16.</td>
+                			            <td class="first-child-col">
+                		                    <div>
+                		                        W.P. Putrajaya
+                	                        </div>
+                		                </td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184216">184216</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184216" name="F184216" value="{{answers.F184216}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184316">184316</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184316" name="F184316" value="{{answers.F184316}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			            <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184416">184416</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184416" name="F184416" value="{{answers.F184416}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                						<td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-184516">184516</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F184516" name="F184516" value="{{answers.F184516}}">
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                						</td>
+                			        </tr>
+                			        <tr>
+                			            <td class="first-child-col" colspan="2">
+                			                <div class="font-weight-semibold">JUMLAH</div>
+                                            <span class="text-muted">TOTAL</span>
+                			            </td>
+                			            <td>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T184066" name="T184066" readonly>
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T184077" name="T184077" readonly>
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T184088" name="T184088" readonly>
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group-feedback form-group-feedback-right">
+                								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-T184099" name="T184099" readonly>
+                								<div class="form-control-feedback form-control-feedback-lg">%</div>
+                							</div>
+                                        </td>
+                			        </tr>
+						        </tbody>
+				            </table>
+				            <br/>
+				            <footer>
+			                    <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                        		    <!--<span class="font-weight-semibold">Nota /</span> Notes:-->
+                        		    <span class="font-weight-semibold">Nota:* Nilai peratusan medan 1842RR, 1843RR, 1844RR dan 1845RR, masing-masing merujuk kepada nilai di medan 174116 (Soalan 17A), 175116 (Soalan 17B), 176116 (Soalan 17C) dan 177116 (Soalan 17D).</span>
+                        		    <br/>Notes: The percentage value in fields 1842RR, 1843RR, 1844RR and1845RR, refers to value in fields 174116 (Question 17A),175116 (Question 17B), 176116 (Question 17C) and 177116 (Question 17D) respectively.
+                        	    </div>
+					        </footer>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

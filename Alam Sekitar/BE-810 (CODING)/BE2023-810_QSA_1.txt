@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+        <script type="text/javascript">
+            $(function() {
+                // Left fixed column example
+                $('.datatable-fixed-left').DataTable({
+                    columnDefs: [
+                        { 
+                            orderable: false,
+                            targets: [5]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [0]
+                        },
+                        { 
+                            width: "300px",
+                            targets: [1]
+                        },
+                        { 
+                            width: "200px",
+                            targets: [5, 6]
+                        },
+                        { 
+                            width: "100px",
+                            targets: [4]
+                        }
+                    ],
+                    scrollX: true,
+                    scrollY: '350px',
+                    scrollCollapse: true,
+                    fixedColumns: true
+                });
+                
+                
+            });
+
+            
+            function initForm(){
+                
+                // A1
+                var arr_F310001_2 = ['#t-F310002','#t-F310002a','#t-F310080'];
+                chkDisableT("#r-F310001_2", "#r-F310001_1", arr_F310001_2);
+                $( "#r-F310001_1" ).click( function() { 
+                    chkDisableT("#r-F310001_2", "#r-F310001_1", arr_F310001_2);
+                });
+                $( "#r-F310001_2" ).click( function() { 
+                    chkDisableT("#r-F310001_2", "#r-F310001_1", arr_F310001_2);
+                    $('#t-F310002').val('');
+                    $('#t-F310002a').val('');
+                    $('#t-F310080').val('');
+                });
+                
+                // A3
+                 var arr_F310003_2 = ['#t-F310004','#t-F310004a','#t-F310081','#r-F310012_1','#r-F310012_2','#r-F310082_1','#r-F310082_2','#c-F310005','#c-F310006'
+                ,'#c-F310007','#c-F310008','#c-F310009','#c-F310010','#r-F310017_1','#r-F310017_2','#c-F310018','#c-F310019','#c-F310020','#c-F310083'
+                ,'#c-F310021','#c-F310022','#c-F310023','#c-F310024','#c-F310025','#c-F310026','#c-F310027','#c-F310028','#c-F310029','#c-F310030'
+                ,'#c-F310031','#c-F310032','#c-F310033'];
+                chkDisableT("#r-F310003_2", "#r-F310003_1", arr_F310003_2);
+                $( "#r-F310003_1" ).click( function() { 
+                    chkDisableT("#r-F310003_2", "#r-F310003_1", arr_F310003_2);
+                });
+                $( "#r-F310003_2" ).click( function() { 
+                    chkDisableT("#r-F310003_2", "#r-F310003_1", arr_F310003_2);
+                    $('#t-F310004').val('');
+                    $('#t-F310004a').val('');
+                    $('#t-F310081').val('');
+                });
+                
+                // A8  
+                var arr_F310017_2 = ['#c-F310018','#c-F310019','#c-F310020', '#c-F310083' ];  
+                chkDisableT("#r-F310017_2", "#r-F310017_1", arr_F310017_2);
+                $( "#r-F310017_1" ).click( function() { 
+                    chkDisableT("#r-F310017_2", "#r-F310017_1", arr_F310017_2);
+                });
+                $( "#r-F310017_2" ).click( function() { 
+                    chkDisableT("#r-F310017_2", "#r-F310017_1", arr_F310017_2);
+                });
+                
+                // A7
+                var trig_F310109 = "#c-F310010";
+                var arr_F310109 = ['#c-F310009'];
+                $( trig_F310109 ).click( function() {
+                    if ($(this).is(":checked")) {
+                        $('#c-F310009').prop('enabled', false);
+                        //chkDisableT(trig_F310109, arr_F310109, arr_F310109);
+                    }
+                    else{
+                        $('#c-F310009').prop('enabled', true);
+                    }
+                    
+                });
+                
+                // A10
+                var trig_F310109 = "#c-F310109";
+                var arr_F310109 = ['#tx-F310110'];
+                chkDisableFRequiredT(trig_F310109, arr_F310109, arr_F310109);
+                $( trig_F310109 ).click( function() {
+                    chkDisableFRequiredT(trig_F310109, arr_F310109, arr_F310109);
+                });
+                
+                $("#c-F310109").click(function() {
+                    if ($(this).is(":checked")) {
+                        $("#tx-F310110").prop("readonly", false);
+                    } else {
+                        $("#tx-F310110").prop("readonly", true);
+                        $("#tx-F310110").val("");
+                    }
+                });
+                
+                 var arr_F310111 = ['#c-F310101','#c-F310102','#c-F310103','#c-F310104','#c-F310105','#c-F310106','#c-F310107','#c-F310108','#c-F310109'];
+            chkBoxDisable("#c-F310111", arr_F310111);
+            $( "#c-F310111" ).click( function() {
+                chkBoxDisable("#c-F310111", arr_F310111);
+            });
+            
+             var arr_F310101 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310101", arr_F310101, arr_F310111);
+            $( "#c-F310101" ).click( function() {
+                chkBoxDisable2("#c-F310101", arr_F310101, arr_F310111);
+            });
+
+            var arr_F310102 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310102", arr_F310102, arr_F310111);
+            $( "#c-F310102" ).click( function() {
+                chkBoxDisable2("#c-F310102", arr_F310102, arr_F310111);
+            });
+            
+            var arr_F310103 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310103", arr_F310103, arr_F310111);
+            $( "#c-F310103" ).click( function() {
+                chkBoxDisable2("#c-F310103", arr_F310103, arr_F310111);
+            });
+            
+            var arr_F310104 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310104", arr_F310104, arr_F310111);
+            $( "#c-F310104" ).click( function() {
+                chkBoxDisable2("#c-F310104", arr_F310104, arr_F310111);
+            });
+
+            var arr_F310105 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310105", arr_F310105, arr_F310111);
+            $( "#c-F310105" ).click( function() {
+                chkBoxDisable2("#c-F310105", arr_F310105, arr_F310111);
+            });
+            
+            var arr_F310106 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310106", arr_F310106, arr_F310111);
+            $( "#c-F310106" ).click( function() {
+                chkBoxDisable2("#c-F310106", arr_F310106, arr_F310111);
+            });
+            
+            var arr_F310107 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310107", arr_F310107, arr_F310111);
+            $( "#c-F310107" ).click( function() {
+                chkBoxDisable2("#c-F310107", arr_F310107, arr_F310111);
+            });
+
+            var arr_F310108 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310108", arr_F310108, arr_F310111);
+            $( "#c-F310108" ).click( function() {
+                chkBoxDisable2("#c-F310108", arr_F310108, arr_F310111);
+            });
+            
+            var arr_F310109 = ['#c-F310111'];
+            chkBoxDisable2("#c-F310109", arr_F310109, arr_F310111);
+            $( "#c-F310109" ).click( function() {
+                chkBoxDisable2("#c-F310109", arr_F310109, arr_F310111);
+            });
+                
+                // A10
+                /*var trig_F310109 = "#c-F310109";
+                var arr_F310109 = ['#tx-F310110'];
+                chkDisableFRequiredT(trig_F310109, arr_F310109, arr_F310109);
+                $( trig_F310109 ).click( function() {
+                    chkDisableFRequiredT(trig_F310109, arr_F310109, arr_F310109);
+                });
+                
+                $("#c-F310109").click(function() {
+                    if ($(this).is(":checked")) {
+                        $("#tx-F310110").prop("readonly", false);
+                    } else {
+                        $("#tx-F310110").prop("readonly", true);
+                        $("#tx-F310110").val("");
+                    }
+                });*/
+                
+                //% limit 100
+                /*var arr_T330001 = ['F310002'];
+                calPercentage( arr_T330001, 'T330001' );
+                $( "#t-F310002" ).blur( function() { calPercentage( arr_T330001,'T330001' ); });
+                
+                //% limit 100
+                var arr_T330002 = ['F310004'];
+                calPercentage( arr_T330002, 'T330002' );
+                $( "#t-F310004" ).blur( function() { calPercentage( arr_T330002,'T330002' ); });*/
+                
+                $("#t-F310002").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                $("#t-F310004").on("change", function() {
+                var val = parseInt(this.value);
+                if(val > 100 || val < 1)
+                 {
+                alert('Range Must be 1% to 100% only');
+                 this.value ='';        
+                }
+                });
+                
+                
+                
+            }
+        </script>
+        
+    <style>
+        table.table-bordered thead {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">A</div></button></td>
+                    <td><h6 class="text-teal-800">MODUL EKONOMI DIGITAL<br/><span class="text-teal-400 font-size-sm">DIGITAL ECONOMIC MODULE</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br/><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br/><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br/><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+	                        <button type="button" class="btn alpha-blue rounded-round text-blue-800 border-blue-600 text-left">
+	                            <span class="font-weight-semibold">Bahagian 1: Penggunaan Teknologi Maklumat dan Komunikasi (TMK)</span> 
+	                            <br/>Part 1: Usage of Information and Communication Technology (ICT)
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.1</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menggunakan komputer dalam mengendalikan perniagaan?</div>
+                            <span class="text-muted">Did this establishment use computers in running a business?</span><br><br>
+
+                                <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <span class="font-weight-semibold">Nota /</span> Note:<br>
+                                    <span class="font-weight-semibold">Komputer termasuk komputer peribadi, komputer mudah alih (cth. komputer riba), tablet dan peranti mudah alih yang lain seperti telefon pintar</span> 
+                                    <br/>Computer includes personal computer, portable computer (e.g., laptop), tablet and other portable devices like smartphone<br><br>
+                                    <span class="font-weight-semibold">Jika TIDAK, sila ke soalan A.3</span>
+                                    <br>If NO, please proceed to question A.3
+                                </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310001">310001</a> <span class="text-danger">*</span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310001" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310001" id="r-F310001_1" name="F310001" value="1" required {{#eq answers.F310001 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310001" id="r-F310001_2" name="F310001" value="2" required {{#eq answers.F310001 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">A.2</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Berapakah bilangan pekerja yang menggunakan komputer untuk tujuan perniagaan?</div>
+                            <span class="text-muted">How many persons engaged use computers for business purposes?</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310080">310080</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F310080" name="F310080" value="{{answers.F310080}}" maxlength="6">
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Jika pertubuhan ini tidak dapat membekalkan bilangan pekerja,</div>
+                            <span class="text-muted">If this establishment cannot provide the number of persons engage,</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan anggaran peratusan jumlah pekerja yang menggunakan komputer untuk tujuan perniagaan.</div>
+                            <span class="text-muted">Please indicate an estimate percentage of the persons engaged who use computers for business purposes</span>
+                            <br>
+                            <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310002a">310002a</a>
+                            </div>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F310002a" name="F310002a" value="{{answers.F310002a}}" maxlength="5">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310002">310002</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310002" name="F310002" value="{{answers.F310002}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.3</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menggunakan internet untuk tujuan perniagaan?</div>
+                            <span class="text-muted">Did this establishment use the internet for business purposes?</span><br><br>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                <span class="font-weight-semibold">Nota /</span> Note:<br>
+                                <span class="font-weight-semibold">Internet yang boleh diakses oleh komputer dan peranti yang lain (cth: telefon mudah alih, telefon pintar dsb.)</span> 
+                                <br/>Internet can be access by computer and other device (e.g.: mobile phone, smart phone etc.)<br><br>
+                                <span class="font-weight-semibold">Jika TIDAK, sila ke soalan A.10</span>
+                                <br>If NO, please proceed to question A.10
+                            </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310003">310003</a> <span class="text-danger">*</span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310003" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted">Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310003" id="r-F310003_1" name="F310003" value="1" required {{#eq answers.F310003 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310003" id="r-F310003_2" name="F310003" value="2" required {{#eq answers.F310003 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">A.4</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Berapakah bilangan pekerja yang mengakses internet untuk tujuan perniagaan?</div>
+                            <span class="text-muted">How many persons engaged have access to the internet for business purposes?</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310081">310081</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F310081" name="F310081" value="{{answers.F310081}}" maxlength="6">
+                                </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Jika pertubuhan ini tidak dapat membekalkan bilangan pekerja,</div>
+                            <span class="text-muted">If this establishment cannot provide the number of persons engage,</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan anggaran peratusan jumlah pekerja yang mengakses internet untuk tujuan perniagaan.</div>
+                            <span class="text-muted">Please indicate an estimate percentage of the persons engaged who access internet for business purposes</span>
+                            <br>
+                            <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-310004a">310004a</a>
+                                </div>
+                                <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310004a" name="F310004a" value="{{answers.F310004a}}" maxlength="5">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310004">310004</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+                                <input class="form-control only-number-pos" type="text" id="t-F310004" name="F310004" value="{{answers.F310004}}" maxlength="3">
+                                <div class="form-control-feedback form-control-feedback-lg">
+                                    %
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+ 
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.5</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menggunakan jalur lebar tetap untuk sambungan ke internet? (cth. ADSL, SDSL, VDSL, teknologi fiber dan optik, teknologi kabel)</div>
+                            <span class="text-muted">Did this establishment use of fixed broadband to connect to the internet? (e.g. ADSL, SDSL, VDSL, fiber optic technology, cable technology)</span><br><br>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310012">310012</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310012" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310012" id="r-F310012_1" name="F310012" value="1" required {{#eq answers.F310012 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310012" id="r-F310012_2" name="F310012" value="2" required {{#eq answers.F310012 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.6</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menggunakan peranti mudah alih (cth. komputer riba dan telefon pintar) yang membolehkan sambungan ke internet menggunakan rangkaian telefon mudah alih (cth. hotspot) dan bukan wifi (cth. Unifi, Streamyx dsb.) bagi tujuan perniagaan?</div>
+                            <span class="text-muted">Did this establishment use any portable devices (e.g. laptop and smartphone) that allow a mobile connection to the internet using mobile phone network (e.g. hotspot) and not wifi (e.g. Unifi, Streamyx etc.) for business purposes?</span><br><br>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310082">310082</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310082" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310082" id="r-F310082_1" name="F310082" value="1" required {{#eq answers.F310082 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310082" id="r-F310082_2" name="F310082" value="2" required {{#eq answers.F310082 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="6">
+                            <h6 class="mb-0">A.7</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="6">
+                            <div class="font-weight-semibold">Sila tanda (X) infrastruktur rangkaian di bawah terdapat di pertubuhan ini? (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">Please mark (X) the network infrastructures available in this establishment? (May choose more than one)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310005">310005</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Intranet dalam perniagaan anda
+                                        <br/><span class="text-muted">Intranet within your business</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310005" name="F310005" value="1" {{#eq answers.F310005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310006">310006</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Extranet di antara perniagaan anda dan organisasi lain (termasuk perniagaan yang berkenaan)
+                                        <br/><span class="text-muted">Extranet between your business and other organisations (include related business)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310006" name="F310006" value="1" {{#eq answers.F310006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310007">310007</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Rangkaian kawasan setempat
+                                        <br/><span class="text-muted">Local area network (LAN)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310007" name="F310007" value="1" {{#eq answers.F310007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310008">310008</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Rangkaian kawasan setempat tanpa wayar
+                                        <br/><span class="text-muted">Wireless local area network (WLAN)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310008" name="F310008" value="1" {{#eq answers.F310008 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310009">310009</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Rangkaian kawasan luas
+                                        <br/><span class="text-muted">Wide area network (WAN)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310009" name="F310009" value="1" {{#eq answers.F310009 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310010">310010</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Lain-lain
+                                        <br/><span class="text-muted">Others</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310010" name="F310010" value="1" {{#eq answers.F310010 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td class="text-center" rowspan="5">
+                            <h6 class="mb-0">A.8</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="5">
+                            <div class="font-weight-semibold">Adakah pertubuhan ini mempunyai <i>web presence</i>?</div>
+                            <span class="text-muted">Did this establishment have a <i>web presence</i>?</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">Jika "YA" sila tandakan (X) jenis <i>web presence</i> pertubuhan ini. (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">If "YES" please mark (X) type of <i>web presence</i> of this establishment. (May choose more than one)</span>
+                            <br/><br/>
+                            
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+								 <span class="font-weight-semibold">Nota /</span> Note:</br>
+                                <br><span class="font-weight-semibold">Termasuk: Laman web, <i>home page</i> atau wujud di laman pihak ketiga yang mana perniagaan ini mempunyai penguasaan yang kuat di atas kandungan dalam laman tersebut</span>
+                                <br><span class="font-weight-semibold">Tidak termasuk : Jika ia wujud di dalam <i>online directory</i> dan mengiklan di laman pihak ketiga</span> <br>
+                                <br>Includes: Websites, home page or presence on a third party’s site where this business has substantial control over the content of the pages
+								<br/>Excludes : Inclusion in an online directory and advertising on a third party’s site
+						    </div>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310017">310017</a> <span class="text-danger">*</span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310017" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310017" id="r-F310017_1" name="F310017" value="1" required {{#eq answers.F310017 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310017" id="r-F310017_2" name="F310017" value="2" required {{#eq answers.F310017 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>                                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310018">310018</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Laman web kepunyaan pertubuhan ini
+                                        <br/><span class="text-muted">Website owned by this establishment</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310018" name="F310018" value="1" {{#eq answers.F310018 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310019">310019</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Laman web di entiti lain
+                                        <br/><span class="text-muted">Presence on another entity's website</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310019" name="F310019" value="1" {{#eq answers.F310019 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310020">310020</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Media sosial (cth. Facebook, Instagram, Twitter, Youtube)
+                                        <br/><span class="text-muted">Social media (e.g. Facebook, Instagram, Twitter, YouTube)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310020" name="F310020" value="1" {{#eq answers.F310020 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310083">310083</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) E-Pasaran (cth. Lazada, Zalora, Shopee)
+                                        <br/><span class="text-muted">E-Marketplace (e.g. Lazada, Zalora, Shopee) </span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310083" name="F310083" value="1" {{#eq answers.F310083 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="13">
+                            <h6 class="mb-0">A.9</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="13">
+                            <div class="font-weight-semibold">Apakah tujuan penggunaan internet di pertubuhan ini? (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">What is the purpose of this establishment using the internet? (May choose more than one)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310021">310021</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Menghantar atau menerima e-mel
+                                        <br/><span class="text-muted">Sending or receiving email</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310021" name="F310021" value="1" {{#eq answers.F310021 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310022">310022</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Telefon melalui internet (cth. Skype, WhatsApp Call)
+                                        <br/><span class="text-muted">Telephoning over the internet (e.g. Skype, WhatsApp Call)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310022" name="F310022" value="1" {{#eq answers.F310022 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310023">310023</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Menghantar informasi atau pesanan dengan segera
+                                        <br/><span class="text-muted">Sending information or instant messaging</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310023" name="F310023" value="1" {{#eq answers.F310023 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310024">310024</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Mendapatkan maklumat berkenaan barangan atau perkhidmatan
+                                        <br/><span class="text-muted">Getting information about goods or services</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310024" name="F310024" value="1" {{#eq answers.F310024 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310025">310025</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Mendapatkan maklumat daripada organisasi kerajaan
+                                        <br/><span class="text-muted">Getting information from government organisations</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310025" name="F310025" value="1" {{#eq answers.F310025 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310026">310026</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Berhubung dengan organisasi kerajaan (termasuk muat turun / permohonan borang, pembayaran secara <i>online</i>)
+                                        <br/><span class="text-muted">Liaise with government organisations (includes downloading / requesting forms, making online payments)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310026" name="F310026" value="1" {{#eq answers.F310026 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310027">310027</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Perbankan melalui internet
+                                        <br/><span class="text-muted">Internet banking</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310027" name="F310027" value="1" {{#eq answers.F310027 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310028">310028</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Mengakses perkhidmatan kewangan yang lain (cth. pembelian insurans)
+                                        <br/><span class="text-muted">Accessing other financial services (e.g., purchases of insurance)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310028" name="F310028" value="1" {{#eq answers.F310028 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310029">310029</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (i) Penyediaan perkhidmatan pelanggan
+                                        <br/><span class="text-muted">Providing customer service</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310029" name="F310029" value="1" {{#eq answers.F310029 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310030">310030</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (j) Penghantaran produk secara dalam talian (merujuk kepada produk yang dihantar melalui internet dalam bentuk digital, cth. laporan, perisian, permainan komputer dan perkhidmatan lain dalam talian seperti perkhidmatan berkaitan komputer atau perkhidmatan maklumat)
+                                        <br/><span class="text-muted">Delivering online products (refers to products delivered via the internet in digital form, e.g. reports, software, computer games and other online services such as computer related services or information services)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310030" name="F310030" value="1" {{#eq answers.F310030 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310031">310031</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (k) Pemberitahuan jawatan kosong dalaman atau luaran
+                                        <br/><span class="text-muted"> Internal or vacant information</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310031" name="F310031" value="1" {{#eq answers.F310031 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310032">310032</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (l) Latihan untuk kakitangan (cth. aplikasi e&#8209;pembelajaran yang didapati melalui intranet atau daripada laman web)
+                                        <br/><span class="text-muted">Staff training (e.g. e-learning applications available on intranet or website)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310032" name="F310032" value="1" {{#eq answers.F310032 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310033">310033</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (m) Lain-lain
+                                        <br/><span class="text-muted">Others</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310033" name="F310033" value="1" {{#eq answers.F310033 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center" rowspan="11">
+                            <h6 class="mb-0">A.10</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="11">
+                            <div class="font-weight-semibold">Sila nyatakan penggunaan teknologi digital yang digunakan di pertubuhan ini (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">Please indicate the adoption of digital technologies used at this establishment (May choose more than one)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310101">310101</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Laman web
+                                        <br/><span class="text-muted">Website</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310101" name="F310101" value="1" {{#eq answers.F310101 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310102">310102</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Media sosial (cth. Facebook, Instagram, Twitter, YouTube)
+                                        <br/><span class="text-muted">Social media (e.g. Facebook, Instagram, Twitter, Youtube)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310102" name="F310102" value="1" {{#eq answers.F310114 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310103">310103</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Internet mudah alih dan teknologi (cth. jalur lebar mudah alih, komputer riba, telefon pintar, tablet dsb.) 
+                                        <br/><span class="text-muted">Mobile internet and technologies (e.g. mobile broadband, laptop, smartphone, tablet etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310103" name="F310103" value="1" {{#eq answers.F310103 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310104">310104</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Pengkomputeran awan (cth. Dropbox, Gmail, Facebook dsb.)
+                                        <br/><span class="text-muted">Cloud computing (e.g. Dropbox, Gmail, Facebook etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310104" name="F310104" value="1" {{#eq answers.F310104 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310105">310105</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Analitik data (cth. Tableau, Analitik Data Raya, Mobile Business Intelligence dsb.)
+                                        <br/><span class="text-muted">Data analytics (e.g. Tableau, Big Data Analytics, Mobile Business Intelligence etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310105" name="F310105" value="1" {{#eq answers.F310105 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310106">310106</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Perisian pengurusan (cth. Human Resources Management System, Accounting Information System dsb.)
+                                        <br/><span class="text-muted">Management software (e.g. Human Resources Management System, Accounting Information System etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310106" name="F310106" value="1" {{#eq answers.F310106 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310107">310107</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Platform kolaborasi dalam talian (cth. Go ToMeeting, Zoom webinar, Google Meet, StreamYard, Microsoft Teams dsb.)
+                                        <br/><span class="text-muted">Online collaborative platforms (e.g. Go ToMeeting, Zoom webinar, Google Meet, StreamYard, Microsoft Teams etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310107" name="F310107" value="1" {{#eq answers.F310107 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310108">310108</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Keperluan penggunaan internet dan teknologi 5G
+                                        <br/><span class="text-muted">Usage of internet and 5G technology necessity</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310108" name="F310108" value="1" {{#eq answers.F310108 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310109">310109</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (i) Lain-lain (Sila nyatakan)
+                                        <br/><span class="text-muted">Others (Please specify)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310109" name="F310109" value="1" {{#eq answers.F310109 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310110">310110</a>
+                            </div>
+                        </td> 
+                        <td>
+                            <textarea rows="3" class="form-control" id="tx-F310110" name="F310110" maxlength="250">{{answers.F310110}}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310111">310111</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (j)  Tiada
+                                        <br/><span class="text-muted">None</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F310111" name="F310111" value="1" {{#eq answers.F310111 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">A.11</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menyediakan peruntukan kewangan untuk melaksanakan transformasi teknologi digital? (cth. pembangunan sistem, aplikasi, platform, laman web dsb.)</div>
+                            <span class="text-muted">Did this establishment allocate any financing to implement digital technology transformation? (e.g. development of system, application, platform, website etc.)</span><br><br>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-310112">310112</a> <span class="text-danger">*</span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="310112" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Ya / <span class="text-muted"> Yes</span></div>
+                                    <input type="radio" class="form-check-input-styled 310112" id="r-F310112_1" name="F310112" value="1" required {{#eq answers.F310112 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                
+                                <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Tidak / <span class="text-muted">No</span></div>
+                                    <input type="radio" class="form-check-input-styled 310112" id="r-F310112_2" name="F310112" value="2" required {{#eq answers.F310112 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

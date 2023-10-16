@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<script type="text/javascript">
+        function initForm(){
+
+            var trig_110018 = "#c-110018";
+            var arr_110018 = ['#tx-110019'];
+            chkDisableFRequiredT(trig_110018, arr_110018, arr_110018);
+            $( trig_110018 ).click( function() {
+                chkDisableFRequiredT(trig_110018, arr_110018, arr_110018);
+            });
+            
+            $("#c-110018").click(function() { 
+                if ($(this).is(":checked")) {
+                    $("#tx-110019").prop("readonly", false);
+                } else {
+                    $("#tx-110019").prop("readonly", true);
+                    $("#tx-110019").val("");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">11</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> KEUNTUNGAN / KERUGIAN SEBELUM CUKAI
+                        <br/><span class="text-teal-400 font-size-sm">PROFIT / LOSS BEFORE TAX</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <!--11.1-->
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">11.1</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila laporkan keuntungan / kerugian bersih seperti yang dilaporkan dalam akaun pertubuhan ini:</div>
+                            <span class="text-muted">Please report net profit / loss as reported in the account of this establishment:</span>
+                            <br/><br/>
+                            <div class="font-weight-semibold">Keuntungan / Kerugian</div>
+                            <span class="text-muted">Profit / Loss</span>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tahun Semasa</div>
+                            <span class="text-muted">Current Year</span>
+                        </td>
+                		<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110001">110001</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                			    <input class="form-control only-number-neg" type="text" id="t-F110001" name="F110001" value="{{answers.F110001}}" maxlength="12">
+                			    <div class="form-control-feedback form-control-feedback-lg">RM</div>
+                			</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Tahun Sebelum</div>
+                            <span class="text-muted">Previous Year</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110002">110002</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                				<input class="form-control only-number-neg" type="text" id="t-F110002" name="F110002" value="{{answers.F110002}}" maxlength="12">
+                				<div class="form-control-feedback form-control-feedback-lg">RM</div>
+                			</div>
+                        </td>
+                    </tr>
+                    
+                    <!--11.2-->
+                    <tr>
+                        <td class="text-center" rowspan="18">
+                            <h6 class="mb-0">11.2</h6>
+                        </td>
+                        <td rowspan="19">
+                            <div class="font-weight-semibold">Sekiranya terdapat pertukaran aktiviti atau perbezaan keuntungan / kerugian yang ketara (> atau <30%) berbanding dengan tahun sebelum,
+                            sila tandakan sebab-sebab di bawah ini (Boleh pilih lebih daripada satu):</div>
+                            <span class="text-muted">If there is any change in activity or difference in the profit / loss reported (> or <30%) as compared to the previous year,
+                            please mark the reasons below (May choose more than one):</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110003">110003</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (a) Perubahan model perniagaan
+                                        <br/><span class="text-muted">Business model changes</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110003" name="F110003" value="1" {{#eq answers.F110003 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110004">110004</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (b) Impak kadar pertukaran matawang
+                                        <br/><span class="text-muted">Currency exchange rate impact</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110004" name="F110004" value="1" {{#eq answers.F110004 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110005">110005</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (c) Perubahan harga barangan yang dijual atau perkhidmatan yang diberikan
+                                        <br/><span class="text-muted">Price changes in goods sold or services rendered</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110005" name="F110005" value="1" {{#eq answers.F110005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110006">110006</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (d) Memberi kontrak kepada pertubuhan luar
+                                        <br/><span class="text-muted">Contracting out</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110006" name="F110006" value="1" {{#eq answers.F110006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110007">110007</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (e) Perubahan organisasi
+                                        <br/><span class="text-muted">Organisation changes</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110007" name="F110007" value="1" {{#eq answers.F110007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110008">110008</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (f) Perubahan dalam kos tenaga buruh atau bahan mentah
+                                        <br/><span class="text-muted">Changes in the cost of labour or raw materials</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110008" name="F110008" value="1" {{#eq answers.F110008 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110009">110009</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (g) Bencana alam
+                                        <br/><span class="text-muted">Natural disaster</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110009" name="F110009" value="1" {{#eq answers.F110009 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110010">110010</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (h) Kemelesetan
+                                        <br/><span class="text-muted">Recession</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110010" name="F110010" value="1" {{#eq answers.F110010 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110011">110011</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (i) Pertukaran produk
+                                        <br/><span class="text-muted">Product changes</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110011" name="F110011" value="1" {{#eq answers.F110011 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110012">110012</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (j) Unit perniagaan yang dijual
+                                        <br/><span class="text-muted">Sold business units</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110012" name="F110012" value="1" {{#eq answers.F110012 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110013">110013</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (k) Perluasan
+                                        <br/><span class="text-muted">Expansion</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110013" name="F110013" value="1" {{#eq answers.F110013 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110014">110014</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (l) Kontrak baharu / hilang
+                                        <br/><span class="text-muted">New / lost contract</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110014" name="F110014" value="1" {{#eq answers.F110014 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110015">110015</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (m) Penutupan ladang
+                                        <br/><span class="text-muted">Farm closures</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110015" name="F110015" value="1" {{#eq answers.F110015 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110016">110016</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (n) Pengambil alihan unit-unit perniagaan
+                                        <br/><span class="text-muted">Acquisition of business units</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F110016" name="F110016" value="1" {{#eq answers.F110016 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110017">110017</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (o) Mogok atau sekatan
+                                        <br/><span class="text-muted">Strike or blockade</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110017" name="F110017" value="1" {{#eq answers.F110017 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110020">110020</a>
+                            </div>
+                        </td>
+                         <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (p) Perubahan ke arah automasi
+                                        <br/><span class="text-muted">Changes towards automation</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110017" name="F110017" value="1" {{#eq answers.F110017 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110018">110018</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (q) Lain-lain (sila nyatakan)
+                                        <br/><span class="text-muted">Others (please specify)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-110018" name="F110018" value="1" {{#eq answers.F110018 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-110019">110019</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <textarea rows="3" class="form-control" id="tx-110019" name="F110019" maxlength="250" enabled>{{answers.F110019}}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
